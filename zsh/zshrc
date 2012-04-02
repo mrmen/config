@@ -1,0 +1,212 @@
+wmname LG3D # pour maple
+# options for Zsh
+
+
+# Modules
+
+autoload -U compinit
+compinit
+
+autoload promptinit
+#promptinit
+#prompt adam2
+
+# partie prompt
+# On charge les couleurs
+autoload -U colors
+colors
+# Définition des couleurs
+cn="%{$reset_color%}" # normal color
+cs="%{$fg[red]%}" # symbol color
+cu="%{$fg[cyan]%}" # user info color
+cr="%{$fg[red]%}" # root info color
+ce="%{$fg[yellow]%}" # failed error color
+# Définition de 'PROMPT'
+# -------------------------
+PROMPT="${cs}-=[${cu}%U%n%u${cs}@${cu}%U%m%u${cs}]=${cu}%T ${cs}%0(?..(${ce}Failed %?${cs}%))${cn}now in ${cs}[${cu}%~${cs}]
+${cu}-->> ${cn} "
+
+
+
+autoload -U zsh-mime-setup
+autoload -U zsh-mime-handler
+zsh-mime-setup
+
+
+
+# Options
+
+setopt autopushd pushdminus pushdsilent pushdtohome
+#setopt autocd
+setopt cdablevars
+setopt ignoreeof
+setopt interactivecomments
+setopt nobanghist
+setopt noclobber
+setopt HIST_REDUCE_BLANKS
+setopt HIST_IGNORE_SPACE
+setopt hist_ignore_all_dups
+setopt SH_WORD_SPLIT
+setopt nohup
+zmodload zsh/complist
+setopt correctall
+
+
+
+# Export
+
+export HISTFILE=~/.zsh_history
+export HISTSIZE=2000
+export SAVEHIST=2000
+export EDITOR="emacs -nw"
+export BROWSER="links2"
+export XTERM="urxvt +sb -geometry 80x29 -fg black -bg lightgoldenrodyellow -fn -xos4-terminus-medium-*-normal-*-14-*-*-*-*-*-iso8859-15"
+
+
+
+# Completion
+
+
+# COMPLETION
+zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
+zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
+zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/sbin /usr/bin /sbin
+# pour qua la commande cd offre une completion sur les répertoires locaux puis ceux de la variable cdpath
+#zstyle ':completion:*:*:cd:*' tag-order local-directories path-directories
+# pour obtenir un menu conviviale pour le completion (avec les flèches du clavier)
+zstyle ':completion:*' menu select=2
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+ # Pour éviter de reproposer un argument déjà utiliser dans la commande lors de la completion
+zstyle ':completion:*:rm:*' ignore-line yes
+zstyle ':completion:*:mv:*' ignore-line yes
+zstyle ':completion:*:cp:*' ignore-line yes
+zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b) #([0-9]#)*=36=31"
+# Crée un cache des complétion possibles
+# très utile pour les complétion qui demandent beaucoup de temps
+# comme la recherche d'un paquet aptitude install moz<tab>
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh_cache
+zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b)" 
+
+# The following lines were added by compinstall
+zstyle ':completion:*' completer _expand _complete _match
+zstyle ':completion:*' completions 0
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' glob 0
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' matcher-list '+m:{a-z}={A-Z} r:|[._-]=** r:|=**' '' '' '+m:{a-z}={A-Z} r:|[._-]=** r:|=**'
+zstyle ':completion:*' max-errors 1 numeric
+
+
+
+# ##################################################################
+# # Stuff to make my life easier
+
+# allow approximate
+zstyle ':completion:*' completer _complete _match _approximate
+# zstyle ':completion:*:match:*' original only
+zstyle ':completion:*:approximate:*' max-errors 0 numeric
+
+# tab completion for PID :D
+zstyle ':completion:*:*:kill:*' menu yes select
+zstyle ':completion:*:kill:*' force-list always
+
+# cd not select parent dir
+zstyle ':completion:*:cd:*' parents pwd
+
+##################################################################
+# Key bindings
+# http://mundy.yazzy.org/unix/zsh.php
+# http://www.zsh.org/mla/users/2000/msg00727.html
+
+typeset -g -A key
+bindkey '^?' backward-delete-char
+bindkey '^[[1~' beginning-of-line
+bindkey '^[[5~' up-line-or-history
+bindkey '^[[3~' delete-char
+bindkey '^[[4~' end-of-line
+bindkey '^[[6~' down-line-or-history
+bindkey '^[[A' up-line-or-search
+bindkey '^[[D' backward-char
+bindkey '^[[B' down-line-or-search
+bindkey '^[[C' forward-char 
+# completion in the middle of a line
+bindkey '^i' expand-or-complete-prefix
+
+##################################################################
+# My aliases
+
+# Set up auto extension stuff
+alias -s html=$BROWSER
+alias -s org=$BROWSER
+alias -s php=$BROWSER
+alias -s com=$BROWSER
+alias -s net=$BROWSER
+alias -s png=display
+alias -s jpg=feh
+alias -s gif=feg
+alias -s sxw=soffice
+alias -s doc=soffice
+alias -s gz=tar -xzvf
+alias -s bz2=tar -xjvf
+alias -s java=$EDITOR
+alias -s txt=$EDITOR
+alias -s PKGBUILD=$EDITOR
+alias -s mp3=mplayer
+alias -s pdf=evince
+alias -s tex=e
+alias -s py=e
+
+# Normal aliases
+LS_COLORS='di=36;1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=32:*gz=85:*.bz=85:*.bz2=85:*.tar=85:*.jpeg=93:*.jpg=93:*.png=93:*.tex=32;1:*.pdf=88;1:*.avi=31;1'
+export LS_COLORS
+alias ls='ls --color -F'
+alias lsd='ls -ld *(-/DN)'
+alias lsa='ls -ld .*'
+alias f='find |grep'
+alias c="clear"
+alias dir='ls -1'
+alias gvim='gvim -geom 82x35'
+alias ..='cd ..'
+alias hist="grep '$1' /home/thomas/.zsh_history"
+alias irssi="irssi -c irc.freenode.net -n yyz"
+alias grep='grep --color=auto'
+alias e='emacs -nw'
+alias  emacs='emacs -nw'
+alias rc='e /home/thomas/.config/awesome/rc.lua'
+alias fetchmail='fetchmail -k'
+alias rm='rm -i'
+alias lstex='ls | grep .tex'
+alias lspdf='ls | grep .pdf'
+alias lssh='ls | grep .sh'
+
+# yaourt
+alias yay='yaourt -Sy'
+alias yau='yaourt -Su'
+alias yaS='yaourt -S'
+alias yass='yaourt -Ss'
+alias yaq='yaourt -Qb | grep'
+
+# command L equivalent to command |less
+alias -g L='|less' 
+
+# command S equivalent to command &> /dev/null &
+alias -g S='&> /dev/null '
+
+# alias serveur ssh
+alias cremi='ssh tetcheve@jaguar.emi.u-bordeaux1.fr'
+alias redstar='ssh mrmen@176.31.3.251'
+alias maison='ssh thomas@mrmen.dyndns-at-home.com'
+
+
+# alias pour uzbl tabbed
+alias uzbl='uzbl-tabbed'
+
+
+alias stage='cd Documents/stage'
+
+
+
+[ -n "$WINDOWID" ] && transset-df 0.85 -i $WINDOWID >/dev/null
+
