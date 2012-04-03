@@ -1,0 +1,60 @@
+# Couleurs
+# Configurations des couleurs de mutt
+#
+
+################
+###  INDEX
+################
+
+# text colors - general functions
+color normal    yellow      default             # normal text
+color status    brightgreen blue                # status bar, last and first row
+color search    brightyellow    red             # search results
+color message   brightyellow    default             # information messages, last row
+color error brightred   default             # error messages, last row
+color markers   brightred   default             # the + sign at the start of broken lines
+
+# text colors - message index and attachment menu
+color indicator red     default             # current message selected
+color tree  brightred   default             # Threads' arrow
+color index brightwhite default ~F          # important messages    ! flag - command "F"
+color index green       default ~N          # nouveaux messages N flag - command "N"
+color index magenta     default ~T          # tagged messages   * flag - command "t"
+color index green       default ~U          # non-lu messages
+color index brightblue  default ~D          # messages supprimé     D flag - commands "d"/"u"
+
+################
+###  MESSAGE
+################
+
+# header de messages
+#
+color header    brightyellow    default     ^(From):
+color header    brightwhite default     ^(Subject): 
+color header    yellow      default     ^(To): 
+color header    green       default     ^(Date): 
+color header    white       default     ^(In-Reply-To):
+color hdrdefault magenta    default
+
+# attachement, URI, mail, signature
+#
+color attachment blue       default                 # attachments
+color body   brightblue     default "(ftp|http)://[^ ]+"       # point out URLs
+color body   cyan       default [-a-z_0-9.]+@[-a-z_0-9.]+ # e-mail addresses
+color signature  brightblue     default                 # the signature (after sigdashes)
+
+# effet de style d'écriture
+#
+color bold   brightwhite    default               # boldface text
+color underline brightgreen default         # underlined text
+color body brightgreen default " [;:]-*[)>(<|]"                                    # :-) etc...
+color body brightgreen default " [;:][)>(<|]"                                    # :) etc...
+
+#color error     brightwhite    red                 # error messages
+
+# Couleurs des quotes
+#
+color quoted    red         default     # quoted text, 1st quote level
+color quoted1   green       default     # quoted text, 2nd quote level
+color quoted2   brightblue  default         # quoted text, 3rd quote level
+color quoted3   blue        default         # quoted text, 4th quoet level

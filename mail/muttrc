@@ -1,0 +1,131 @@
+# ~/.muttrc
+ 
+set spoolfile = "+gmail"
+set postponed="+postponed"
+# Utilisation du cache
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+set record="+envoye"
+set envelope_from=yes
+set sendmail="/usr/bin/msmtp"
+#set sort=reverse-date 
+
+
+ 
+# Ligne à décommenté pour avoir une disposition
+# différente des informations relative au mail
+#set folder_format="%N %f %F %s %t"
+#set index_format="%4C %Z Exp:%-30.30f   Suj:%-30.30s %b %d %-15.15L (%?l?%4l&amp;%4c?)"
+ 
+#Une signature (que je ne met pas)
+set signature="~/.mutt/signature"
+#set move = no
+set sort=threads
+set sort_aux = reverse-date
+
+set imap_check_subscribed
+ 
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+hdr_order Date From To Cc
+ 
+# Heures et dates françaises
+set locale="fr_FR.UTF-8"
+set charset="utf-8"     # character set for your terminal
+set assumed_charset="utf-8"
+set send_charset="utf-8:iso-8859-15:us-ascii"
+set date_format="%A %d %b %Y à %H:%M:%S (%Z)"
+# les citations
+set attribution="Le %d, %n a écrit :"
+set forward_format="[Re: %s]"
+set forward_quote
+ 
+# Mon éditeur fétiche
+set editor='emacs -nw'#'vim + -c "set textwidth=72" -c "set wrap" -c "set nocp" -c "?^$"'
+ 
+# Couleurs
+color attachment brightred default            # attachments
+color body brightblue default "(ftp|http)://[^ ]+"       # point out URLs
+color body brightcyan default [-a-z_0-9.]+@[-a-z_0-9.]+ # e-mail addresses
+color bold brightwhite default               # boldface text
+color error brightwhite red                 # error messages
+color hdrdefault magenta default            # default color of message header
+color header brightgreen default ^(From): # From and Subject header
+color header brightwhite default ^(Subject): # From and Subject header
+color header brightyellow default ^(Date): # Date header
+color header white default ^(In-Reply-To):
+color indicator brightred default                   # indicator bar
+color markers brightblue default            # wrapped line markers (+)
+color message brightblack green             # status messages
+color normal default default                # default
+color quoted yellow default                 # quoted text, 1st quote level
+color quoted1 green default                 # quoted text, 2nd quote level
+color quoted2 brightblue default            # quoted text, 3rd quote level
+color quoted3 blue default                  # quoted text, 4th quoet level
+color search black yellow                   # matched search patterns in pager
+color signature brightblue default                 # the signature (after sigdashes)
+color status default blue                   # status lines
+color tilde brightblue default              # « ~ » used to pad blank lines
+color tree green default                    # thread tree in the index menu
+color underline brightgreen default         # underlined text
+
+
+# set reverse_name=yes
+# set reverse_realname=yes
+
+set folder = ~/Mail
+mailboxes +gmail
+mailboxes +hotmail
+mailboxes +laposte
+mailboxes +ent
+mailboxes +autre
+mailboxes +gmail/gut
+mailboxes +insight
+alternates ^laposte\\.net$ ^hotmail\\.fr$
+
+
+send-hook . 'set sendmail="/usr/bin/msmtp -a gmail"'
+send-hook "~f ^gmail\\.com$"  'set sendmail="/usr/bin/msmtp -a gmail"'
+send-hook "~f ^laposte\\.net$"  'set sendmail="/usr/bin/msmtp -a laposte"'
+send-hook "~f ^bordeaux1\\.fr$"  'set sendmail="/usr/bin/msmtp -a ENT"'
+send-hook "~f ^hotmail\\.fr$"  'set sendmail="/usr/bin/msmtp -a hotmail"'
+
+#source ~/.mutt/couleur
+
+macro index M "T.*\n;WN" "Tous Marquer comme lu"
+macro generic,index,pager H <shell-escape>"fetchmail -k -m 'procmail -d %T'"<enter> 'Run fetchmail'
+
+
+
+folder-hook   dossier         'my_hdr From: moi <moi@domain.com>'
+
+# Use abook with Mutt
+#macro generic,index,pager A "|abook\n" "lance abook"
+macro index,pager a "|abook --add-email\n" "ajoute l'adresse de l'envoyeur à abook"
+#set query_command="abook --mutt-query '%s'"
+#macro index a     "|abook --add-email\n" 'add sender to abook'
+#macro pager a     "|abook --add-email\n" 'add sender to abook'
+#
+#############
+##  Abook  ##
+#############
+ 
+set query_command= "abook --mutt-query '%s'"
+macro index,pager  a "<pipe-message>abook --add-email-quiet<return>" "Ajouter cet expéditeur dans Abook"
+bind editor  <Tab> complete-query
+
+
+
+
+# Commande spécifique pour lire les mails html avec lynx
+auto_view text/html
+
+
+source ~/.mutt/couleur
+#source ~/.mutt/place
+
+#source ~/.mutt/header
+
+

@@ -1,0 +1,25 @@
+# disposition
+
+#différent formats indiqué
+set attribution="* %n <%a> [%{%Y-%m-%d %H:%M:%S %Z}]:\n"
+set folder_format="%N %f %F %s %t"
+set index_format="%4C %Z  Exp: %-30.30f    Suj: %-30.30s %b %d %-15.15L (%?l?%4l&%4c?)"
+set pager_context=3
+set nostrict_threads
+set date_format="%A %d %b %Y à %H:%M:%S (%Z)"
+
+# permet lorsqu'on lit un mail de toujours avoir 
+# une liste affiché en haut dans une 2ème fenêtre
+set pager_index_lines=9
+
+# permet d'avoir les threads, et arbre en places
+set sort=threads
+set sort_aux = last-date-received
+
+# les citations
+set attribution="Le %d, %n a écrit :"
+set forward_format="[Re: %s]"
+set forward_quote
+
+#Une signature (que je ne met pas)
+#set signature="~/.mutt/.signature"

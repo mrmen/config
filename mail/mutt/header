@@ -1,0 +1,29 @@
+# header
+
+# On ignore tout
+ignore *
+
+# Puis on un-ignore ce que l'on souhaite
+
+unignore From:
+unignore To:
+unignore Reply-To:
+unignore Mail-Followup-To:
+unignore Subject:
+unignore Date:
+#unignore Organization:
+unignore Newsgroups:
+unignore CC:
+unignore BCC:
+#unignore Message-ID:
+#unignore X-Mailer:
+unignore User-Agent:
+#unignore X-Junked-Because:
+#unignore X-SpamProbe:
+#unignore X-Virus-hagbard:
+#unignore X-Spam-Status
+#unignore X-Grouchosity
+#unignore X-Bogosity
+
+
+hdr_order Date: From: Subject: To: Cc: Reply-To: Mail-Followup-To Newsgroups: User-Agent:
