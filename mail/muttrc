@@ -99,7 +99,11 @@ macro generic,index,pager H <shell-escape>"fetchmail -k -m 'procmail -d %T'"<ent
 
 
 
-folder-hook   dossier         'my_hdr From: moi <moi@domain.com>'
+folder-hook   .           'my_hdr From: Thomas Etcheverria <thomas.etcheverria@laposte.net>'
+folder-hook   gmail       'my_hdr From: Thomas Etcheverria <tetcheve@gmail.com>'
+folder-hook   hotmail     'my_hdr From: Thomas Etcheverria <chouchoum33@hotmail.fr>'
+folder-hook   laposte     'my_hdr From: Thomas Etcheverria <thomas.etcheverria@laposte.net>'
+folder-hook   ent         'my_hdr From: Thomas Etcheverria <thomas.etcheverria@etu.u-bordeaux1.fr>'
 
 # Use abook with Mutt
 #macro generic,index,pager A "|abook\n" "lance abook"
@@ -120,7 +124,12 @@ bind editor  <Tab> complete-query
 
 
 # Commande spécifique pour lire les mails html avec lynx
-auto_view text/html
+#auto_view text/html
+# Commande spécifique pour lire les mails html avec lynx
+set implicit_autoview
+auto_view text/html  application/x-pgp-message
+set mailcap_path="~/.mutt/mailcap"
+### FIN lynx
 
 
 source ~/.mutt/couleur
