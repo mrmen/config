@@ -1,0 +1,82 @@
+#!/bin/bash
+#
+# Script for automatic copy of files
+#
+
+PWD=$(pwd)
+
+copy () {
+    if [ -e $HOME/.$1 ]; then
+	mv $HOME/.$1 $HOME/.$1.old
+    fi
+    cp -a $1 $HOME/.$1
+}
+
+error () {
+    if (($?)); then
+	echo "Something went wrong with $1"
+	echo "exiting..."
+	exit 1
+    fi;
+}
+
+
+# coyping Xressources
+copy Xressources
+error Xressources
+
+# coyping Xmodmap
+copy Xmodmap
+error Xmodmap
+
+
+# coyping mutt files
+cd mail
+## copying muttrc
+copy muttrc
+error muttrc
+
+## copying mutt directory
+copy mutt
+error mutt
+
+## copying msmtprc
+copy msmtprc
+error msmtprc
+
+## copying fetchmailrc
+copy fetchmailrc
+error fetchmailrc
+chmod 600 $HOME/.fetchmailrc
+
+## copying procmailrc
+copy procmailrc
+error procmailrc
+chmod 600 $HOME/.procmailrc
+
+# going up
+cd ..
+
+# copying zsh files
+cd zsh
+
+## copying zshrc
+copy zshrc
+error zshrc
+
+
+## copying dir_colors
+copy dir_colors
+error dir_colors
+
+#going up
+
+cd ..
+
+
+echo "You should edit $HOME/.fetchmailrc, $HOME/.procmailrc and $HOME/.msmtprc"
+
+exit 0
+
+
+
