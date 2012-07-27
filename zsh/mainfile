@@ -1,0 +1,79 @@
+#
+#  ______________ 
+# |             | 
+# |_______      |
+#        /     /
+#       /     /
+#      /     /
+#     /     /
+#    /     / 
+#   /     /_____     
+#  |            |
+#  |____________|
+#
+#
+#  MrMen < echo dGV0Y2hldmUgKGF0KSBnbWFpbCBkb3QgY29tCg== | base64 -d >
+#
+#
+# My zsh master config file
+#  require :
+# .zsh
+# |-- aliases.conf    : alias configuration
+# |-- bindkeys.conf   : keybindinsg configuration
+# |-- completion.conf : completion configuration
+# |-- others.conf     : all others stuff
+# `-- prompt.conf     : PS1 configuration
+#
+#
+
+
+
+# Load options
+
+setopt autopushd pushdminus pushdsilent pushdtohome
+#setopt autocd
+setopt cdablevars
+setopt ignoreeof
+setopt interactivecomments
+setopt noclobber
+setopt HIST_REDUCE_BLANKS
+setopt HIST_IGNORE_SPACE
+setopt hist_ignore_all_dups
+setopt HIST_VERIFY
+setopt SH_WORD_SPLIT
+setopt nohup
+zmodload zsh/complist
+setopt correctall
+
+# Export var
+
+export HISTFILE=~/.zsh_history
+export HISTSIZE=2000
+export SAVEHIST=2000
+export EDITOR="emacs -nw"
+export BROWSER="links2"
+export XTERM="urxvt +sb -geometry 80x29 -fg black -bg lightgoldenrodyellow -fn -xos4-terminus-medium-*-normal-*-14-*-*-*-*-*-iso8859-15"
+
+####
+# Configuration
+####
+
+# prompt configuration
+[ -f $HOME/.zsh/prompt.conf ] && source $HOME/.zsh/prompt.conf
+
+# completion configuration
+[ -f $HOME/.zsh/completion.conf ] && source $HOME/.zsh/completion.conf
+
+# bindings configuration
+[ -f $HOME/.zsh/bindkeys.conf ] && source $HOME/.zsh/bindkeys.conf
+
+# aliases configuration
+[ -f $HOME/.zsh/aliases.conf ] && source $HOME/.zsh/aliases.conf
+
+# loading functions
+[ -f $HOME/.zsh/functions.conf ] && source $HOME/.zsh/functions.conf
+
+
+####
+# End configuration
+####
