@@ -143,6 +143,51 @@ layouts =
    -- 
 
 
+-- mocpwidget = widget({ type = 'textbox', name = 'mocpwidget', align = 'right'})
+
+-- local function mocp_status(type)
+--    local output={}
+--    local fd=io.popen("(mocp -Q '%state' || echo nothing ) | sed 's/PLAY/|>/; s/PAUSE/||/'","r")
+--    local mocp_output=io.popen("mocp -Q '<i>%title</i>' || echo nothing")
+--    local stuff = mocp_output:read()
+--    stuff=string.gsub(stuff,"-","\n")
+--    local line=fd:read()
+--    if string.match(line,"|>") then
+--       if type ~= pause then
+-- 	 naughty.notify({title = "Mocp   <i>Playing</i>", text = stuff, timeout = 10})
+--       end
+--       return line
+--    elseif string.match(line, "||") then
+--       if type ~= pause then
+-- 	 naughty.notify({title = "<b>Mocp</b>", text = "Pause", timeout = 10})
+--       end
+--       return line
+--    else
+--       if type ~= "update" then
+-- 	 awful.util.spawn("mocp --play")
+-- 	 return mocp_status()
+--       else
+-- 	 return "Not Playing"
+--       end
+--    end
+-- end
+
+-- mocpwidget.text = mocp_status()
+
+-- mocpwidget:buttons(awful.util.table.join(
+--                     awful.button({ }, 1, function () awful.util.spawn('mocp --toggle-pause')
+-- 			  mocpwidget.text=mocp_status("pause")
+-- 					 end),
+--                     awful.button({ }, 4, function () awful.util.spawn('mocp --previous')
+--                           mocpwidget.text=mocp_status("previous")
+-- 					 end),
+--                     awful.button({ }, 5, function () awful.util.spawn('mocp --next')
+--                           mocpwidget.text=mocp_status("next")
+-- 					 end)
+-- 					 ))
+
+
+
 --
 -- added
 --
@@ -207,7 +252,7 @@ layouts =
       local line=output:read()
       local sound_num = string.match(line, "%d+%%")    
       if string.match(line, "off") then
---	 sound_num = sound_num .. "(mute)"
+	 sound_num = sound_num --.. "(mute)"
 	 iconsound.image = image("/home/mrmen/.config/awesome/icons/vol-mute.png")
       else
 	 iconsound.image = image("/home/mrmen/.config/awesome/icons/vol-hi.png")
@@ -216,6 +261,23 @@ layouts =
       return sound_num
    end
    sound_status()
+
+   soundwidget:buttons(awful.util.table.join(
+			  awful.button({ }, 1, function()
+					  awful.util.spawn("amixer set Master toggle")
+					  sound_status()
+					       end),
+			  awful.button({ }, 4, function()
+					  awful.util.spawn("amixer set Master,0 1+")
+					  sound_status()
+					       end),
+			  awful.button({ }, 5, function()
+					  awful.util.spawn("amixer set Master,0 1-")
+					  sound_status()
+					       end)
+					    ))
+
+
 
    --
    -- luminosity widget
@@ -232,132 +294,6 @@ layouts =
       luminwidget.text = value.."% "    
    end
    lumin_status()
-   --
-   -- Battery monitor
-   --   
-   batticon = widget({type = "imagebox"})
-   mybattmon = widget({ type = "textbox", name = "mybattmon", align = "right" })
-   function battery_status ()
-      local output={} --output buffer
-      local fd=io.popen("acpi", "r") --list present batteries
-      local line=fd:read()
-      while line do --there might be several batteries.
-   	 local battery_num = string.match(line, "Battery \#(%d+)")
-   	 local battery_load = string.match(line, "%d+%%")
-   	 local time_rem = string.match(line, "(%d+\:%d+)\:%d+")
-   	 local discharging
-   	 if string.match(line, "Discharging") then --discharging: always red
-   	    discharging="<span color=\"#CC7777\">"
-	    batticon.image=image("/home/mrmen/.config/awesome/icons/power-bat.png")
-	    battery_load=battery_load.."</span> ("..time_rem..")"
-  	 -- elseif tonumber(battery_load)>85 then --almost charged
-  	 --    discharging="<span color=\"#77CC77\">"
-	 --    battery_load=battery_load.."%</span>"
-   	 else --charging
-   	    discharging="<span color=\"#DCDCCC\">" --#CCCC77\">ch"
-	    battery_load=battery_load.."</span>"
-	    batticon.image=image("/home/mrmen/.config/awesome/icons/power-ac.png")
-   	 end
-   	 table.insert(output, discharging..battery_load)
-   	 line=fd:read() --read next line
-      end
-      return table.concat(output," ")
-   end
-   mybattmon.text = battery_status()
-   -- add a timer
-   my_battmon_timer=timer({timeout=60})
-   my_battmon_timer:add_signal("timeout", function()
-   				  mybattmon.text = " " .. battery_status() .. " "
-   					  end)
-   my_battmon_timer:start()
-   -- 
-   -- Ram widget
-   -- 
-   memwidget = widget({ type = "textbox" })
-   vicious.register(memwidget, vicious.widgets.mem," RAM <span color='yellow'>$1% </span>", 13)
-   -- if you want more eye candy
-   -- "<span weight='bold'>RAM :</span> <span color='green'>$1%</span> |", 13)
-   -- 
-   -- Cpu widget (temp)
-   -- 
-   cputemp = widget({ type = "textbox" })
-   -- vicious.register(thermalwidget, vicious.widgets.thermal, "CPU ",19,"thermal_zone0"})
-   vicious.register(cputemp, vicious.widgets.thermal, "<span color='red'> $1°C</span> | ", 19, {"coretemp.0","core"})
-   -- 
-   -- Cpu widget (freq)
-   cpuwidget = widget({ type = "textbox" })
-   vicious.register(cpuwidget, vicious.widgets.cpu, " CPU <span color='orange'>$1%</span>")
-   -- 
-   -- Pacman Widget
-   -- 
-   -- pacwidget = widget({type="textbox"})
-   -- vicious.register(pacwidget, vicious.widgets.pkg, "|<b> UPDATES :</b> $1 | ", 1801, "Arch")
-   
-   
-   --- Mail updater
-   mymail = widget({ type = "textbox", align = "right" })
-   -- mymail.text = "| <b>Mail :</b> <span color='yellow'>0</span> - <span color='red'>0</span>"
-   
-   -- Mail checker
-   -- local function mail_check_old(option)
-   --    -- if option == forced, Python scripts are launched
-   --    -- they check unseen mail, end return the number of unseen
-   --    -- in files.
-   --    -- 
-   --    -- force check
-   --    if option == "forced" then
-   -- 	 -- experiencing some problems with laposte's server, so commenting
-   --       -- os.execute('python /home/thomas/.config/awesome/mail_laposte.py > ~/tmp/laposte')
-   --       os.execute('/home/thomas/.config/awesome/mail_gmail.py > ~/tmp/gmail')
-   --       os.execute('/home/thomas/.config/awesome/mail_ent.py > ~/tmp/ent')
-   --    end
-   --    -- 
-   --     os.execute('/home/thomas/.config/awesome/check_file')
-   --     -- experiencing some problems with laposte's server, so commenting
-   --     -- local f = io.open("/home/thomas/tmp/laposte") 
-   --     local gmail = io.open("/home/thomas/tmp/gmail")
-   --     local ent = io.open("/home/thomas/tmp/ent")
-   --     -- experiencing some problems with laposte's server, so commenting
-   --     -- local l = nil
-   --     local g_unseen = nil
-   --     local e_unseen = nil
-   --     -- 
-   --     -- check if file is empty, if not, get the line 
-   --     -- 
-   --     -- experiencing some problems with laposte's server, so commenting
-   --     -- if f ~= nil then
-   --     --    l = f:read() -- read output of command
-   --     -- else
-   --     --    l = "<span color='yellow'>0</span>"
-   --     -- end
-   --     if gmail ~= nil then
-   --        g_unseen = h:read() -- read output of command
-   --     else
-   --        g_unseen = "<span color='red'>0</span>"
-   --     end
-   --     if ent ~= nil then
-   --        e_unseen = ent:read() -- read output of command
-   --     else
-   --        e_unseen = "<span color='green'>0</span>"
-   --     end
-   --     -- experiencing some problems with laposte's server, so commenting
-   --     -- f:close()
-   --     gmail:close()
-   --     ent:close()
-   --     -- adapt for your mail
-   --     mymail.text = "| Mail : "..g.."-"..e" | "
-   -- end 
-   -- -- print last updated data
-   -- mail_check_old("null")
-   -- 
-   -- create a timer
-   -- !!
-   -- !! be aware that you need an internet connection if you don't want errors !
-   -- !!
-   --    my_battmon_timer=timer({timeout=300})
-   --   my_battmon_timer:add_signal("timeout", function() mail_check_old("forced") end)
-   -- my_battmon_timer:start()
-
 
 -- add mail
 -- added
@@ -442,9 +378,9 @@ layouts =
     mail_check_old("null")
 
    -- create a timer
-   -- mail_timer=timer({timeout=300})
-   -- mail_timer:add_signal("timeout", function() mail_check_old("forced") end)
-   -- mail_timer:start()
+   mail_timer=timer({timeout=300})
+   mail_timer:add_signal("timeout", function() mail_check_old("forced") end)
+   mail_timer:start()
    -- }}}
 
 
@@ -495,6 +431,80 @@ layouts =
 
    -- end added mail
    -- end add
+
+
+
+   --
+   -- Battery monitor
+   --   
+   batticon = widget({type = "imagebox"})
+   mybattmon = widget({ type = "textbox", name = "mybattmon", align = "right" })
+   function battery_status ()
+      local output={} --output buffer
+      local fd=io.popen("acpi", "r") --list present batteries
+      local line=fd:read()
+      while line do --there might be several batteries.
+   	 local battery_num = string.match(line, "Battery \#(%d+)")
+   	 local battery_load = string.match(line, "%d+%%")
+   	 local time_rem = string.match(line, "(%d+\:%d+)\:%d+")
+   	 local discharging
+   	 if string.match(line, "Discharging") then --discharging: always red
+   	    discharging="<span color=\"#CC7777\">"
+	    batticon.image=image("/home/mrmen/.config/awesome/icons/power-bat.png")
+	    battery_load=battery_load.."</span> ("..time_rem..")"
+  	 -- elseif tonumber(battery_load)>85 then --almost charged
+  	 --    discharging="<span color=\"#77CC77\">"
+	 --    battery_load=battery_load.."%</span>"
+	    -- on battery so stop mail timer
+	    mail_timer:stop()
+   	 else --charging
+   	    discharging="<span color=\"#DCDCCC\">" --#CCCC77\">ch"
+	    battery_load=battery_load.."</span>"
+	    batticon.image=image("/home/mrmen/.config/awesome/icons/power-ac.png")
+	    -- on AC so launch timer for mail
+	    mail_timer:start()
+   	 end
+   	 table.insert(output, discharging..battery_load)
+   	 line=fd:read() --read next line
+      end
+      return table.concat(output," ")
+   end
+   mybattmon.text = battery_status() .. "|"
+   -- add a timer
+   my_battmon_timer=timer({timeout=60})
+   my_battmon_timer:add_signal("timeout", function()
+   				  mybattmon.text = " " .. battery_status() .. " | "
+   					  end)
+   my_battmon_timer:start()
+
+
+   -- 
+   -- Ram widget
+   -- 
+   memwidget = widget({ type = "textbox" })
+   vicious.register(memwidget, vicious.widgets.mem," RAM <span color='yellow'>$1% </span>", 13)
+   -- if you want more eye candy
+   -- "<span weight='bold'>RAM :</span> <span color='green'>$1%</span> |", 13)
+   -- 
+   -- Cpu widget (temp)
+   -- 
+   cputemp = widget({ type = "textbox" })
+   -- vicious.register(thermalwidget, vicious.widgets.thermal, "CPU ",19,"thermal_zone0"})
+   vicious.register(cputemp, vicious.widgets.thermal, "<span color='red'> $1°C</span> | ", 19, {"coretemp.0","core"})
+   -- 
+   -- Cpu widget (freq)
+   cpuwidget = widget({ type = "textbox" })
+   cpuwidget.width, cpuwidget.align=60, "left"
+   vicious.register(cpuwidget, vicious.widgets.cpu, " CPU <span color='orange'>$1%</span>")
+   -- 
+   -- Pacman Widget
+   -- 
+   -- pacwidget = widget({type="textbox"})
+   -- vicious.register(pacwidget, vicious.widgets.pkg, "|<b> UPDATES :</b> $1 | ", 1801, "Arch")
+     
+
+
+
 
 
    -- 
@@ -589,6 +599,7 @@ layouts =
 	 luminwidget,
 	 -- pacwidget,
 	 mymail,
+--	 mocpwidget,
 	 s == 1 and mysystray or nil,
 	 mytasklist[s],
 	 layout = awful.widget.layout.horizontal.rightleft
@@ -626,34 +637,22 @@ globalkeys = awful.util.table.join(
 		 lumin_status()
 					    end),
     -- volume modification
-    awful.key({ }, "XF86AudioRaiseVolume", function ()
-		 awful.util.spawn("amixer set Master,0 5+")
-		 sound_status()
-					   end),
-    awful.key({ }, "XF86AudioLowerVolume", function ()
-		 awful.util.spawn("amixer set Master,0 5-")
-		 sound_status()
-					   end),
     awful.key({ }, "XF86AudioMute", function ()
 		 awful.util.spawn("amixer set Master toggle")
 		 sound_status()
 				    end),    
-    awful.key({ }, "F11", function ()
-		 awful.util.spawn("amixer set Master,0 5+")
+    awful.key({ }, "XF86AudioRaiseVolume", function ()
+		 awful.util.spawn("amixer set Master,0 1+")
 		 sound_status()
 					   end),
-    awful.key({ }, "F10", function ()
-		 awful.util.spawn("amixer set Master,0 5-")
+    awful.key({ }, "XF86AudioLowerVolume", function ()
+		 awful.util.spawn("amixer set Master,0 1-")
 		 sound_status()
 					   end),
-    awful.key({ }, "F9", function ()
-		 awful.util.spawn("amixer set Master toggle")
-		 sound_status()
-				    end),    
     -- lock your screen
     -- !!
     -- !! require xlock
-    awful.key({ }, "F12", function () awful.util.spawn("xlock") end),
+    awful.key({ }, "XF86Eject", function () awful.util.spawn("xlock -mode blank") end),
     awful.key({ modkey,           }, "j",
         function ()
             awful.client.focus.byidx( 1)

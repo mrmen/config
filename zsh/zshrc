@@ -1,7 +1,8 @@
 wmname LG3D # pour maple
 # options for Zsh
-
-
+# to have bépo dead keys
+export GTK_IM_MODULE=xim mousepad
+export PATH=$PATH:/opt/android-sdk/platform-tools/
 # Modules
 
 autoload -U compinit
@@ -41,11 +42,12 @@ setopt autopushd pushdminus pushdsilent pushdtohome
 setopt cdablevars
 setopt ignoreeof
 setopt interactivecomments
-setopt nobanghist
+#setopt nobanghist
 setopt noclobber
 setopt HIST_REDUCE_BLANKS
 setopt HIST_IGNORE_SPACE
 setopt hist_ignore_all_dups
+setopt HIST_VERIFY
 setopt SH_WORD_SPLIT
 setopt nohup
 zmodload zsh/complist
@@ -77,19 +79,23 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/sbin /usr/bin /s
 zstyle ':completion:*' menu select=2
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
  # Pour éviter de reproposer un argument déjà utiliser dans la commande lors de la completion
+zstyle ':completion:*:default:kill' list-colors '$(dircolors ~/.dir_colors)'
 zstyle ':completion:*:rm:*' ignore-line yes
 zstyle ':completion:*:mv:*' ignore-line yes
 zstyle ':completion:*:cp:*' ignore-line yes
-zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b) #([0-9]#)*=36=31"
+zstyle ':completion:*:processes' command 'ps -au$USER -o pid,cmd,state'
+zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b) #([0-9]#)(*)([SRZ])*=36=31=32"
+zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd'
+#zstyle ':completion:*:*:killall:*:processes' list-colors "=(#b) #([0-9]#)*=36=31"
 # Crée un cache des complétion possibles
 # très utile pour les complétion qui demandent beaucoup de temps
 # comme la recherche d'un paquet aptitude install moz<tab>
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh_cache
-zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b)" 
+#zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b)" 
 
 # The following lines were added by compinstall
-zstyle ':completion:*' completer _expand _complete _match
+zstyle ':completion:*' completer _expand _complete _match _last_command_args_commplete
 zstyle ':completion:*' completions 0
 zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' glob 0
@@ -100,8 +106,8 @@ zstyle ':completion:*' max-errors 1 numeric
 
 
 
-# ##################################################################
-# # Stuff to make my life easier
+##################################################################
+# Stuff to make my life easier
 
 # allow approximate
 zstyle ':completion:*' completer _complete _match _approximate
@@ -111,6 +117,8 @@ zstyle ':completion:*:approximate:*' max-errors 0 numeric
 # tab completion for PID :D
 zstyle ':completion:*:*:kill:*' menu yes select
 zstyle ':completion:*:kill:*' force-list always
+zstyle ':completion:*:*:killall:*' menu yes select
+zstyle ':completion:*:killall:*' force-list always
 
 # cd not select parent dir
 zstyle ':completion:*:cd:*' parents pwd
@@ -159,8 +167,12 @@ alias -s tex=e
 alias -s py=e
 
 # Normal aliases
-LS_COLORS='di=36;1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=32:*gz=85:*.bz=85:*.bz2=85:*.tar=85:*.jpeg=93:*.jpg=93:*.png=93:*.tex=32;1:*.pdf=88;1:*.avi=31;1'
-export LS_COLORS
+if [ -e .dir_colors ]; then
+    eval $(dircolors .dir_colors)
+else
+    LS_COLORS='di=36;1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=32:*gz=85:*.bz=85:*.bz2=85:*.tar=85:*.jpeg=93:*.jpg=93:*.png=93:*.tex=32;1:*.pdf=88;1:*.avi=31;1'
+    export LS_COLORS
+fi
 alias ls='ls --color -F'
 alias lsd='ls -ld *(-/DN)'
 alias lsa='ls -ld .*'
@@ -173,8 +185,8 @@ alias hist="grep '$1' /home/thomas/.zsh_history"
 alias irssi="irssi -c irc.freenode.net -n yyz"
 alias grep='grep --color=auto'
 alias e='emacs -nw'
-alias  emacs='emacs -nw'
-alias rc='e /home/thomas/.config/awesome/rc.lua'
+#alias  emacs='emacs -nw'
+alias rc='e /home/mrmen/.config/awesome/rc.lua'
 alias fetchmail='fetchmail -k'
 alias rm='rm -i'
 alias lstex='ls | grep .tex'
@@ -196,7 +208,7 @@ alias -g S='&> /dev/null '
 
 # alias serveur ssh
 alias cremi='ssh tetcheve@jaguar.emi.u-bordeaux1.fr'
-alias redstar='ssh mrmen@176.31.3.251'
+alias redstar='ssh mrmen@mrmen.dyndns-server.com'
 alias maison='ssh thomas@mrmen.dyndns-at-home.com'
 
 

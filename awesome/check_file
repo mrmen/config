@@ -1,0 +1,21 @@
+#!/bin/bash
+
+p1=`ls -l $HOME/tmp/laposte | awk '{print $5}'`
+p2=`ls -l $HOME/tmp/gmail | awk '{print $5}'`
+p3=`ls -l $HOME/tmp/ent | awk '{print $5}'`
+
+if (( $p1 == 0 ));
+ then
+    rm $HOME/tmp/laposte
+    echo "?" > $HOME/tmp/laposte
+fi
+if (( $p2 == 0 ));
+then
+   rm $HOME/tmp/gmail
+    echo "?" > $HOME/tmp/gmail
+fi
+if (( $p3 == 0 ));
+then
+    rm $HOME/tmp/ent
+    echo "?" > $HOME/tmp/ent
+fi

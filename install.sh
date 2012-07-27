@@ -54,6 +54,12 @@ copy procmailrc
 error procmailrc
 chmod 600 $HOME/.procmailrc
 
+# create Mail directory
+mkdir -p $HOME/Mail/{gmail,ent,lapost,autre,insight,hotmail}/{cur,tmp,new}
+error Mail_directory_main
+mkdir -p $HOME/Mail/gmail/gut/{tmp,new,cur}
+error Mail_directory_gut
+
 # going up
 cd ..
 
