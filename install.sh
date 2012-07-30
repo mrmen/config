@@ -6,6 +6,7 @@
 PWD=$(pwd)
 
 copy () {
+    if 
     if [ -e $HOME/.$1 ]; then
 	mv $HOME/.$1 $HOME/.$1.old
     fi
@@ -20,7 +21,12 @@ error () {
     fi;
 }
 
+cd emacs
+# coyping emacs
+copy emacs
+error emacs
 
+cd ..
 # coyping Xressources
 copy Xressources
 error Xressources
@@ -38,7 +44,7 @@ error muttrc
 
 ## copying mutt directory
 copy mutt
-error mutt
+ error mutt
 
 ## copying msmtprc
 copy msmtprc
@@ -67,8 +73,12 @@ cd ..
 cd zsh
 
 ## copying zshrc
-copy zshrc
+copy mainfile zshrc #zshrc
 error zshrc
+
+## copying zsh
+copy main zsh #zshrc
+error zsh
 
 
 ## copying dir_colors

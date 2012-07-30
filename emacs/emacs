@@ -14,10 +14,8 @@
 ;;     Author: Thomas <MrMen> Etcheverria
 ;;     Mail:   tetcheve at gmail dot com
 ;;
-;;      Time-stamp: <06-03-2012 21:31:57>
+;;     Time-stamp: <30-07-2012 17:58:43>
 ;;
-
-
 ;;
 ;; Modify load path
 ;;
@@ -36,12 +34,24 @@
 
 
 ; color theme
-(require 'color-theme)
-(color-theme-euphoria)
+;;(require 'color-theme)
+;;(color-theme-euphoria)
 
 ;;
 ;; user's definitions
 ;;
+(require 'parenthesis)
+
+(global-set-key "(" 'parenthesis-insert-parens)
+(global-set-key "[" 'parenthesis-insert-brackets)
+(global-set-key "{" 'parenthesis-insert-braces)
+(global-set-key "\"" 'parenthesis-insert-double-quotation)
+
+
+(setq show-paren-delay 1)           ; how long to wait?
+(show-paren-mode t)                 ; turn paren-mode on
+(setq show-paren-style 'parenthesis) ; alternatives are 'parenthesis' and
+				     ; 'mixed' also 'expression'
 
 
 ;;
@@ -62,11 +72,24 @@
     (setq-default transient-mark-mode t))
 
 
-; time-stamp
-;; time-stamps (better not use those in version-controlled files)
-(defun insert-time-stamp-on-create ()
-"insert time-stamp on create file" (interactive)
-(insert ";;   Time-stamp: <>"))
+
+;; partie qui gère l'ajout de time-stamp
+;;
+;;
+(require 'headers);; lib in .emacs.d
+
+(add-hook 'find-file-hooks 'add-or-not-time-stamp)
+
+;;
+;;
+;; fin des time-stamp
+
+;; (defun maybe-test ()
+;;   (interactive)
+;;   (when (and 
+;;          (string-match "\\.rb$" (buffer-file-name))
+;;          (eq 1 (point-max)))
+;;     (insert-file "C:/Home/template.rb")))
 
 
 
@@ -79,6 +102,8 @@
 
 
 
+; complete
+(global-set-key [f5] 'dabbrev-expand)
 
 
 ; encoding
@@ -100,22 +125,24 @@
 (add-hook 'conf-mode-hook 'turn-on-auto-fill)
 
 ; some few functions
-(require 'misc-func)
-
+(require 'misc-functions)
 
 
 ;;
 ;; LaTeX-mode
 ;;
 ; LaTeX functions
-(defun babel-quote ()
-  "insert babel quote and go between them" (interactive)
-  (insert "\\og  \\fg{}") (backward-char 6))
 
 ; create hook
-(add-hook 'LaTeX-mode-hook '(lambda ()
-    (global-set-key (kbd "«") 'babel-quote))
-)
+;; (add-hook 'LaTeX-mode-hook '(lambda ()
+;;     (local-set-key "«" 'parenthesis-insert-og)
+;; )
+;; (add-hook 'c-mode-hook '(lambda ()
+;;     (set-key "(" 'parenthesis-insert-parens)
+;; )
+;; (add-hook 'c-mode-hook '(lambda ()
+;;     (set-key "{" 'parenthesis-insert-braces)
+;; )
 
 
 (setq TeX-auto-save t)
@@ -130,14 +157,14 @@
 (setq reftex-plug-into-AUCTeX t)
 
 
-(require 'tex-site)
+;;(require 'tex-site)
 
 (add-to-list 'auto-mode-alist '("tex$" . latex-mode)) 
 ;;(add-to-list 'auto-mode-alist '("\\.tex$" . reftex-mode)) ; sometimes not auto load
 
 
 ;; LaTeX shortcurt
-(require 'my-parent) ;my-parent package
+;(require 'my-parent) ;my-parent package
 
 
 ;;
@@ -146,6 +173,9 @@
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode)) ;to have the org mode available in .org file
 (setq org-log-done t)
 
+;; conf-mode
+(add-to-list 'auto-mode-alist '("\\.conf$" . conf-mode))
+(add-to-list 'auto-mode-alist '("rc$" . conf-mode))
 
 ;;
 ;; w3m for macOS
