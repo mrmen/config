@@ -8,9 +8,10 @@ PWD=$(pwd)
 copy () {
     if 
     if [ -e $HOME/.$1 ]; then
-	mv $HOME/.$1 $HOME/.$1.old
+	mv $HOME/.$1 $HOME/.$1.old."$(date +%d%m%y)"
+    else
+	cp -a $1 $HOME/.$1
     fi
-    cp -a $1 $HOME/.$1
 }
 
 error () {
@@ -25,6 +26,9 @@ cd emacs
 # coyping emacs
 copy emacs
 error emacs
+
+copy emacs.d
+error emacs.d
 
 cd ..
 # coyping Xressources
