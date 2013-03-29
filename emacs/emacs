@@ -1,4 +1,3 @@
-;;
 ;;      ________
 ;;     |        |
 ;;     |    ____|
@@ -14,172 +13,161 @@
 ;;     Author: Thomas <MrMen> Etcheverria
 ;;     Mail:   tetcheve at gmail dot com
 ;;
-;;     Time-stamp: <30-07-2012 17:58:43>
+;;     Time-stamp: <08-02-2013 11:03:37>
 ;;
+;;
+
+;;;;;;
+;;;;
+;;
+;; Init part
+;;
+;;;;
+;;;;;;
+
 ;;
 ;; Modify load path
 ;;
-
-; add .emacs.d to load-path
+;; add .emacs.d to load-path
 (add-to-list 'load-path "~/.emacs.d/")
-
-
-; if darwin system add texlive path
-; 2011 by default, modify if needed
-(if (equal system-type 'darwin)
-    (add-to-list 'load-path "/usr/local/texlive/2011/"))
-
-; add color-theme-solarized
-(add-to-list 'load-path "~/.emacs.d/color-theme-solarized")
-
-
-; color theme
-;;(require 'color-theme)
-;;(color-theme-euphoria)
+(add-to-list 'load-path "~/.emacs.d/def")
+;;
+;; Themes and color
+;;
+(require 'theme)
 
 ;;
-;; user's definitions
+;; Appearance
 ;;
-(require 'parenthesis)
+(require 'appearance)
 
-(global-set-key "(" 'parenthesis-insert-parens)
-(global-set-key "[" 'parenthesis-insert-brackets)
-(global-set-key "{" 'parenthesis-insert-braces)
-(global-set-key "\"" 'parenthesis-insert-double-quotation)
-
-
-(setq show-paren-delay 1)           ; how long to wait?
-(show-paren-mode t)                 ; turn paren-mode on
-(setq show-paren-style 'parenthesis) ; alternatives are 'parenthesis' and
-				     ; 'mixed' also 'expression'
+;;
+;; File stuff
+;;
+(require 'file-stuff)
 
 
 ;;
-;; Interface tweaks
-;;
-
-; column and line count
-(setq column-number-mode nil)
-(setq column-number-mode t)
-
-; time and date
-(setq display-time-day-and-date t
-      display-time-24hr-format t)
-(display-time)
-
-; transient mode not active by default in darwin
-(if (equal system-type 'darwin)
-    (setq-default transient-mark-mode t))
-
-
-
-;; partie qui gère l'ajout de time-stamp
-;;
+;; Headers
 ;;
 (require 'headers);; lib in .emacs.d
-
 (add-hook 'find-file-hooks 'add-or-not-time-stamp)
 
+
+;;;;;;
+;;;;
 ;;
+;; Mode
 ;;
-;; fin des time-stamp
+;;;;
+;;;;;;
 
-;; (defun maybe-test ()
-;;   (interactive)
-;;   (when (and 
-;;          (string-match "\\.rb$" (buffer-file-name))
-;;          (eq 1 (point-max)))
-;;     (insert-file "C:/Home/template.rb")))
-
-
-
-(setq time-stamp-pattern nil)
-(setq ;; when there's "Time-stamp: <>" in the first 10 lines of the file
-  time-stamp-active t        ; do enable time-stamps
-  time-stamp-line-limit 20   ; check first 10 buffer lines for Time-stamp: <>
-  time-stamp-format "%02d-%02m-%04y %02H:%02M:%02S") ; date format
-(add-hook 'before-save-hook 'time-stamp) ; update when saving
-
-
-
-; complete
-(global-set-key [f5] 'dabbrev-expand)
-
-
-; encoding
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(prefer-coding-system 'utf-8)
+;;
+;; Auto-fill
+;;
+(require 'auto-fill-def)
 
 
 ;;
-;; auto-fill-mode
+;; LaTeX
 ;;
-
-; 80 chars max on a line
-(setq default-fill-column 80)
-
-; add auto-fill for few mode
-(add-hook 'LaTeX-mode-hook 'turn-on-auto-fill)
-(add-hook 'emacs-lisp-mode-hook 'turn-on-auto-fill)
-(add-hook 'conf-mode-hook 'turn-on-auto-fill)
-
-; some few functions
-(require 'misc-functions)
+(require 'latex-def)
 
 
 ;;
-;; LaTeX-mode
 ;;
-; LaTeX functions
-
-; create hook
-;; (add-hook 'LaTeX-mode-hook '(lambda ()
-;;     (local-set-key "«" 'parenthesis-insert-og)
-;; )
-;; (add-hook 'c-mode-hook '(lambda ()
-;;     (set-key "(" 'parenthesis-insert-parens)
-;; )
-;; (add-hook 'c-mode-hook '(lambda ()
-;;     (set-key "{" 'parenthesis-insert-braces)
-;; )
-
-
-(setq TeX-auto-save t)
-(setq TeX-parse-self t)
-(setq-default TeX-master nil)
-
-(add-hook 'LaTeX-mode-hook 'visual-line-mode)
-(add-hook 'LaTeX-mode-hook 'flyspell-mode)
-(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
-
-(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
-(setq reftex-plug-into-AUCTeX t)
-
-
-;;(require 'tex-site)
-
-(add-to-list 'auto-mode-alist '("tex$" . latex-mode)) 
-;;(add-to-list 'auto-mode-alist '("\\.tex$" . reftex-mode)) ; sometimes not auto load
-
-
-;; LaTeX shortcurt
-;(require 'my-parent) ;my-parent package
-
+;; PKGBUILD
+(require 'pkgbuild-def)
 
 ;;
-;; Org-mode
 ;;
-(add-to-list 'auto-mode-alist '("\\.org$" . org-mode)) ;to have the org mode available in .org file
-(setq org-log-done t)
-
-;; conf-mode
-(add-to-list 'auto-mode-alist '("\\.conf$" . conf-mode))
-(add-to-list 'auto-mode-alist '("rc$" . conf-mode))
+;; emms
+(require 'emms-def)
 
 ;;
-;; w3m for macOS
+;; Lua mode
 ;;
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/w3m")
-(if window-system
-   (require 'w3m-load))
+(require 'lua-def)
+
+;;
+;; Org
+;;
+(require 'org-def)
+
+;;
+;; conf
+;;
+(require 'conf-def)
+
+;;
+;; Misc
+;;
+;; docview mode
+(add-hook 'doc-view-mode-hook 'auto-revert-mode)
+
+
+;;;;;;
+;;;;
+;;
+;; bindings
+;;
+;;;;
+;;;;;;
+
+;;
+;; parenthesis
+;;
+(require 'parenthesis-def)
+
+;;
+;; Others
+;;
+(require 'bindings-def)
+
+
+;;;;;;
+;;;;
+;;
+;; Networks
+;;
+;;;;
+;;;;;;
+
+;;
+;; wanderlust
+;;
+(require 'wanderlust-def)
+
+;;
+;; jabber
+;;
+(require 'jabber-def)
+
+
+;;;;;;
+;;;;
+;;
+;; Custom 
+;;
+;;;;
+;;;;;;
+
+(require 'custom-def)
+
+
+
+
+
+
+;Simplest way:
+;; (require 'google-contacts)
+
+;; Integrate google-contacts into gnus:
+;; (require 'google-contacts-gnus)
+
+;; Integrate google-contacts into message-mode
+;; (require 'google-contacts-message)
+;; (require 'google-maps)
+
+
+

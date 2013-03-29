@@ -1,0 +1,39 @@
+;
+; milieu d'un segment
+;
+(defun mid (xa ya xb yb)
+  "Retourne les coordonnées du milieu d'un segment"
+  (interactive
+   (list
+    (read-number "Xa :")
+    (read-number "Ya :")
+    (read-number "Xb :")
+    (read-number "Yb :")
+    )
+   )
+  (setq xi (/ (+ xa xb) 2))
+  (setq yi (/ (+ ya yb) 2))
+  (message "( %d, %d)" xi yi)
+  )
+
+;
+; longueur d'un segment
+;
+(defun dist (xa ya xb yb)
+  "Retourne les coordonnées du milieu d'un segment"
+  (interactive
+   (list
+    (read-number "Xa :")
+    (read-number "Ya :")
+    (read-number "Xb :")
+    (read-number "Yb :")
+    )
+   )
+  (setq d (
+	   sqrt (
+		 +
+		 (expt (- xb xa) 2)
+		 (expt (- yb ya) 2)
+		 ) ) )
+  (message "AB = %s" d)
+  )

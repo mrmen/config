@@ -1,0 +1,16 @@
+;;; public entries -*- mode: plstore -*- 
+(("c5a55b05226b829d6a3e2637cc4c01d1" :secret-access-token t :secret-refresh-token t :secret-access-response t))
+;;; secret entries
+"-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2.0.19 (GNU/Linux)
+
+jA0EAwMCFPcQEksv4pLOycBr182PBHHLE40UNNH2Zwotyw1tKua+iR+0TNWmv7sq
+GtNA4YdVgo9+IH5pAMc7T1avK8rx3NmDYmNHjl4atv2l8MHPyH+zYihmhbI3CkFH
+gZz0NzOakgxwnq1zid5IMc1aUMLUTYHrTM5pQy56ujq0PiAt6Y6u2Crc+ATPSv8U
+dzvg0k8QqUhG0SL9SmEd3fxBMrNu8ciFmx2EJB+IKjXDy1SeJobtN2NUn9syyAXX
+tZSnj1/DyE5cMAiuIhrF8HiKbe/tR9kq410FTl8+8G4yqM+8NTRNpQBlsmx9ZWg/
+T7bK8rixXyJ6tF+tlzyyQ6+b/ZsRl5VEKcY+dprPXPPFp0/9ECEBaoyecl1iVCuO
+rTuyqSU7oxzawb6FnZP2vcWqgPJ7AocBDvD/vJg=
+=+9Vd
+-----END PGP MESSAGE-----
+"
