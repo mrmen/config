@@ -1,0 +1,25 @@
+local wibox = require("wibox")
+local awful = require("awful")
+
+   --
+   -- Sound widget
+   --
+
+   sound_i = wibox.widget.imagebox()
+
+   sound_w = wibox.widget.textbox()
+   sound_w:set_align("right")
+   function sound_status ()
+      local output=io.popen("amixer | grep Mono | head -n 2 | tail -n 1") -- must be modified
+      local line=output:read()
+      local sound_num = string.match(line, "%d+%%")    
+      if string.match(line, "off") then
+	 sound_num = sound_num --.. "(mute)"
+	 sound_i:set_image("/home/mrmen/.config/awesome/icons/vol-mute.png")
+      else
+	 sound_i:set_image("/home/mrmen/.config/awesome/icons/vol-hi.png")
+      end
+      sound_w:set_markup(sound_num.." ")
+   end
+   sound_status()
+
