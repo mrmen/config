@@ -31,5 +31,3 @@ sed -i 's/=?.*?Q?//g; s/?=//g' subject
 
 paste from subject >> output
 sed -i 's/\t/ : /g' output
-
-

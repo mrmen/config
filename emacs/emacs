@@ -13,7 +13,7 @@
 ;;     Author: Thomas <MrMen> Etcheverria
 ;;     Mail:   tetcheve at gmail dot com
 ;;
-;;     Time-stamp: <08-02-2013 11:03:37>
+;;     Time-stamp: <04-09-2013 13:10:02>
 ;;
 ;;
 
@@ -30,7 +30,11 @@
 ;;
 ;; add .emacs.d to load-path
 (add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/google")
+(add-to-list 'load-path "/opt/slime")
 (add-to-list 'load-path "~/.emacs.d/def")
+(setq user-mail-address "tetcheve@gmail.com")
+
 ;;
 ;; Themes and color
 ;;
@@ -67,12 +71,10 @@
 ;;
 (require 'auto-fill-def)
 
-
 ;;
 ;; LaTeX
 ;;
 (require 'latex-def)
-
 
 ;;
 ;;
@@ -99,13 +101,6 @@
 ;;
 (require 'conf-def)
 
-;;
-;; Misc
-;;
-;; docview mode
-(add-hook 'doc-view-mode-hook 'auto-revert-mode)
-
-
 ;;;;;;
 ;;;;
 ;;
@@ -125,6 +120,11 @@
 (require 'bindings-def)
 
 
+;;
+;; auto-complet
+;;
+(require 'auto-complete-def)
+
 ;;;;;;
 ;;;;
 ;;
@@ -137,6 +137,12 @@
 ;; wanderlust
 ;;
 (require 'wanderlust-def)
+
+;;
+;; gnus
+;;
+(require 'gnus-def)
+
 
 ;;
 ;; jabber
@@ -154,20 +160,22 @@
 
 (require 'custom-def)
 
+;;
+;; switch window
+;;
+(require 'switch-window)
 
 
+;;
+;; evil mode
+;;
+(require 'evil-def)
 
+;;
+;; google-calendar
+;;
+(require 'google-calendar-def)
 
-
-;Simplest way:
-;; (require 'google-contacts)
-
-;; Integrate google-contacts into gnus:
-;; (require 'google-contacts-gnus)
-
-;; Integrate google-contacts into message-mode
-;; (require 'google-contacts-message)
-;; (require 'google-maps)
 
 
 

@@ -4,15 +4,10 @@ import imaplib
 import sys
 import os
 
-# id infos
-user='xxx@gmail.com'
-passwd='xxx'
-
-
-is_reachable=os.system("ping -c1 -W2s imap.gmail.com &>/dev/null")
+is_reachable=os.system("ping -c1 -W 0.5s imap.gmail.com &>/dev/null")
 if (is_reachable==0):
     conn = imaplib.IMAP4_SSL('imap.gmail.com')
-    conn.login(user,passwd)
+    conn.login('login','passwd')
     conn.select('Inbox','readonly')
     tmp, unseen = conn.search(None,'UNSEEN')
     file = open('/home/mrmen/tmp/gmail_headers','w')

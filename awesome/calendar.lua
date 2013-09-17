@@ -1,4 +1,5 @@
 local naughty = require("naughty")
+local awful = require("awful")
 
 
 local calendar = nil
@@ -29,16 +30,16 @@ function add_calendar(inc_offset)
 end
 
 -- change clockbox for your clock widget (e.g. mytextclock)
-mytextclock:add_signal("mouse::enter", function()
-			  add_calendar(0)
-				       end)
-mytextclock:add_signal("mouse::leave", remove_calendar)
+-- mytextclock:add_signal("mouse::enter", function()
+-- 			  add_calendar(0)
+-- 				       end)
+-- mytextclock:add_signal("mouse::leave", remove_calendar)
 
-mytextclock:buttons(awful.util.table.join(
-		       awful.button({ }, 4, function()
-				       add_calendar(-1)
-					    end),
-		       awful.button({ }, 5, function()
-				       add_calendar(1)
-					    end)
-					 ))
+-- mytextclock:buttons(awful.util.table.join(
+-- 		       awful.button({ }, 4, function()
+-- 				       add_calendar(-1)
+-- 					    end),
+-- 		       awful.button({ }, 5, function()
+-- 				       add_calendar(1)
+-- 					    end)
+-- 					 ))

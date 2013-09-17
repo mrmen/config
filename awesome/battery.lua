@@ -29,7 +29,7 @@ battery_i = wibox.widget.imagebox()
 	    -- on AC so launch timer for mail
 --	    mail_timer:start()
    	 end
-   	 table.insert(output, discharging..battery_load.." ")
+   	 table.insert(output, discharging..battery_load.." |")
    	 line=fd:read() --read next line
       end
       return table.concat(output," ")

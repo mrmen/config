@@ -1,0 +1,47 @@
+--- tasklist.lua.orig	2013-01-06 11:02:38.779914522 +0100
++++ tasklist.lua	2013-01-06 11:04:44.649429131 +0100
+@@ -46,36 +46,29 @@
+     local floating = args.floating or theme.tasklist_floating or '✈'
+     local maximized_horizontal = args.maximized_horizontal or theme.tasklist_maximized_horizontal or '⬌'
+     local maximized_vertical = args.maximized_vertical or theme.tasklist_maximized_vertical or '⬍'
+-
+     if c.sticky then name = name .. sticky end
+     if c.ontop then name = name .. ontop end
+     if client.floating.get(c) then name = name .. floating end
+     if c.maximized_horizontal then name = name .. maximized_horizontal end
+     if c.maximized_vertical then name = name .. maximized_vertical end
+     if c.minimized then
+-        name = name .. (util.escape(c.icon_name) or util.escape(c.name) or util.escape("<untitled>"))
++        name = util.escape(c.class) or util.escape(c.icon_name) or util.escape(c.name) or util.escape("<untitled>")
+     else
+-        name = name .. (util.escape(c.name) or util.escape("<untitled>"))
++        name = util.escape(c.class) or util.escape(c.name) or util.escape("<untitled>")
+     end
+     if capi.client.focus == c then
+         bg = bg_focus
+-        if fg_focus then
+-            text = text .. "<span color='"..util.color_strip_alpha(fg_focus).."'>"..name.."</span>"
+-        else
+-            text = text .. "<span color='"..util.color_strip_alpha(fg_normal).."'>"..name.."</span>"
+-        end
++	text = text .. "<span color='"..util.color_strip_alpha(fg_focus).."'>["..name.."]</span>"
++    elseif c.minimized then
++        text = text .. "{"..name.."}"
+     elseif c.urgent and fg_urgent then
+         bg = bg_urgent
+-        text = text .. "<span color='"..util.color_strip_alpha(fg_urgent).."'>"..name.."</span>"
+-    elseif c.minimized and fg_minimize and bg_minimize then
+-        bg = bg_minimize
+-        text = text .. "<span color='"..util.color_strip_alpha(fg_minimize).."'>"..name.."</span>"
++        text = text .. "<span color='"..util.color_strip_alpha(fg_urgent).."'>!("..name..")</span>"
+     else
+-        bg = bg_normal
+-        text = text .. "<span color='"..util.color_strip_alpha(fg_normal).."'>"..name.."</span>"
++        text = text .. "("..name..")"
+     end
+     text = text .. "</span>"
+-    return text, bg, nil, c.icon
++    return text,bg
+ end
+ 
+ local function tasklist_update(s, w, buttons, filter, data, style)

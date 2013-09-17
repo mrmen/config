@@ -14,6 +14,6 @@ local awful = require("awful")
       local maxi_value = maxi:read()
       maxi:close()
       local value = math.floor(100*actual_value/maxi_value)
-      lumin_w:set_markup(value.."% ")
+      lumin_w:set_markup("| "..value.."% |")
    end
    lumin_status()

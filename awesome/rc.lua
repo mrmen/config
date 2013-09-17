@@ -3,16 +3,19 @@
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
+require("awful.rules")
 require("awful.autofocus")
 -- Widget and layout library
 local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
-local naughty = require("naughty")
+local naughty = require("naughty-mod")
 local menubar = require("menubar")
 -- shifty - dynamic tagging library
 local shifty = require("shifty")
+
+os.setlocale("fr_FR.UTF-8")
 
 --
 -- My modules
@@ -23,22 +26,9 @@ require("luminosity")
 require("volume")
 require("hardware")
 require("vicious_widget")
-
-require("mocp")
-
-mocpwidget = wibox.widget.textbox()
-mocpwidget:set_align("right")
---mocp.setwidget(mocpwidget)
-mocpwidget:buttons({
-		      button({ }, 1, function () mocp.play(); mocp.popup() end ),
-		      button({ }, 2, function () awful.util.spawn('mocp --toggle-pause') end),
-		      button({ }, 4, function () awful.util.spawn('mocp --toggle-pause') end),
-		      button({ }, 3, function () awful.util.spawn('mocp --previous'); mocp.popup() end),
-		      button({ }, 5, function () awful.util.spawn('mocp --previous'); mocp.popup() end)
-		   })
-mocpwidget.mouse_enter = function() mocp.popup() end
---awful.hooks.timer.register(0.75,scroller)
-
+require("calendar")
+require("todo-widget")
+require("mocp-mine")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -113,50 +103,51 @@ use_titlebar = false
 
 -- Shifty configured tags.
 shifty.config.tags = {
-    main = {
+    ["[Term]"] = {
         layout    = awful.layout.suit.max,
-        mwfact    = 0.60,
         exclusive = false,
         position  = 1,
+        init      = false,
+        screen    = 1,
+        slave     = true,
+    },
+    ["[Emacs]"] = {
+        layout    = awful.layout.suit.max,
+        exclusive = true,
+        position  = 0,
         init      = true,
         screen    = 1,
         slave     = true,
     },
-    web = {
+    ["[Web]"] = {
         layout      = awful.layout.suit.tile.bottom,
-        mwfact      = 0.65,
---        exclusive   = true,
---        max_clients = 1,
-        position    = 4,
+        position    = 2,
         spawn       = browser,
+	nopopup     = true,
     },
-    mail = {
+    ["[Mail]"] = {
         layout    = awful.layout.suit.tile,
-        mwfact    = 0.55,
         exclusive = false,
-        position  = 5,
+        position  = 3,
         spawn     = mail,
-        slave     = true
+        slave     = true,
+	nopopup     = true,
     },
-    media = {
+    ["[Media]"] = {
         layout    = awful.layout.suit.float,
         exclusive = false,
-        position  = 8,
+        position  = 5,
+	nopopup     = true,
     },
-    office = {
+    ["[Office]"] = {
         layout   = awful.layout.suit.tile,
         position = 9,
     },
-    math = {
+    ["[Math]"] = {
         layout   = awful.layout.suit.max,
-        position = 2,
-    },
-    redstar = {
-        layout   = awful.layout.suit.max,
-        position = 3,
+        position = 4,
     },
 }
-
 -- SHIFTY: application matching rules
 -- order here matters, early rules will be applied first
 shifty.config.apps = {
@@ -165,8 +156,10 @@ shifty.config.apps = {
             "Navigator",
             "Vimperator",
             "Gran Paradiso",
+	    "uzbl-tabbed",
+	    "uzbl-browser"
         },
-        tag = "web",
+        tag = "[Web]",
     },
     {
         match = {
@@ -174,7 +167,7 @@ shifty.config.apps = {
             "Thunderbird",
             "mutt",
         },
-        tag = "mail",
+        tag = "[Mail]",
     },
     {
         match = {
@@ -189,7 +182,7 @@ shifty.config.apps = {
 	   "Abiword",
 	   "Gnumeric",
         },
-        tag = "office",
+        tag = "[Office]",
     },
     {
         match = {
@@ -201,41 +194,34 @@ shifty.config.apps = {
 	   "easytag",
 	   "vlc",
         },
-        tag = "media",
+        tag = "[Media]",
         nopopup = true,
-    },
-    {
-        match = {
-            "MPlayer",
-            "Gnuplot",
-            "galculator",
-        },
-        float = true,
     },
     {
         match = {
             terminal,
 	    "URxvt",
+	    "xterm",
         },
+	tag = "[Term]",
         honorsizehints = false,
-        slave = true,
     },
     {
         match = {
 	   "wxmaxima",
-	   "emacs",
 	   "xcas",
+	   "geogebra",
         },
         honorsizehints = false,
-        tag = "math",
+        tag = "[Math]",
     },
-    {
-        match = {
-	   "redstar",
+    {    match = {
+	   "emacs",
         },
         honorsizehints = false,
-	tag = "redstar",
+        tag = "[Emacs]",
     },
+
     {
         match = {""},
         buttons = awful.util.table.join(
@@ -249,8 +235,6 @@ shifty.config.apps = {
             )
     },
 }
-
-
 -- SHIFTY: default tag creation rules
 -- parameter description
 --  * floatBars : if floating clients should always have a titlebar
@@ -295,8 +279,25 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- Create a textclock widget
 mytextclock = awful.widget.textclock()
 
+mytextclock:connect_signal("mouse::enter", function()
+			  add_calendar(0)
+				       end)
+mytextclock:connect_signal("mouse::leave", remove_calendar)
+
+mytextclock:buttons(awful.util.table.join(
+		       awful.button({ }, 4, function()
+				       add_calendar(-1)
+					    end),
+		       awful.button({ }, 5, function()
+				       add_calendar(1)
+					    end)
+					 ))
+
+
 -- Create a wibox for each screen and add it
 mywibox = {}
+mywibox2 = {}
+
 mypromptbox = {}
 mylayoutbox = {}
 mytaglist = {}
@@ -362,44 +363,55 @@ for s = 1, screen.count() do
 
     -- Create the wibox
     mywibox[s] = awful.wibox({ position = "top", screen = s })
+    -- create second wibox
+    mywibox2[s] = awful.wibox({ position = "bottom", screen = s })
 
     -- Widgets that are aligned to the left
     local left_layout = wibox.layout.fixed.horizontal()--fixed
+    local left_layout2 = wibox.layout.fixed.horizontal()--fixed
     left_layout:add(mylauncher)
     left_layout:add(mytaglist[s])
     left_layout:add(mypromptbox[s])
 
     -- Widgets that are aligned to the right
+    local right_layout2 = wibox.layout.fixed.horizontal()
     local right_layout = wibox.layout.fixed.horizontal()
-    if s == 1 then right_layout:add(wibox.widget.systray()) end
+    if s == 1 then right_layout2:add(wibox.widget.systray()) end
 
+-- todo
+    right_layout2:add(todo_w)
 -- mocp 
-    right_layout:add(mocpwidget)
+    right_layout2:add(mocp_w)
 -- from luminosity module
-    right_layout:add(lumin_w)   
+    right_layout2:add(lumin_w)   
 -- from volume module
-    right_layout:add(sound_i)
-    right_layout:add(sound_w)
+    right_layout2:add(sound_i)
+    right_layout2:add(sound_w)
 -- from battery module
     right_layout:add(battery_i)
     right_layout:add(battery_w)
 -- from mail module
-    right_layout:add(mymail)
+    right_layout2:add(mymail)
 -- from hardware module
-    right_layout:add(ram_w)
-    right_layout:add(cpuwidget)
-    right_layout:add(cputemp)
+    right_layout2:add(ram_w)
+    right_layout2:add(cputemp)
+    right_layout2:add(cpuwidget)
+
 
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 
     -- Now bring it all together (with the tasklist in the middle)
     local layout = wibox.layout.align.horizontal()
+    local layout2 = wibox.layout.align.horizontal()
     layout:set_left(left_layout)
     layout:set_middle(mytasklist[s])
     layout:set_right(right_layout)
+    layout2:set_middle(right_layout2)
 
     mywibox[s]:set_widget(layout)
+    mywibox2[s]:set_widget(layout2)
+
 end
 -- }}}
 
@@ -419,6 +431,16 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
+--
+-- rasp Pi moc bindings
+-- 
+    -- awful.key({ }, "XF86AudioPlay",   function ()  awful.util.spawn("bash /home/mrmen/.bin/mocPi.sh pause") end),
+    -- awful.key({ }, "XF86AudioPrev",   function ()  awful.util.spawn("bash /home/mrmen/.bin/mocPi.sh previous") end),
+    -- awful.key({ }, "XF86AudioNext",   function ()  awful.util.spawn("bash /home/mrmen/.bin/mocPi.sh next") end),
+    awful.key({ }, "XF86AudioPlay",   function ()  awful.util.spawn("mocp -G") end),
+    awful.key({ }, "XF86AudioPrev",   function ()  awful.util.spawn("mocp -r") end),
+    awful.key({ }, "XF86AudioNext",   function ()  awful.util.spawn("mocp -f") end),
+
     awful.key({ modkey,           }, "p",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "n",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
@@ -428,10 +450,12 @@ globalkeys = awful.util.table.join(
     -- brightness modification for nvidia (look at repo)
     awful.key({ }, "XF86MonBrightnessUp", function ()
 		 awful.util.spawn("/home/mrmen/.bright/mod +25")
+		 awful.util.spawn("bash /tmp/test.sh")
 		 lumin_status()
 					  end),
     awful.key({ }, "XF86MonBrightnessDown", function ()
 		 awful.util.spawn("/home/mrmen/.bright/mod -25")
+		 awful.util.spawn("bash /tmp/test.sh")
 		 lumin_status()
 					    end),
     -- volume modification
@@ -451,7 +475,7 @@ globalkeys = awful.util.table.join(
     -- !!
     -- !! require xlock
     awful.key({ }, "XF86Eject", function () awful.util.spawn("slock") end),
-    awful.key({ }, "F5", function () awful.util.spawn("bash /home/mrmen/.config/awesome/touchpad-toggle.sh") end),
+--    awful.key({ }, "F5", function () awful.util.spawn("bash /home/mrmen/.config/awesome/touchpad-toggle.sh") end),
     
     -- awful.key({ modkey,      }, "z",
     -- 	      function ()
@@ -596,4 +620,27 @@ root.keys(globalkeys)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
+-- }}}
+
+-- {{{ Rules
+awful.rules = {
+    -- All clients will match this rule.
+    { rule = { },
+      properties = { border_width = beautiful.border_width,
+                     border_color = beautiful.border_normal,
+                     focus = true,
+                     keys = clientkeys,
+                     buttons = clientbuttons } },
+    -- Application specific rules
+    { rule = { class = "MPlayer" },
+      properties = { floating = true } },
+    { rule = { class = "pinentry" },
+      properties = { floating = true } },
+    { rule = { class = "gimp" },
+      properties = { floating = true } },
+    { rule = { class = "Sozi.py" },
+      properties = { floating = true } },
+    { rule = { class = "Gtk-recordMyDesktop" },
+      properties = { floating = true } },
+}
 -- }}}

@@ -74,7 +74,7 @@ function mail_check_old(option)
       local text = "Some mails are waiting for you...\n"
       text = text .. "Gmail : " .. g_unseen .. "\n"
       text = text .. "Ent     : " .. e_unseen  
-      naughty.notify({title = "<b>Mails</b>", text = text, timeout = 30})
+      naughty.notify({title = "Mails", text = text, timeout = 30})
    end
 end 
 -- print last updated data

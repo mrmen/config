@@ -1,0 +1,33 @@
+;
+;;
+;;    Thomas "Mr Men" Etcheverria
+;;    <tetcheve (at) gmail .com>
+;;
+;;    Created on : 13-07-2013 23:44:31
+;;    Time-stamp: <29-07-2013 23:39:40>
+;;
+;;    File name : /home/mrmen/.emacs.d/def/evil-mode.el
+;;    Description :
+;;
+
+;; undo-tree mode required by evil
+
+(require 'undo-tree)
+;; replace undo emacs 
+(global-undo-tree-mode)
+
+(require 'evil)
+;; turn on evil mode
+(setq evil-mode 1)
+
+;; modify cursor color
+;fait varier la couleur du curseur en fonction du mode
+ (setq evil-normal-state-cursor '("red" box)
+       evil-visual-state-cursor '("light salmon" box)
+       evil-insert-state-cursor '("blue" box)
+       evil-replace-state-cursor '("sienna" hbar)
+       evil-emacs-state-cursor '("green" box))
+
+(evil-initialize-state 'emacs)
+
+(provide 'evil-mode)
