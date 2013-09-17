@@ -54,6 +54,15 @@ export EDITOR="emacs -nw"
 export BROWSER="links2"
 export XTERM="urxvt +sb -geometry 80x29 -fg black -bg lightgoldenrodyellow -fn -xos4-terminus-medium-*-normal-*-14-*-*-*-*-*-iso8859-15"
 
+
+function precmd() {
+    case "$TERM" in
+	rxvt|rxvt-unicode|xterm|xterm-color|xterm-256color|rxvt|rxvt-256color)
+	    print -Pn "\e]2;%n@%m:%~\a"
+	    ;;
+    esac
+}
+
 ####
 # Configuration
 ####

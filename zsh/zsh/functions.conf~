@@ -1,0 +1,135 @@
+#!/bin/zsh
+#
+# Some zsh functions
+#
+
+#Translate a Word  - USAGE: translate word from-lang
+# suppose out is french
+
+translate () {
+    (($#>=2)) || $2="en"
+    lynx -dump "http://translate.reference.com/translate?query=${1}&src=${2}&dst=fr" | awk -v v=0 '{
+if (/.*translation results.*/) {v=0};
+if (v==1) {print $0};
+if (/Symbols/) {v=1}
+}' | sed '/^$/d'
+}
+
+#
+# calculatrice
+#
+calc (){
+    if (($#!=1)); then
+	echo "Args error"
+    else
+	echo $1 | bc -l
+    fi
+}
+
+#
+# timer
+#
+timer (){
+    c=0;
+    while true;do
+	sleep 1
+	clear
+	((c++))
+	m=$(($c/60))
+	echo $m" minutes"  $((($c-$m*60)%60))" secondes"
+    done
+}
+
+timer2 () {
+    base=$(date +%s)
+    while true; do
+	clear
+	echo $(($(date +%s) - $base))
+	sleep 1
+    done
+}
+
+mychroot () {
+    sudo mount $1 $2
+    sudo mount --bind /dev $2/dev
+    sudo mount --bind /proc $2/proc
+    sudo mount --bind /sys $2/sys
+    sudo cp /etc/resolv.conf $2/etc/resolv.conf
+    sudo chroot $2 /bin/bash
+}
+
+exitchroot () {
+    sudo umount $1/dev
+    sudo umount $1/proc
+    sudo umount $1/sys
+    sudo umount $1
+}
+
+
+#
+# maxima parse
+#
+expand-calc () {
+    maxima -r "tex($1=expand($1));tex(S=solve($1=0,x));" --quiet |
+    sed '/\$/!d;
+         s/^(.*) \$/$/g;
+         s/\$\$/\$/g' |
+    tr '\n' ' ' |
+    sed 's/\$ \$/ \\\\qquad /g;
+         s/\\left\[/\\left\\{/g;
+         s/\\right\]/\\right\\}/g'
+}
+
+
+#
+# plot
+#
+plot () {
+    function=$1
+    min=$2
+    max=$3
+    echo "plot[x=$min:$max] $function" | gnuplot -p
+}
+
+
+#
+# lesscolor
+#
+lesscolor (){
+    if (($#!=1)); then
+	echo "Not enough argument"
+	echo "\t lesscolor FILE"
+    fi
+    file=$1
+    ext=$(echo $file | sed 's/.*\.//g')
+    case $ext in
+	py)
+	    colout -s Python < $file | less -R
+	    ;;
+	sh)
+	    colout -s bash < $file | less -R
+	    ;;
+	tex)
+	    colout -s tex < $file | less -R
+	    ;;
+	sty)
+	    colout -s tex < $file | less -R
+	    ;;
+	pl)
+	    colout -s Perl < $file | less -R
+	    ;;
+	conf)
+	    colout -s bash < $file | less -R
+	    ;;
+	lua)
+	    colout -s lua < $file | less -R
+	    ;;
+	ps)
+	    colout -s postscript < $file | less -R
+	    ;;
+	*)
+	    less -R $file
+	    ;;
+    esac
+	
+}
