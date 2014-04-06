@@ -1,0 +1,33 @@
+;; Object doc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "doc/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("info_TEXINFOS" variable (:default-value ("source-highlight-qt.texinfo")) nil [71 115])
+            ("source_highlight_qt_TEXINFOS" variable (:default-value ("$(GENERATEDINFOS)")) nil [116 165])
+            ("AM_MAKEINFOHTMLFLAGS" variable (:default-value ("--no-split")) nil [166 198])
+            ("AM_MAKEINFOFLAGS" variable (:default-value ("-I$(srcdir)")) nil [238 267])
+            ("doc_DATA" variable (:default-value ("source-highlight-qt.html")) nil [268 304])
+            ("SRCHILITETEXINFO" variable (:default-value ("$(SRCHILITEEXE)" "-f" "texinfo" "--output-dir=$(top_builddir)/doc/" "--style-file=texinfo.style")) nil [305 412])
+            ("GENERATEDINFOS" variable (:default-value ("qt4_highlighter_example_main.cpp.texinfo" "qt4_highlighter_edit_main.cpp.texinfo" "simpleusage.cpp.texinfo" "comboboxes.cpp.texinfo" "colordialog.cpp.texinfo" "textedithighlighted_exceptions.cpp.texinfo" "settingsdialog.cpp.texinfo")) nil [466 715])
+            ("EXTRA_DIST" variable (:default-value ("$(GENERATEDINFOS)" "source-highlight-qt.html" "simpleusage.cpp" "comboboxes.cpp" "colordialog.cpp" "settingsdialog.cpp")) nil [716 844])
+            ("qt4_highlighter_example_main.cpp.texinfo" function (:arguments ("$(top_srcdir)/tests/qt4_highlighter_example_main.cpp")) nil [845 1014])
+            ("qt4_highlighter_edit_main.cpp.texinfo" function (:arguments ("$(top_srcdir)/tests/qt4_highlighter_edit_main.cpp")) nil [1015 1209])
+            ("simpleusage.cpp.texinfo" function (:arguments ("$(srcdir)/simpleusage.cpp")) nil [1210 1308])
+            ("comboboxes.cpp.texinfo" function (:arguments ("$(srcdir)/comboboxes.cpp")) nil [1309 1404])
+            ("colordialog.cpp.texinfo" function (:arguments ("$(srcdir)/colordialog.cpp")) nil [1405 1503])
+            ("settingsdialog.cpp.texinfo" function (:arguments ("$(srcdir)/settingsdialog.cpp")) nil [1504 1611])
+            ("textedithighlighted_exceptions.cpp.texinfo" function (:arguments ("$(top_srcdir)/lib/srchiliteqt/TextEditHighlighted.cpp")) nil [1612 1867]))          
+    :file "Makefile.am"
+    :pointmax 1867
+    :fsize 1866
+    :lastmodtime '(19176 36209 0 0)
+    :unmatched-syntax '((shell-command 1711 . 1867) (bol 1710 . 1710))
+    )
+   )
+  :file "!tmp!source-highlight-qt!src!source-highlight-qt-0.2.2!doc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

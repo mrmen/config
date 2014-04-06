@@ -1,0 +1,74 @@
+;; Object tmp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tmp/"
+  :tables (list 
+   (semanticdb-table "symetrie-axiale.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("random" include nil nil [1 14])
+            ("math" include nil nil [15 26])
+            ("SOMMET" variable nil nil [61 71])
+            ("LETTRE" variable nil nil [72 83])
+            ("for" code nil nil [84 134])
+            ("L" variable nil nil [185 191])
+            ("for" code nil nil [192 382])
+            ("ABS" variable nil nil [448 456])
+            ("ORD" variable nil nil [457 465])
+            ("for" code nil nil [466 520])
+            ("ABS" code nil nil [520 530])
+            ("ORD" code nil nil [531 541])
+            ("MIN" variable nil nil [543 555])
+            ("MAX" variable nil nil [556 577])
+            ("ORD_MIN" variable nil nil [578 594])
+            ("ORD_MAX" variable nil nil [595 620])
+            ("EQNC" variable nil nil [669 678])
+            ("EQNC" code nil nil [679 712])
+            ("EQNC" code nil nil [713 746])
+            ("a" variable nil nil [747 756])
+            ("PLOT_DOMAIN" variable nil nil [801 817])
+            ("if" code nil nil [818 928])
+            ("if" code nil nil [928 1038])
+            ("if" code nil nil [1038 1103])
+            ("print" code nil nil [1157 1190])
+            ("print" code nil nil [1191 1218])
+            ("print" code nil nil [1219 1262])
+            ("print" code nil nil [1263 1289])
+            ("print" code nil nil [1291 1367])
+            ("print" code nil nil [1415 1536])
+            ("string" variable nil nil [1538 1549])
+            ("idx" variable nil nil [1550 1557])
+            ("for" code nil nil [1558 1739])
+            ("print" code nil nil [1740 1813])
+            ("print" code nil nil [1980 2139])
+            ("print" code nil nil [2145 2185])
+            ("print" code nil nil [2213 2231])
+            ("SYM" variable nil nil [2241 2249])
+            ("n" variable nil nil [2250 2269])
+            ("c" code nil nil [2270 2282])
+            ("for" code nil nil [2283 2432])
+            ("for" code nil nil [2433 2589])
+            ("print" code nil nil [2590 2634])
+            ("print" code nil nil [2682 2805])
+            ("string" variable nil nil [2829 2840])
+            ("idx" variable nil nil [2841 2848])
+            ("for" code nil nil [2849 3030])
+            ("print" code nil nil [3031 3103])
+            ("print" code nil nil [3104 3263])
+            ("string" variable nil nil [3283 3294])
+            ("idx" variable nil nil [3295 3302])
+            ("for" code nil nil [3303 3488])
+            ("print" code nil nil [3489 3563])
+            ("for" code nil nil [3565 3760])
+            ("print" code nil nil [3763 3803])
+            ("print" code nil nil [3805 3829]))          
+    :file "symetrie-axiale.py"
+    :pointmax 3830
+    :fsize 3987
+    :lastmodtime '(21304 719 597895 211000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!tmp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

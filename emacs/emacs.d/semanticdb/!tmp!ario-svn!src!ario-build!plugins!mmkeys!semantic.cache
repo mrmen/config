@@ -1,0 +1,31 @@
+;; Object mmkeys/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mmkeys/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("plugindir" variable (:default-value ("$(PLUGINDIR)")) nil [1 26])
+            ("plugindatadir" variable (:default-value ("$(PLUGIN_DATA_DIR)")) nil [26 61])
+            ("plugin_LTLIBRARIES" variable (:default-value ("libmmkeys.la")) nil [61 95])
+            ("libmmkeys_la_SOURCES" variable (:default-value ("ario-mmkeys-plugin.c" "ario-mmkeys-plugin.h")) nil [96 174])
+            ("libmmkeys_la_LDFLAGS" variable (:default-value ("$(PLUGIN_LIBTOOL_FLAGS)")) nil [176 223])
+            ("libmmkeys_la_LIBADD" variable (:default-value ("$(DBUS_LIBS)")) nil [224 260])
+            ("INCLUDES" variable (:default-value ("-DLOCALE_DIR=\\\"\"$(prefix)/$(DATADIRNAME)/locale\"\\\"" "$(DEPS_CFLAGS)" "$(DBUS_CFLAGS)" "-I$(top_srcdir)" "-I$(top_srcdir)/src" "-I$(top_srcdir)/src/lib" "-I$(top_srcdir)/src/plugins" "-I$(top_srcdir)/src/shell" "-Wcomment" "-Wformat" "-Wnonnull" "-Wimplicit-int" "-Wimplicit" "-Wmain" "-Wmissing-braces" "-Wparentheses" "-Wsequence-point" "-Wreturn-type" "-Wswitch" "-Wtrigraphs" "-Wunused-function" "-Wunused-label" "-Wunused-value" "-Wchar-subscripts" "-Wmissing-declarations" "-Wmissing-prototypes" "-Wnested-externs" "-Wpointer-arith" "-Wcast-align" "-Wall")) nil [261 961])
+            ("plugin_in_files" variable (:default-value ("mmkeys.ario-plugin.desktop.in")) nil [962 1010])
+            ("%.ario-plugin" function (:arguments ("%.ario-plugin.desktop.in" "$(INTLTOOL_MERGE)" "$(wildcard $(top_srcdir)/po/*po)" ";" "$(INTLTOOL_MERGE)" "$(top_srcdir)/po" "$<" "$@" "-d" "-u" "-c" "$(top_builddir)/po/.intltool-merge-cache")) nil [1011 1195])
+            ("plugin_DATA" variable (:default-value ("$(plugin_in_files:.ario-plugin.desktop.in=.ario-plugin)")) nil [1196 1266])
+            ("EXTRA_DIST" variable (:default-value ("$(plugin_in_files)")) nil [1267 1299])
+            ("CLEANFILES" variable (:default-value ("$(plugin_DATA)")) nil [1300 1328])
+            ("DISTCLEANFILES" variable (:default-value ("$(plugin_DATA)")) nil [1328 1360]))          
+    :file "Makefile.am"
+    :pointmax 1360
+    :fsize 1359
+    :lastmodtime '(21147 11851 460078 828000)
+    :unmatched-syntax '((shell-command 175 . 175) (bol 174 . 174))
+    )
+   )
+  :file "!tmp!ario-svn!src!ario-build!plugins!mmkeys!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,19 @@
+;; Object animate/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "animate/"
+  :tables (list 
+   (semanticdb-table "micro-ondes.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("Utilisation d'animate" section nil nil [52 333]))          
+    :file "micro-ondes.html"
+    :pointmax 333
+    :fsize 332
+    :lastmodtime '(21226 38120 26681 533000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!mrmen!Documents!site-wiki!latex!animate!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

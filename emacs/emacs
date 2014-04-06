@@ -1,4 +1,4 @@
-;;      ________
+;;     ________
 ;;     |        |
 ;;     |    ____|
 ;;     |   |  
@@ -13,7 +13,7 @@
 ;;     Author: Thomas <MrMen> Etcheverria
 ;;     Mail:   tetcheve at gmail dot com
 ;;
-;;     Time-stamp: <04-09-2013 13:10:02>
+;;     Time-stamp: <31-03-2014 22:06:10>
 ;;
 ;;
 
@@ -25,6 +25,8 @@
 ;;;;
 ;;;;;;
 
+;(setq debug-on-error t)
+
 ;;
 ;; Modify load path
 ;;
@@ -35,15 +37,35 @@
 (add-to-list 'load-path "~/.emacs.d/def")
 (setq user-mail-address "tetcheve@gmail.com")
 
+;; package list
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+
+;; automatic add path for elpa
+(defconst elpa-loads '("auto-complete" "anything" "anzu" "auctex"
+		       "color-theme" "color-theme-solarized" "ergoemacs-mode"
+		       "evil" "evil-leader" "key-chord"
+		       "markdown-mode" "ov" "pandoc-mode" "tabbar"
+		       "popup" "powerline" "undo-tree" "w3m" "zenburn-theme"))
+(mapc (lambda (p) (if (file-directory-p p) (add-to-list 'load-path p)))
+      (directory-files "~/.emacs.d/elpa" t
+                       (concat "^\\("
+                               (mapconcat 'identity elpa-loads "\\|")
+                               "\\).*")))
+
+
 ;;
 ;; Themes and color
 ;;
-(require 'theme)
+;; (require 'theme)
 
 ;;
 ;; Appearance
 ;;
 (require 'appearance)
+;(require 'zenburn-theme)
+
 
 ;;
 ;; File stuff
@@ -84,7 +106,7 @@
 ;;
 ;;
 ;; emms
-(require 'emms-def)
+;;(require 'emms-def)
 
 ;;
 ;; Lua mode
@@ -117,14 +139,17 @@
 ;;
 ;; Others
 ;;
-(require 'bindings-def)
-
+;(require 'bindings-def)
 
 ;;
-;; auto-complet
+;; auto-complete
 ;;
 (require 'auto-complete-def)
 
+;;
+;; c++ and qt
+;;
+(require 'c++-def)
 ;;;;;;
 ;;;;
 ;;
@@ -137,12 +162,6 @@
 ;; wanderlust
 ;;
 (require 'wanderlust-def)
-
-;;
-;; gnus
-;;
-(require 'gnus-def)
-
 
 ;;
 ;; jabber
@@ -167,15 +186,213 @@
 
 
 ;;
+;; slime mode
+;;
+					;(require 'slime-def)
+
+;;;;;;
+;;;;
+;;
+;; language
+;;
+;;;;
+;;;;;;
+
+;;
+;; Antidote
+;;
+(defun correction ()
+  (interactive)
+  (setq file (buffer-file-name))
+  (setq command (concat "/opt/Druide/Antidote8/Programmes64/Antidote8 -f " file))
+  (start-process-shell-command "Antidote" "Antidote" command)
+  )
+
+
+
+(autoload 'php-mode "php-mode.el" "Php mode." t)
+(setq auto-mode-alist (append '(("/*.\.php$" . php-mode))
+			      auto-mode-alist))
+
+
+
+(add-hook 'server-switch-hook
+	  (lambda nil
+	    (let ((server-buf (current-buffer)))
+	      (bury-buffer)
+	      (switch-to-buffer-other-frame server-buf))))
+
+(add-hook 'server-done-hook 'delete-frame)
+
+
+;; (setq load-path (append (list (expand-file-name "~/emacs/icalendar")) load-path))
+(require 'icalendar)
+;; (setq load-path (append load-path (list (expand-file-name "~/emacs/google"))))
+(require 'google-calendar)
+
+(setq google-calendar-user           "tetcheve")         ;;; GOOGLE USER
+(setq google-calendar-code-directory "/usr/lib/python2/site-packages/emacs-google/") ;;; PATH TO THE
+;;; PYTHON CODE
+
+(setq google-calendar-directory      "~/tmp")               ;;; TEMPORARY DIRECTORY
+(setq google-calendar-url            "https://www.google.com/calendar/ical/tetcheve%40gmail.com/private-5eadfc7db3cccec3ec8540639ebc1852/basic.ics") ;;; URL TO YOUR GOOGLE CALENDAR
+(setq google-calendar-auto-update    t )                    ;;; DEFINE IF THE CALENDAR IS DOWNLOADED AFTER EVERY MODIFICATION
+
+
+
+
+
+;;
+;; gnus
+;;
+;; (setq gnus-ignored-newsgroups "^to\\.\\|^[0-9. ]+\\( \\|$\\)\\|^[\"]\"[#'()]")
+;; (setq gnus-select-method 
+;;       '(nnmaildir "gmail" 
+;;                   (directory "~/Maildir")
+;;                   (directory-files nnheader-directory-files-safe) 
+;;                   (get-new-mail nil)))
+
+;; (setq-default
+;;  gnus-summary-line-format "%U%R%z %(%&user-date;  %-15,15f  %B%s%)\n"
+;;  gnus-user-date-format-alist '((t . "%Y-%m-%d %H:%M"))
+;;  gnus-summary-thread-gathering-function 'gnus-gather-threads-by-references
+;;  gnus-thread-sort-functions '(gnus-thread-sort-by-date)
+;;  gnus-sum-thread-tree-false-root ""
+;;  gnus-sum-thread-tree-indent " "
+;;  gnus-sum-thread-tree-leaf-with-other "├► "
+;;  gnus-sum-thread-tree-root ""
+;;  gnus-sum-thread-tree-single-leaf "╰► "
+;;  gnus-sum-thread-tree-vertical "│")
+
+;; (setq gnus-topic-line-format "%i[ %u&topic-line; ] %v\n")
+
+;; (setq gnus-thread-sort-functions 'gnus-thread-sort-by-most-recent-date)
+
+;; ;; this corresponds to a topic line format of "%n %A"
+;; (defun gnus-user-format-function-topic-line (dummy)
+;;   (let ((topic-face (if (zerop total-number-of-articles)
+;; 			'my-gnus-topic-empty-face
+;; 		      'my-gnus-topic-face)))
+;;     (propertize
+;;      (format "%s %d" name total-number-of-articles)
+;;      'face topic-face)))
+
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(LaTeX-command "latex -synctex=1")
+ ;;'(ergoemacs-mode-used "5.14.01-0")
+ ;;'(ergoemacs-theme nil)
+ '(send-mail-function (quote smtpmail-send-it))
+ '(smtpmail-smtp-server "smtp.gmail.com")
+ '(smtpmail-smtp-service 25))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+;;
 ;; evil mode
-;;
+(require 'evil-leader)
+(global-evil-leader-mode)
+(evil-leader/set-leader ",")
+(require 'key-chord)
+
+;;Exit insert mode by pressing j and then j quickly
+(setq key-chord-two-keys-delay 0.5)
+(key-chord-define evil-insert-state-map "ee" 'evil-normal-state)
+(key-chord-define evil-emacs-state-map "ee" 'evil-normal-state)
+(key-chord-define evil-visual-state-map "ee" 'evil-normal-state)
+(key-chord-define evil-replace-state-map "ee" 'evil-normal-state)
+(key-chord-define evil-normal-state-map "ee" 'evil-emacs-state)
+(key-chord-mode 1)
 (require 'evil-def)
+(evil-leader/set-key
+  "e" 'find-file
+  "s" 'save-buffer
+  "b" 'switch-to-buffer
+  "d" 'kill-buffer
+  "q" 'kill-emacs)
 
-;;
-;; google-calendar
-;;
-(require 'google-calendar-def)
+;; ;; powerline
+(require 'powerline)
+(powerline-center-evil-theme)
+
+;;(require 'ergoemacs-mode)
+;;(setq ergoemacs-theme nil) ;; Uses Standard Ergoemacs keyboard theme
+;;(setq ergoemacs-keyboard-layout "bepo") ;; Assumes QWERTY keyboard layout
+
+;;( if window-system 
+;;    (ergoemacs-mode 1)
+;;  (ergoemacs-mode 0)
+;;  )
 
 
 
+
+;; w3m
+(require 'w3m)
+(require 'bbdb)
+
+(require 'ido)
+(ido-mode 1)
+
+(require 'tabbar-def)
+
+(iswitchb-mode 1)
+
+  (add-to-list 'load-path "~/.emacs.d/predictive")
+  (add-to-list 'load-path "/home/mrmen/.emacs.d/predictive")
+  (add-to-list 'load-path "/home/mrmen/.emacs.d/predictive/texinfo")
+  (add-to-list 'load-path "/home/mrmen/.emacs.d/predictive/latex")
+  (add-to-list 'load-path "/home/mrmen/.emacs.d/predictive/misc")
+  (add-to-list 'load-path "/home/mrmen/.emacs.d/predictive/html")
+  (require 'predictive)
+
+;; (setq org-publish-project-alist
+;;       '(("blog"
+;;          :base-directory "~/blog/"
+;;          :html-extension "html"
+;;          :base-extension "org"
+;;          :publishing-directory "~/blog/public_html/"
+;;          :publishing-function (org-publish-org-to-html)
+;;          :html-preamble nil
+;;          :html-postamble nil)))
+
+(require 'org-publish)
+(setq org-publish-project-alist
+      '(("blog"
+         :components ("blog-content" "blog-static"))
+        ("blog-content"
+         :base-directory "~/blog"
+         :base-extension "org"
+         :publishing-directory "~/blog/posts"
+         :recursive t
+         :publishing-function org-publish-org-to-html
+         :export-with-tags nil
+         :headline-levels 4             ; Just the default for this project.
+         :table-of-contents nil
+         :section-numbers nil
+         :sub-superscript nil
+         :todo-keywords nil
+         :author nil
+         :creator-info nil
+         :html-preamble "blog header goes here"
+         :html-postamble nil
+         :style "This is raw html for stylesheet <link>'s"
+         :timestamp t
+         :exclude-tags ("noexport" "todo")
+         :auto-preamble t)
+        ;; ("blog-static"
+        ;;  :base-directory "~/src/blogposts/static/"
+        ;;  :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|otf"
+        ;;  :publishing-directory "/ssh:justinlilly@caesium.justinlilly.com:/var/www/blog/static/"
+        ;;  :recursive t
+        ;;  :publishing-function org-publish-attachment)
+	))
 

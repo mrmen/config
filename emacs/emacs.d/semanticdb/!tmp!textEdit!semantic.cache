@@ -1,0 +1,118 @@
+;; Object textEdit/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "textEdit/"
+  :tables (list 
+   (semanticdb-table "richtext-syntaxhightlighte.cpp"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "richtext-syntaxhightlighte.cpp"
+    :pointmax 1
+    :fsize 5615
+    :lastmodtime '(21179 62093 323901 524000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "highlighter.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("HIGHLIGHTER_H" variable (:constant-flag t) nil [2338 2351])
+            ("HIGHLIGHTER_H" variable (:constant-flag t) nil [2338 2351])
+            ("QSyntaxHighlighter" include (:system-flag t) nil [2353 2382])
+            ("QHash" include (:system-flag t) nil [2384 2400])
+            ("QTextCharFormat" include (:system-flag t) nil [2401 2427])
+            ("QTextDocument" type
+               (:prototype t
+                :type "class")
+                nil [2429 2449])
+            ("Highlighter" type
+               (:superclasses 
+                  ( ("QSyntaxHighlighter" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2509 2516])
+                    ("Highlighter" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("parent" variable
+                               (:pointer 1
+                                :type ("QTextDocument" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2529 2552]))                          
+                        :type ("Highlighter" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2517 2556])
+                    ("protected" label nil (reparse-symbol classsubparts) [2558 2568])
+                    ("highlightBlock" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("text" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("QString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2589 2609]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2569 2610])
+                    ("private" label nil (reparse-symbol classsubparts) [2612 2620])
+                    ("HighlightingRule" type
+                       (:members 
+                          ( ("pattern" variable (:type ("QRegExp" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2647 2663])
+                            ("format" variable (:type ("QTextCharFormat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2664 2687]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [2621 2690])
+                    ("highlightingRules" variable (:type ("QVector" type
+                         (:template-specifier 
+                            ( ("HighlightingRule" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2691 2735])
+                    ("commentStartExpression" variable (:type ("QRegExp" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2737 2768])
+                    ("commentEndExpression" variable (:type ("QRegExp" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2769 2798])
+                    ("keywordFormat" variable (:type ("QTextCharFormat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2800 2830])
+                    ("classFormat" variable (:type ("QTextCharFormat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2831 2859])
+                    ("singleLineCommentFormat" variable (:type ("QTextCharFormat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2860 2900])
+                    ("multiLineCommentFormat" variable (:type ("QTextCharFormat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2901 2940])
+                    ("quotationFormat" variable (:type ("QTextCharFormat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2941 2973])
+                    ("functionFormat" variable (:type ("QTextCharFormat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2974 3005]))                  
+                :type "class")
+                nil [2451 3008]))          
+    :file "highlighter.h"
+    :pointmax 3017
+    :fsize 3016
+    :lastmodtime '(21179 62118 943902 297000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("HIGHLIGHTER_H")
+          )
+
+    )
+   (semanticdb-table "mainwindow.cpp"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "mainwindow.cpp"
+    :pointmax 1
+    :fsize 4530
+    :lastmodtime '(21179 62138 150569 826000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "mainwindow.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file "mainwindow.h"
+    :pointmax 1
+    :fsize 2795
+    :lastmodtime '(21179 62152 150568 596000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "main.cpp"
+    :pointmax 1
+    :fsize 2528
+    :lastmodtime '(21179 62165 277236 994000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!tmp!textEdit!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,802 @@
+;; Object new/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "new/"
+  :tables (list 
+   (semanticdb-table "zudirogrid.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("zudirogrid.h" include nil nil [1 24])
+            ("iostream" include (:system-flag t) nil [26 45])
+            ("tinyxml.h" include (:system-flag t) nil [46 66])
+            ("string" include (:system-flag t) nil [67 84])
+            ("vector" include (:system-flag t) nil [149 166])
+            ("iterator" include (:system-flag t) nil [203 222])
+            ("add_lvalue_reference.hpp" include nil nil [247 282])
+            ("add_reference.hpp" include nil nil [283 311])
+            ("add_rvalue_reference.hpp" include nil nil [312 347])
+            ("adl_barrier.hpp" include nil nil [348 374])
+            ("adl.hpp" include nil nil [375 393])
+            ("and.hpp" include nil nil [394 412])
+            ("arity.hpp" include nil nil [413 433])
+            ("arrays.hpp" include nil nil [434 455])
+            ("assert.hpp" include nil nil [456 477])
+            ("bool_fwd.hpp" include nil nil [478 501])
+            ("bool.hpp" include nil nil [502 521])
+            ("bool_trait_def.hpp" include nil nil [522 551])
+            ("bool_trait_undef.hpp" include nil nil [552 583])
+            ("broken_compiler_spec.hpp" include nil nil [584 619])
+            ("compiler.hpp" include nil nil [620 643])
+            ("config.hpp" include nil nil [644 665])
+            ("ctps.hpp" include nil nil [666 685])
+            ("cv_traits_impl.hpp" include nil nil [686 715])
+            ("def_params_tail.hpp" include nil nil [716 746])
+            ("dtp.hpp" include nil nil [747 765])
+            ("enum.hpp" include nil nil [766 785])
+            ("eti.hpp" include nil nil [786 804])
+            ("eval_if.hpp" include nil nil [805 827])
+            ("ext_params.hpp" include nil nil [828 853])
+            ("false_result.hpp" include nil nil [854 881])
+            ("filter_params.hpp" include nil nil [882 910])
+            ("foreach_fwd.hpp" include nil nil [911 937])
+            ("foreach.hpp" include nil nil [938 960])
+            ("gcc.hpp" include nil nil [961 979])
+            ("ice_and.hpp" include nil nil [980 1002])
+            ("ice_eq.hpp" include nil nil [1003 1024])
+            ("ice.hpp" include nil nil [1025 1043])
+            ("ice_not.hpp" include nil nil [1044 1066])
+            ("ice_or.hpp" include nil nil [1067 1088])
+            ("if.hpp" include nil nil [1089 1106])
+            ("include_preprocessed.hpp" include nil nil [1107 1142])
+            ("integral_c_fwd.hpp" include nil nil [1143 1172])
+            ("integral_c.hpp" include nil nil [1173 1198])
+            ("integral_constant.hpp" include nil nil [1199 1231])
+            ("integral_c_tag.hpp" include nil nil [1232 1261])
+            ("integral.hpp" include nil nil [1262 1285])
+            ("integral_wrapper.hpp" include nil nil [1286 1317])
+            ("intel.hpp" include nil nil [1318 1338])
+            ("int_fwd.hpp" include nil nil [1339 1361])
+            ("int.hpp" include nil nil [1362 1380])
+            ("intrinsics.hpp" include nil nil [1381 1406])
+            ("is_abstract.hpp" include nil nil [1407 1433])
+            ("is_arithmetic.hpp" include nil nil [1434 1462])
+            ("is_array.hpp" include nil nil [1463 1486])
+            ("is_base_and_derived.hpp" include nil nil [1487 1521])
+            ("is_class.hpp" include nil nil [1522 1545])
+            ("is_const.hpp" include nil nil [1546 1569])
+            ("is_convertible.hpp" include nil nil [1570 1599])
+            ("is_enum.hpp" include nil nil [1600 1622])
+            ("is_float.hpp" include nil nil [1623 1646])
+            ("is_function.hpp" include nil nil [1647 1673])
+            ("is_function_ptr_helper.hpp" include nil nil [1674 1711])
+            ("is_function_ptr_tester.hpp" include nil nil [1712 1749])
+            ("is_integral.hpp" include nil nil [1750 1776])
+            ("is_lvalue_reference.hpp" include nil nil [1777 1811])
+            ("is_member_function_pointer.hpp" include nil nil [1812 1853])
+            ("is_member_pointer.hpp" include nil nil [1854 1886])
+            ("is_mem_fun_pointer_impl.hpp" include nil nil [1887 1925])
+            ("is_mem_fun_pointer_tester.hpp" include nil nil [1926 1966])
+            ("is_pointer.hpp" include nil nil [1967 1992])
+            ("is_polymorphic.hpp" include nil nil [1993 2022])
+            ("is_reference.hpp" include nil nil [2023 2050])
+            ("is_rvalue_reference.hpp" include nil nil [2051 2085])
+            ("is_same.hpp" include nil nil [2086 2108])
+            ("is_scalar.hpp" include nil nil [2109 2133])
+            ("is_union.hpp" include nil nil [2134 2157])
+            ("is_void.hpp" include nil nil [2158 2180])
+            ("is_volatile.hpp" include nil nil [2181 2207])
+            ("lambda_arity_param.hpp" include nil nil [2208 2241])
+            ("lambda_fwd.hpp" include nil nil [2242 2267])
+            ("lambda.hpp" include nil nil [2268 2289])
+            ("lambda_support.hpp" include nil nil [2290 2319])
+            ("logical.hpp" include nil nil [2320 2342])
+            ("logical_op.hpp" include nil nil [2343 2368])
+            ("msvc.hpp" include nil nil [2369 2388])
+            ("na_fwd.hpp" include nil nil [2389 2410])
+            ("na.hpp" include nil nil [2411 2428])
+            ("na_spec.hpp" include nil nil [2429 2451])
+            ("nested_type_wknd.hpp" include nil nil [2452 2483])
+            ("noncopyable.hpp" include nil nil [2484 2510])
+            ("not.hpp" include nil nil [2511 2529])
+            ("nttp_decl.hpp" include nil nil [2530 2554])
+            ("nttp.hpp" include nil nil [2555 2574])
+            ("or.hpp" include nil nil [2575 2592])
+            ("overload_resolution.hpp" include nil nil [2593 2627])
+            ("params.hpp" include nil nil [2628 2649])
+            ("pp_counter.hpp" include nil nil [2650 2675])
+            ("preprocessor.hpp" include nil nil [2676 2703])
+            ("remove_bounds.hpp" include nil nil [2704 2732])
+            ("remove_const.hpp" include nil nil [2733 2760])
+            ("remove_cv.hpp" include nil nil [2761 2785])
+            ("remove_reference.hpp" include nil nil [2786 2817])
+            ("static_assert.hpp" include nil nil [2818 2846])
+            ("static_cast.hpp" include nil nil [2847 2873])
+            ("static_constant.hpp" include nil nil [2874 2904])
+            ("sub.hpp" include nil nil [2905 2923])
+            ("template_arity_fwd.hpp" include nil nil [2924 2957])
+            ("template_arity_spec.hpp" include nil nil [2958 2992])
+            ("token_functions.hpp" include nil nil [2993 3023])
+            ("token_iterator.hpp" include nil nil [3024 3053])
+            ("tokenizer.hpp" include nil nil [3054 3078])
+            ("ttp.hpp" include nil nil [3079 3097])
+            ("tuple.hpp" include nil nil [3098 3118])
+            ("typeof.hpp" include nil nil [3119 3140])
+            ("type_trait_def.hpp" include nil nil [3141 3170])
+            ("type_trait_undef.hpp" include nil nil [3171 3202])
+            ("use_preprocessed.hpp" include nil nil [3203 3234])
+            ("value_wknd.hpp" include nil nil [3235 3260])
+            ("void_fwd.hpp" include nil nil [3261 3284])
+            ("workaround.hpp" include nil nil [3285 3310])
+            ("wrap.hpp" include nil nil [3311 3330])
+            ("yes_no.hpp" include nil nil [3331 3352])
+            ("yes_no_type.hpp" include nil nil [3353 3379])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [3383 3403])
+            ("boost" using (:type ("boost" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [3404 3426])
+            ("ZudiroGrid" function
+               (:constructor-flag t
+                :parent "ZudiroGrid"
+                :type ("ZudiroGrid" type (:type "class") nil nil))
+                nil [3428 3454])
+            ("ZudiroGrid" function
+               (:constructor-flag t
+                :parent "ZudiroGrid"
+                :arguments 
+                  ( ("filename" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3506 3522])
+                    ("level" variable (:type "int") (reparse-symbol arg-sub-list) [3523 3533])
+                    ("subLevel" variable (:type "int") (reparse-symbol arg-sub-list) [3534 3547]))                  
+                :type ("ZudiroGrid" type (:type "class") nil nil))
+                nil [3483 4542])
+            ("ZudiroGridSecond" function
+               (:parent "ZudiroGrid"
+                :arguments 
+                  ( ("filename" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4604 4620])
+                    ("level" variable (:type "int") (reparse-symbol arg-sub-list) [4621 4631])
+                    ("subLevel" variable (:type "int") (reparse-symbol arg-sub-list) [4632 4645]))                  
+                :type "void")
+                nil [4570 6011])
+            ("stringToVector" function
+               (:parent "ZudiroGrid"
+                :arguments 
+                  ( ("text" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6047 6059])
+                    ("attribute" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6060 6083]))                  
+                :type "void")
+                nil [6015 6276])
+            ("isDoneHere" function
+               (:parent "ZudiroGrid"
+                :arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [6313 6319])
+                    ("j" variable (:type "int") (reparse-symbol arg-sub-list) [6320 6326]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [6278 7822]))          
+    :file "zudirogrid.cpp"
+    :pointmax 7823
+    :fsize 7822
+    :lastmodtime '(21183 20313 500058 886000)
+    :unmatched-syntax '((punctuation 3454 . 3455))
+    )
+   (semanticdb-table "zudirogrid.h"
+    :file "zudirogrid.h"
+    :fsize 548
+    :lastmodtime '(21183 19853 446711 582000)
+    )
+   (semanticdb-table "add_lvalue_reference.hpp"
+    :file "add_lvalue_reference.hpp"
+    :fsize 750
+    :lastmodtime '(21183 19803 600043 401000)
+    )
+   (semanticdb-table "add_reference.hpp"
+    :file "add_reference.hpp"
+    :fsize 2748
+    :lastmodtime '(21183 19803 600043 401000)
+    )
+   (semanticdb-table "add_rvalue_reference.hpp"
+    :file "add_rvalue_reference.hpp"
+    :fsize 2429
+    :lastmodtime '(21183 19803 600043 401000)
+    )
+   (semanticdb-table "adl_barrier.hpp"
+    :file "adl_barrier.hpp"
+    :fsize 1669
+    :lastmodtime '(21183 19803 526710 67000)
+    )
+   (semanticdb-table "adl.hpp"
+    :file "adl.hpp"
+    :fsize 1518
+    :lastmodtime '(21183 19803 526710 67000)
+    )
+   (semanticdb-table "and.hpp"
+    :file "and.hpp"
+    :fsize 1650
+    :lastmodtime '(21183 19803 560043 400000)
+    )
+   (semanticdb-table "arity.hpp"
+    :file "arity.hpp"
+    :fsize 639
+    :lastmodtime '(21183 19803 546710 67000)
+    )
+   (semanticdb-table "arrays.hpp"
+    :file "arrays.hpp"
+    :fsize 934
+    :lastmodtime '(21183 19803 550043 400000)
+    )
+   (semanticdb-table "assert.hpp"
+    :file "assert.hpp"
+    :fsize 4545
+    :lastmodtime '(21183 19803 610043 402000)
+    )
+   (semanticdb-table "bool_fwd.hpp"
+    :file "bool_fwd.hpp"
+    :fsize 873
+    :lastmodtime '(21183 19803 536710 66000)
+    )
+   (semanticdb-table "bool.hpp"
+    :file "bool.hpp"
+    :fsize 1051
+    :lastmodtime '(21183 19803 536710 66000)
+    )
+   (semanticdb-table "bool_trait_def.hpp"
+    :file "bool_trait_def.hpp"
+    :fsize 5458
+    :lastmodtime '(21183 19803 566710 68000)
+    )
+   (semanticdb-table "bool_trait_undef.hpp"
+    :file "bool_trait_undef.hpp"
+    :fsize 984
+    :lastmodtime '(21183 19803 570043 401000)
+    )
+   (semanticdb-table "broken_compiler_spec.hpp"
+    :file "broken_compiler_spec.hpp"
+    :fsize 5553
+    :lastmodtime '(21183 19803 590043 401000)
+    )
+   (semanticdb-table "compiler.hpp"
+    :file "compiler.hpp"
+    :fsize 2239
+    :lastmodtime '(21183 19803 556710 66000)
+    )
+   (semanticdb-table "config.hpp"
+    :file "config.hpp"
+    :fsize 2571
+    :lastmodtime '(21183 19803 563376 734000)
+    )
+   (semanticdb-table "ctps.hpp"
+    :file "ctps.hpp"
+    :fsize 926
+    :lastmodtime '(21183 19803 536710 66000)
+    )
+   (semanticdb-table "cv_traits_impl.hpp"
+    :file "cv_traits_impl.hpp"
+    :fsize 2708
+    :lastmodtime '(21183 19803 570043 401000)
+    )
+   (semanticdb-table "def_params_tail.hpp"
+    :file "def_params_tail.hpp"
+    :fsize 4587
+    :lastmodtime '(21183 19803 546710 67000)
+    )
+   (semanticdb-table "dtp.hpp"
+    :file "dtp.hpp"
+    :fsize 1673
+    :lastmodtime '(21183 19803 543376 733000)
+    )
+   (semanticdb-table "enum.hpp"
+    :file "enum.hpp"
+    :fsize 1759
+    :lastmodtime '(21183 19803 543376 733000)
+    )
+   (semanticdb-table "eti.hpp"
+    :file "eti.hpp"
+    :fsize 1337
+    :lastmodtime '(21183 19803 523376 732000)
+    )
+   (semanticdb-table "eval_if.hpp"
+    :file "eval_if.hpp"
+    :fsize 1864
+    :lastmodtime '(21183 19803 560043 400000)
+    )
+   (semanticdb-table "ext_params.hpp"
+    :file "ext_params.hpp"
+    :fsize 3026
+    :lastmodtime '(21183 19803 560043 400000)
+    )
+   (semanticdb-table "false_result.hpp"
+    :file "false_result.hpp"
+    :fsize 767
+    :lastmodtime '(21183 19803 580043 401000)
+    )
+   (semanticdb-table "filter_params.hpp"
+    :file "filter_params.hpp"
+    :fsize 1383
+    :lastmodtime '(21183 19803 546710 67000)
+    )
+   (semanticdb-table "foreach_fwd.hpp"
+    :file "foreach_fwd.hpp"
+    :fsize 1702
+    :lastmodtime '(21183 19803 606710 69000)
+    )
+   (semanticdb-table "foreach.hpp"
+    :file "foreach.hpp"
+    :fsize 45550
+    :lastmodtime '(21183 19803 516710 65000)
+    )
+   (semanticdb-table "gcc.hpp"
+    :file "gcc.hpp"
+    :fsize 693
+    :lastmodtime '(21183 19803 526710 67000)
+    )
+   (semanticdb-table "ice_and.hpp"
+    :file "ice_and.hpp"
+    :fsize 996
+    :lastmodtime '(21183 19803 573376 733000)
+    )
+   (semanticdb-table "ice_eq.hpp"
+    :file "ice_eq.hpp"
+    :fsize 972
+    :lastmodtime '(21183 19803 576710 67000)
+    )
+   (semanticdb-table "ice.hpp"
+    :file "ice.hpp"
+    :fsize 768
+    :lastmodtime '(21183 19803 573376 733000)
+    )
+   (semanticdb-table "ice_not.hpp"
+    :file "ice_not.hpp"
+    :fsize 777
+    :lastmodtime '(21183 19803 576710 67000)
+    )
+   (semanticdb-table "ice_or.hpp"
+    :file "ice_or.hpp"
+    :fsize 999
+    :lastmodtime '(21183 19803 573376 733000)
+    )
+   (semanticdb-table "if.hpp"
+    :file "if.hpp"
+    :fsize 3013
+    :lastmodtime '(21183 19803 516710 65000)
+    )
+   (semanticdb-table "include_preprocessed.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("boost/mpl/aux_/config/compiler.hpp" include (:system-flag t) nil [484 529])
+            ("boost/mpl/aux_/config/preprocessor.hpp" include (:system-flag t) nil [530 579])
+            ("boost/mpl/aux_/config/workaround.hpp" include (:system-flag t) nil [580 627])
+            ("boost/preprocessor/cat.hpp" include (:system-flag t) nil [628 665])
+            ("boost/preprocessor/stringize.hpp" include (:system-flag t) nil [666 709])
+            ("AUX778076_PREPROCESSED_HEADER" variable (:constant-flag t) nil [788 817]))          
+    :file "include_preprocessed.hpp"
+    :pointmax 1453
+    :fsize 1452
+    :lastmodtime '(21183 19803 556710 66000)
+    :unmatched-syntax '((semantic-list 1307 . 1366) (symbol 1289 . 1307) (punctuation 1335 . 1336) (punctuation 1322 . 1323) (punctuation 1317 . 1318) (punctuation 1313 . 1314) (symbol 1281 . 1288) (punctuation 1335 . 1336) (punctuation 1322 . 1323) (punctuation 1317 . 1318) (punctuation 1313 . 1314) (punctuation 1277 . 1278))
+    )
+   (semanticdb-table "integral_c_fwd.hpp"
+    :file "integral_c_fwd.hpp"
+    :fsize 1000
+    :lastmodtime '(21183 19803 566710 68000)
+    )
+   (semanticdb-table "integral_c.hpp"
+    :file "integral_c.hpp"
+    :fsize 1616
+    :lastmodtime '(21183 19803 566710 68000)
+    )
+   (semanticdb-table "integral_constant.hpp"
+    :file "integral_constant.hpp"
+    :fsize 1411
+    :lastmodtime '(21183 19803 566710 68000)
+    )
+   (semanticdb-table "integral_c_tag.hpp"
+    :file "integral_c_tag.hpp"
+    :fsize 838
+    :lastmodtime '(21183 19803 530043 400000)
+    )
+   (semanticdb-table "integral.hpp"
+    :file "integral.hpp"
+    :fsize 1152
+    :lastmodtime '(21183 19803 520043 399000)
+    )
+   (semanticdb-table "integral_wrapper.hpp"
+    :file "integral_wrapper.hpp"
+    :fsize 3618
+    :lastmodtime '(21183 19803 530043 400000)
+    )
+   (semanticdb-table "intel.hpp"
+    :file "intel.hpp"
+    :fsize 615
+    :lastmodtime '(21183 19803 526710 67000)
+    )
+   (semanticdb-table "int_fwd.hpp"
+    :file "int_fwd.hpp"
+    :fsize 784
+    :lastmodtime '(21183 19803 523376 732000)
+    )
+   (semanticdb-table "int.hpp"
+    :file "int.hpp"
+    :fsize 622
+    :lastmodtime '(21183 19803 523376 732000)
+    )
+   (semanticdb-table "intrinsics.hpp"
+    :file "intrinsics.hpp"
+    :fsize 15625
+    :lastmodtime '(21183 19803 583376 734000)
+    )
+   (semanticdb-table "is_abstract.hpp"
+    :file "is_abstract.hpp"
+    :fsize 4570
+    :lastmodtime '(21183 19803 580043 401000)
+    )
+   (semanticdb-table "is_arithmetic.hpp"
+    :file "is_arithmetic.hpp"
+    :fsize 1483
+    :lastmodtime '(21183 19803 596710 68000)
+    )
+   (semanticdb-table "is_array.hpp"
+    :file "is_array.hpp"
+    :fsize 3201
+    :lastmodtime '(21183 19803 563376 734000)
+    )
+   (semanticdb-table "is_base_and_derived.hpp"
+    :file "is_base_and_derived.hpp"
+    :fsize 8172
+    :lastmodtime '(21183 19803 603376 735000)
+    )
+   (semanticdb-table "is_class.hpp"
+    :file "is_class.hpp"
+    :fsize 4734
+    :lastmodtime '(21183 19803 590043 401000)
+    )
+   (semanticdb-table "is_const.hpp"
+    :file "is_const.hpp"
+    :fsize 5223
+    :lastmodtime '(21183 19803 570043 401000)
+    )
+   (semanticdb-table "is_convertible.hpp"
+    :file "is_convertible.hpp"
+    :fsize 16516
+    :lastmodtime '(21183 19803 600043 401000)
+    )
+   (semanticdb-table "is_enum.hpp"
+    :file "is_enum.hpp"
+    :fsize 5641
+    :lastmodtime '(21183 19803 600043 401000)
+    )
+   (semanticdb-table "is_float.hpp"
+    :file "is_float.hpp"
+    :fsize 997
+    :lastmodtime '(21183 19803 596710 68000)
+    )
+   (semanticdb-table "is_function.hpp"
+    :file "is_function.hpp"
+    :fsize 3086
+    :lastmodtime '(21183 19803 583376 734000)
+    )
+   (semanticdb-table "is_function_ptr_helper.hpp"
+    :file "is_function_ptr_helper.hpp"
+    :fsize 19787
+    :lastmodtime '(21183 19803 583376 734000)
+    )
+   (semanticdb-table "is_function_ptr_tester.hpp"
+    :file "is_function_ptr_tester.hpp"
+    :fsize 64238
+    :lastmodtime '(21183 19803 586710 68000)
+    )
+   (semanticdb-table "is_integral.hpp"
+    :file "is_integral.hpp"
+    :fsize 3665
+    :lastmodtime '(21183 19803 596710 68000)
+    )
+   (semanticdb-table "is_lvalue_reference.hpp"
+    :file "is_lvalue_reference.hpp"
+    :fsize 4681
+    :lastmodtime '(21183 19803 573376 733000)
+    )
+   (semanticdb-table "is_member_function_pointer.hpp"
+    :file "is_member_function_pointer.hpp"
+    :fsize 4113
+    :lastmodtime '(21183 19803 593376 734000)
+    )
+   (semanticdb-table "is_member_pointer.hpp"
+    :file "is_member_pointer.hpp"
+    :fsize 4363
+    :lastmodtime '(21183 19803 593376 734000)
+    )
+   (semanticdb-table "is_mem_fun_pointer_impl.hpp"
+    :file "is_mem_fun_pointer_impl.hpp"
+    :fsize 77890
+    :lastmodtime '(21183 19803 593376 734000)
+    )
+   (semanticdb-table "is_mem_fun_pointer_tester.hpp"
+    :file "is_mem_fun_pointer_tester.hpp"
+    :fsize 276041
+    :lastmodtime '(21183 19803 596710 68000)
+    )
+   (semanticdb-table "is_pointer.hpp"
+    :file "is_pointer.hpp"
+    :fsize 5119
+    :lastmodtime '(21183 19803 593376 734000)
+    )
+   (semanticdb-table "is_polymorphic.hpp"
+    :file "is_polymorphic.hpp"
+    :fsize 2842
+    :lastmodtime '(21183 19803 603376 735000)
+    )
+   (semanticdb-table "is_reference.hpp"
+    :file "is_reference.hpp"
+    :fsize 1349
+    :lastmodtime '(21183 19803 570043 401000)
+    )
+   (semanticdb-table "is_rvalue_reference.hpp"
+    :file "is_rvalue_reference.hpp"
+    :fsize 882
+    :lastmodtime '(21183 19803 573376 733000)
+    )
+   (semanticdb-table "is_same.hpp"
+    :file "is_same.hpp"
+    :fsize 3229
+    :lastmodtime '(21183 19803 583376 734000)
+    )
+   (semanticdb-table "is_scalar.hpp"
+    :file "is_scalar.hpp"
+    :fsize 1921
+    :lastmodtime '(21183 19803 596710 68000)
+    )
+   (semanticdb-table "is_union.hpp"
+    :file "is_union.hpp"
+    :fsize 1587
+    :lastmodtime '(21183 19803 590043 401000)
+    )
+   (semanticdb-table "is_void.hpp"
+    :file "is_void.hpp"
+    :fsize 1189
+    :lastmodtime '(21183 19803 586710 68000)
+    )
+   (semanticdb-table "is_volatile.hpp"
+    :file "is_volatile.hpp"
+    :fsize 4852
+    :lastmodtime '(21183 19803 586710 68000)
+    )
+   (semanticdb-table "lambda_arity_param.hpp"
+    :file "lambda_arity_param.hpp"
+    :fsize 813
+    :lastmodtime '(21183 19803 540043 399000)
+    )
+   (semanticdb-table "lambda_fwd.hpp"
+    :file "lambda_fwd.hpp"
+    :fsize 1310
+    :lastmodtime '(21183 19803 533376 732000)
+    )
+   (semanticdb-table "lambda.hpp"
+    :file "lambda.hpp"
+    :fsize 1015
+    :lastmodtime '(21183 19803 540043 399000)
+    )
+   (semanticdb-table "lambda_support.hpp"
+    :file "lambda_support.hpp"
+    :fsize 5473
+    :lastmodtime '(21183 19803 550043 400000)
+    )
+   (semanticdb-table "logical.hpp"
+    :file "logical.hpp"
+    :fsize 608
+    :lastmodtime '(21183 19803 556710 66000)
+    )
+   (semanticdb-table "logical_op.hpp"
+    :file "logical_op.hpp"
+    :fsize 4644
+    :lastmodtime '(21183 19803 560043 400000)
+    )
+   (semanticdb-table "msvc.hpp"
+    :file "msvc.hpp"
+    :fsize 603
+    :lastmodtime '(21183 19803 523376 732000)
+    )
+   (semanticdb-table "na_fwd.hpp"
+    :file "na_fwd.hpp"
+    :fsize 778
+    :lastmodtime '(21183 19803 536710 66000)
+    )
+   (semanticdb-table "na.hpp"
+    :file "na.hpp"
+    :fsize 1746
+    :lastmodtime '(21183 19803 533376 732000)
+    )
+   (semanticdb-table "na_spec.hpp"
+    :file "na_spec.hpp"
+    :fsize 4555
+    :lastmodtime '(21183 19803 533376 732000)
+    )
+   (semanticdb-table "nested_type_wknd.hpp"
+    :file "nested_type_wknd.hpp"
+    :fsize 1379
+    :lastmodtime '(21183 19803 553376 733000)
+    )
+   (semanticdb-table "noncopyable.hpp"
+    :file "noncopyable.hpp"
+    :fsize 1324
+    :lastmodtime '(21183 19803 560043 400000)
+    )
+   (semanticdb-table "not.hpp"
+    :file "not.hpp"
+    :fsize 1131
+    :lastmodtime '(21183 19803 553376 733000)
+    )
+   (semanticdb-table "nttp_decl.hpp"
+    :file "nttp_decl.hpp"
+    :fsize 952
+    :lastmodtime '(21183 19803 530043 400000)
+    )
+   (semanticdb-table "nttp.hpp"
+    :file "nttp.hpp"
+    :fsize 1112
+    :lastmodtime '(21183 19803 530043 400000)
+    )
+   (semanticdb-table "or.hpp"
+    :file "or.hpp"
+    :fsize 1679
+    :lastmodtime '(21183 19803 556710 66000)
+    )
+   (semanticdb-table "overload_resolution.hpp"
+    :file "overload_resolution.hpp"
+    :fsize 936
+    :lastmodtime '(21183 19803 550043 400000)
+    )
+   (semanticdb-table "params.hpp"
+    :file "params.hpp"
+    :fsize 2031
+    :lastmodtime '(21183 19803 543376 733000)
+    )
+   (semanticdb-table "pp_counter.hpp"
+    :file "pp_counter.hpp"
+    :fsize 822
+    :lastmodtime '(21183 19803 553376 733000)
+    )
+   (semanticdb-table "preprocessor.hpp"
+    :file "preprocessor.hpp"
+    :fsize 1220
+    :lastmodtime '(21183 19803 543376 733000)
+    )
+   (semanticdb-table "remove_bounds.hpp"
+    :file "remove_bounds.hpp"
+    :fsize 1516
+    :lastmodtime '(21183 19803 576710 67000)
+    )
+   (semanticdb-table "remove_const.hpp"
+    :file "remove_const.hpp"
+    :fsize 5769
+    :lastmodtime '(21183 19803 606710 69000)
+    )
+   (semanticdb-table "remove_cv.hpp"
+    :file "remove_cv.hpp"
+    :fsize 7762
+    :lastmodtime '(21183 19803 590043 401000)
+    )
+   (semanticdb-table "remove_reference.hpp"
+    :file "remove_reference.hpp"
+    :fsize 1549
+    :lastmodtime '(21183 19803 603376 735000)
+    )
+   (semanticdb-table "static_assert.hpp"
+    :file "static_assert.hpp"
+    :fsize 7891
+    :lastmodtime '(21183 19803 586710 68000)
+    )
+   (semanticdb-table "static_cast.hpp"
+    :file "static_cast.hpp"
+    :fsize 878
+    :lastmodtime '(21183 19803 520043 399000)
+    )
+   (semanticdb-table "static_constant.hpp"
+    :file "static_constant.hpp"
+    :fsize 794
+    :lastmodtime '(21183 19803 530043 400000)
+    )
+   (semanticdb-table "sub.hpp"
+    :file "sub.hpp"
+    :fsize 1945
+    :lastmodtime '(21183 19803 546710 67000)
+    )
+   (semanticdb-table "template_arity_fwd.hpp"
+    :file "template_arity_fwd.hpp"
+    :fsize 680
+    :lastmodtime '(21183 19803 540043 399000)
+    )
+   (semanticdb-table "template_arity_spec.hpp"
+    :file "template_arity_spec.hpp"
+    :fsize 938
+    :lastmodtime '(21183 19803 566710 68000)
+    )
+   (semanticdb-table "token_functions.hpp"
+    :file "token_functions.hpp"
+    :fsize 19705
+    :lastmodtime '(21183 19803 610043 402000)
+    )
+   (semanticdb-table "token_iterator.hpp"
+    :file "token_iterator.hpp"
+    :fsize 3742
+    :lastmodtime '(21183 19803 606710 69000)
+    )
+   (semanticdb-table "tokenizer.hpp"
+    :file "tokenizer.hpp"
+    :fsize 2783
+    :lastmodtime '(21183 19803 606710 69000)
+    )
+   (semanticdb-table "ttp.hpp"
+    :file "ttp.hpp"
+    :fsize 1270
+    :lastmodtime '(21183 19803 540043 399000)
+    )
+   (semanticdb-table "tuple.hpp"
+    :file "tuple.hpp"
+    :fsize 1392
+    :lastmodtime '(21183 19803 546710 67000)
+    )
+   (semanticdb-table "typeof.hpp"
+    :file "typeof.hpp"
+    :fsize 1376
+    :lastmodtime '(21183 19803 580043 401000)
+    )
+   (semanticdb-table "type_trait_def.hpp"
+    :file "type_trait_def.hpp"
+    :fsize 1578
+    :lastmodtime '(21183 19803 580043 401000)
+    )
+   (semanticdb-table "type_trait_undef.hpp"
+    :file "type_trait_undef.hpp"
+    :fsize 625
+    :lastmodtime '(21183 19803 580043 401000)
+    )
+   (semanticdb-table "use_preprocessed.hpp"
+    :file "use_preprocessed.hpp"
+    :fsize 640
+    :lastmodtime '(21183 19803 556710 66000)
+    )
+   (semanticdb-table "value_wknd.hpp"
+    :file "value_wknd.hpp"
+    :fsize 2138
+    :lastmodtime '(21183 19803 520043 399000)
+    )
+   (semanticdb-table "void_fwd.hpp"
+    :file "void_fwd.hpp"
+    :fsize 706
+    :lastmodtime '(21183 19803 533376 732000)
+    )
+   (semanticdb-table "workaround.hpp"
+    :file "workaround.hpp"
+    :fsize 606
+    :lastmodtime '(21183 19803 520043 399000)
+    )
+   (semanticdb-table "wrap.hpp"
+    :file "wrap.hpp"
+    :fsize 575
+    :lastmodtime '(21183 19803 563376 734000)
+    )
+   (semanticdb-table "yes_no.hpp"
+    :file "yes_no.hpp"
+    :fsize 1285
+    :lastmodtime '(21183 19803 550043 400000)
+    )
+   (semanticdb-table "yes_no_type.hpp"
+    :file "yes_no_type.hpp"
+    :fsize 726
+    :lastmodtime '(21183 19803 563376 734000)
+    )
+   )
+  :file "!tmp!new!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

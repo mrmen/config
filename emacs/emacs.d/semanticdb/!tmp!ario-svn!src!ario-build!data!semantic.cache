@@ -1,0 +1,33 @@
+;; Object data/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "data/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("desktopdir" variable (:default-value ("$(datadir)/applications")) nil [1 40])
+            ("desktop_in_files" variable (:default-value ("ario.desktop.in")) nil [40 75])
+            ("desktop_DATA" variable (:default-value ("$(desktop_in_files:.desktop.in=.desktop)")) nil [75 133])
+            ("artdir" variable (:default-value ("$(pkgdatadir)/art")) nil [158 185])
+            ("art_DATA" variable (:default-value ("ario.png" "ario-play.png" "ario-pause.png" "logo.png" "play.png" "shuffle.png" "volume-medium.png" "volume-zero.png" "repeat.png" "volume-max.png" "volume-min.png")) nil [185 407])
+            ("gladedir" variable (:default-value ("$(pkgdatadir)/glade")) nil [408 439])
+            ("glade_DATA" variable (:default-value ("glade/browser-prefs.glade" "glade/connection-prefs.glade" "glade/connection-assistant.glade" "glade/connection-widget.glade" "glade/cover-prefs.glade" "glade/proxy-prefs.glade" "glade/interface-prefs.glade" "glade/trayicon-prefs.glade" "glade/server-prefs.glade" "glade/cover-progress.glade" "glade/lyrics-select.glade" "glade/lyrics-prefs.glade" "glade/cover-select.glade" "glade/song-infos.glade" "glade/similar-artists.glade" "glade/stats-prefs.glade")) nil [439 1086])
+            ("appicon_DATA" variable (:default-value ("ario.png")) nil [1087 1111])
+            ("appicondir" variable (:default-value ("$(datadir)/icons/hicolor/48x48/apps")) nil [1111 1160])
+            ("uidir" variable (:default-value ("$(pkgdatadir)/ui")) nil [1161 1186])
+            ("ui_DATA" variable (:default-value ("ario-ui.xml")) nil [1186 1208])
+            ("alldatadir" variable (:default-value ("$(pkgdatadir)/data")) nil [1209 1241])
+            ("alldata_DATA" variable (:default-value ("profiles.xml.default")) nil [1241 1278])
+            ("EXTRA_DIST" variable (:default-value ("$(desktop_in_files)" "$(art_DATA)" "$(appicon_DATA)" "$(glade_DATA)" "$(alldata_DATA)" "$(ui_DATA)")) nil [1279 1404])
+            ("CLEANFILES" variable (:default-value ("$(desktop_DATA)")) nil [1405 1434]))          
+    :file "Makefile.am"
+    :pointmax 1434
+    :fsize 1433
+    :lastmodtime '(21147 11851 453412 160000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!tmp!ario-svn!src!ario-build!data!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

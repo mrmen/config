@@ -1,0 +1,37 @@
+;;
+;;
+;;    Thomas "Mr Men" Etcheverria
+;;    <tetcheve (at) gmail .com>
+;;
+;;    Created on : 05-03-2014 13:49:41
+;;    Time-stamp: <05-03-2014 14:11:30>
+;;
+;;    File name : /home/mrmen/.emacs.d/def/maths.el
+;;    Description :
+;;
+(defun getEqn (a b c d)
+  (interactive "na : \nnb : \nnc : \nnd : ")
+  (setq coeff 
+	(/ (- d b) (- c a))
+	)
+  (setq ord 
+	(- b (* coeff a))
+	)
+  (insert (format "\\draw[domain=..:..] plot (\\x,%d *\\x + %d);" coeff ord))
+  )
+
+
+(defun solveEqn (a b e c d f)
+  (interactive "na : \nnb : \nnc : \nnd : \nne : \nnf : ")
+  (setq delta (- ( * a d) (* b c)))
+  (if (not (equal delta 0))
+      (progn 
+	(setq x (/ (- (* e d) (* f c)) delta))
+	(setq y (/ (- (* e d) (* f c)) delta))
+    	      (setq y (/ (- ( * a e) (* b f)) (- ( * a d) (* b c))))
+    	      (insert (format "(%d,%d)" x y))
+    	      (message (format "Intersection found : (%d,%d)" x y))
+    	      )
+    (message "Cramer say ' No '")
+    )
+)

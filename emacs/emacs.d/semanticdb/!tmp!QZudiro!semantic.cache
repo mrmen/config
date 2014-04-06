@@ -1,0 +1,358 @@
+;; Object QZudiro/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "QZudiro/"
+  :tables (list 
+   (semanticdb-table "mainwindow.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("MAINWINDOW_H" variable (:constant-flag t) nil [30 42])
+            ("QMainWindow" include (:system-flag t) nil [44 66])
+            ("QPushButton" include (:system-flag t) nil [67 89])
+            ("QHash" include (:system-flag t) nil [90 106])
+            ("QLabel" include (:system-flag t) nil [107 124])
+            ("zudirogrid.h" include nil nil [125 148])
+            ("Ui" type
+               (:members 
+                  ( ("MainWindow" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [165 182]))                  
+                :type "namespace")
+                nil [150 184])
+            ("MainWindow" type
+               (:superclasses 
+                  ( ("QMainWindow" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("buttonHash" variable (:type ("QHash" type
+                         (:template-specifier 
+                            ( ("QPushButton" type (:pointer 1) nil nil)
+                              ("QPair" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [243 292])
+                    ("labelHorizontal" variable (:type ("QVector" type
+                         (:template-specifier 
+                            ( ("QLabel" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [297 330])
+                    ("labelVertical" variable (:type ("QVector" type
+                         (:template-specifier 
+                            ( ("QLabel" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [335 366])
+                    ("grille" variable (:type ("ZudiroGrid" type (:type "class") nil nil)) (reparse-symbol classsubparts) [404 422])
+                    ("public" label nil (reparse-symbol classsubparts) [425 432])
+                    ("MainWindow" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("parent" variable
+                               (:pointer 1
+                                :type ("QWidget" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [457 474]))                          
+                        :type ("MainWindow" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [446 478])
+                    ("MainWindow" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [483 497])
+                    ("private" label nil (reparse-symbol classsubparts) [499 507])
+                    ("ui" variable
+                       (:pointer 1
+                        :type ("Ui::MainWindow" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [512 531])
+                    ("public" label nil (reparse-symbol classsubparts) [533 546])
+                    ("updateLevelLcd" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [571 575]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [551 576])
+                    ("buttonClick" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type ("QWidget" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [598 607]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [581 608])
+                    ("doTheStuff" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("level" variable (:type "int") (reparse-symbol arg-sub-list) [629 639])
+                            ("sublevel" variable (:type "int") (reparse-symbol arg-sub-list) [640 653]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [613 654])
+                    ("getValueAndUpdate" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [659 684])
+                    ("updateIt" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("level" variable (:type "int") (reparse-symbol arg-sub-list) [703 703])
+                            ("sublevel" variable (:type "int") (reparse-symbol arg-sub-list) [703 704]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [689 705]))                  
+                :type "class")
+                nil [186 874]))          
+    :file "mainwindow.h"
+    :pointmax 922
+    :fsize 921
+    :lastmodtime '(21230 44658 574844 801000)
+    :unmatched-syntax '((number 475 . 476) (punctuation 473 . 474) (EXPLICIT 437 . 445) (symbol 230 . 238))
+    :lexical-table 
+        '(("MAINWINDOW_H")
+          )
+
+    )
+   (semanticdb-table "zudirogrid.h"
+    :file "zudirogrid.h"
+    :fsize 548
+    :lastmodtime '(21230 44658 574844 801000)
+    )
+   (semanticdb-table "mainwindow.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("mainwindow.h" include nil nil [1 24])
+            ("ui_mainwindow.h" include nil nil [25 51])
+            ("zudirogrid.h" include nil nil [52 75])
+            ("QSignalMapper" include (:system-flag t) nil [76 100])
+            ("QPushButton" include (:system-flag t) nil [101 123])
+            ("iostream" include (:system-flag t) nil [124 143])
+            ("MainWindow" function
+               (:constructor-flag t
+                :parent "MainWindow"
+                :arguments 
+                  ( ("parent" variable
+                       (:pointer 1
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [168 184]))                  
+                :type ("MainWindow" type (:type "class") nil nil))
+                nil [145 525])
+            ("MainWindow" function
+               (:destructor-flag t
+                :parent "MainWindow"
+                :type "void")
+                nil [527 571])
+            ("updateLevelLcd" function
+               (:parent "MainWindow"
+                :arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [605 615]))                  
+                :type "void")
+                nil [573 801])
+            ("doTheStuff" function
+               (:parent "MainWindow"
+                :arguments 
+                  ( ("level" variable (:type "int") (reparse-symbol arg-sub-list) [831 841])
+                    ("sublevel" variable (:type "int") (reparse-symbol arg-sub-list) [842 855]))                  
+                :type "void")
+                nil [803 3148])
+            ("buttonClick" function
+               (:parent "MainWindow"
+                :arguments 
+                  ( ("widget" variable
+                       (:pointer 1
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3179 3195]))                  
+                :type "void")
+                nil [3150 4817])
+            ("getValueAndUpdate" function
+               (:parent "MainWindow"
+                :type "void")
+                nil [4819 5037])
+            ("updateIt" function
+               (:parent "MainWindow"
+                :type "void")
+                nil [5039 5264]))          
+    :file "mainwindow.cpp"
+    :pointmax 5265
+    :fsize 5264
+    :lastmodtime '(21230 44658 574844 801000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "zudirogrid.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("zudirogrid.h" include nil nil [1 24])
+            ("iostream" include (:system-flag t) nil [26 45])
+            ("tinyxml.h" include (:system-flag t) nil [46 66])
+            ("string" include (:system-flag t) nil [67 84])
+            ("boost/foreach.hpp" include (:system-flag t) nil [85 113])
+            ("boost/tokenizer.hpp" include (:system-flag t) nil [114 144])
+            ("vector" include (:system-flag t) nil [145 162])
+            ("boost/lexical_cast.hpp" include (:system-flag t) nil [163 196])
+            ("iterator" include (:system-flag t) nil [197 216])
+            ("algorithm" include (:system-flag t) nil [217 237])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [239 259])
+            ("boost" using (:type ("boost" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [260 282])
+            ("ZudiroGrid" function
+               (:constructor-flag t
+                :parent "ZudiroGrid"
+                :type ("ZudiroGrid" type (:type "class") nil nil))
+                nil [284 310])
+            ("ZudiroGrid" function
+               (:constructor-flag t
+                :parent "ZudiroGrid"
+                :arguments 
+                  ( ("filename" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [362 378])
+                    ("level" variable (:type "int") (reparse-symbol arg-sub-list) [379 389])
+                    ("subLevel" variable (:type "int") (reparse-symbol arg-sub-list) [390 403]))                  
+                :type ("ZudiroGrid" type (:type "class") nil nil))
+                nil [339 1398])
+            ("ZudiroGridSecond" function
+               (:parent "ZudiroGrid"
+                :arguments 
+                  ( ("filename" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1460 1476])
+                    ("level" variable (:type "int") (reparse-symbol arg-sub-list) [1477 1487])
+                    ("subLevel" variable (:type "int") (reparse-symbol arg-sub-list) [1488 1501]))                  
+                :type "void")
+                nil [1426 2867])
+            ("stringToVector" function
+               (:parent "ZudiroGrid"
+                :arguments 
+                  ( ("text" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2903 2915])
+                    ("attribute" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2916 2939]))                  
+                :type "void")
+                nil [2871 3132])
+            ("isDoneHere" function
+               (:parent "ZudiroGrid"
+                :arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [3169 3175])
+                    ("j" variable (:type "int") (reparse-symbol arg-sub-list) [3176 3182]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [3134 4678]))          
+    :file "zudirogrid.cpp"
+    :pointmax 4681
+    :fsize 4680
+    :lastmodtime '(21230 44658 574844 801000)
+    :unmatched-syntax '((punctuation 310 . 311))
+    )
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("first" function (:arguments ("release")) nil [369 384])
+            ("install" function (:arguments ("release-install")) nil [384 409])
+            ("uninstall" function (:arguments ("release-uninstall")) nil [409 438])
+            ("MAKEFILE" variable (:default-value ("Makefile")) nil [438 463])
+            ("QMAKE" variable (:default-value ("/usr/bin/i686-w64-mingw32-qmake")) nil [463 511])
+            ("DEL_FILE" variable (:default-value ("rm" "-f")) nil [511 533])
+            ("CHK_DIR_EXISTS" variable (:default-value ("mkdir" "-p")) nil [533 558])
+            ("MKDIR" variable nil nil [558 575])
+            ("COPY" variable (:default-value ("cp" "-f")) nil [575 597])
+            ("COPY_FILE" variable (:default-value ("$(COPY)")) nil [597 621])
+            ("COPY_DIR" variable (:default-value ("$(COPY)" "-a")) nil [621 648])
+            ("INSTALL_FILE" variable (:default-value ("install" "-m" "644" "-p")) nil [648 682])
+            ("INSTALL_PROGRAM" variable (:default-value ("install" "-m" "755" "-p")) nil [682 718])
+            ("INSTALL_DIR" variable (:default-value ("$(COPY_DIR)")) nil [718 746])
+            ("DEL_FILE" variable (:default-value ("rm" "-f")) nil [746 768])
+            ("SYMLINK" variable nil nil [768 785])
+            ("DEL_DIR" variable (:default-value ("rmdir")) nil [785 807])
+            ("MOVE" variable (:default-value ("mv" "-f")) nil [807 829])
+            ("CHK_DIR_EXISTS" variable (:default-value ("mkdir" "-p")) nil [829 854])
+            ("MKDIR" variable nil nil [854 871])
+            ("SUBTARGETS" variable (:default-value ("release" "debug")) nil [871 910])
+            ("release" function (:arguments ("$(MAKEFILE).Release" "FORCE")) nil [911 978])
+            ("release-make_default" function (:arguments ("$(MAKEFILE).Release" "FORCE")) nil [978 1059])
+            ("release-make_first" function (:arguments ("$(MAKEFILE).Release" "FORCE")) nil [1059 1143])
+            ("release-all" function (:arguments ("$(MAKEFILE).Release" "FORCE")) nil [1143 1218])
+            ("release-clean" function (:arguments ("$(MAKEFILE).Release" "FORCE")) nil [1218 1297])
+            ("release-distclean" function (:arguments ("$(MAKEFILE).Release" "FORCE")) nil [1297 1384])
+            ("release-install" function (:arguments ("$(MAKEFILE).Release" "FORCE")) nil [1384 1467])
+            ("release-uninstall" function (:arguments ("$(MAKEFILE).Release" "FORCE")) nil [1467 1554])
+            ("debug" function (:arguments ("$(MAKEFILE).Debug" "FORCE")) nil [1554 1615])
+            ("debug-make_default" function (:arguments ("$(MAKEFILE).Debug" "FORCE")) nil [1615 1690])
+            ("debug-make_first" function (:arguments ("$(MAKEFILE).Debug" "FORCE")) nil [1690 1768])
+            ("debug-all" function (:arguments ("$(MAKEFILE).Debug" "FORCE")) nil [1768 1837])
+            ("debug-clean" function (:arguments ("$(MAKEFILE).Debug" "FORCE")) nil [1837 1910])
+            ("debug-distclean" function (:arguments ("$(MAKEFILE).Debug" "FORCE")) nil [1910 1991])
+            ("debug-install" function (:arguments ("$(MAKEFILE).Debug" "FORCE")) nil [1991 2068])
+            ("debug-uninstall" function (:arguments ("$(MAKEFILE).Debug" "FORCE")) nil [2068 2149])
+            ("Makefile" function (:arguments ("QZudiro.pro" "/usr/i686-w64-mingw32/share/qt4/mkspecs/win32-g++-cross/qmake.conf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/qconfig.pri" "/usr/i686-w64-mingw32/share/qt4/mkspecs/modules/qt_webkit_version.pri" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/qt_functions.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/qt_config.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/exclusive_builds.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/default_pre.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/win32/default_pre.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/release.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/debug_and_release.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/default_post.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/win32/default_post.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/win32/stl.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/win32/rtti.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/win32/exceptions.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/shared.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/warn_on.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/qt.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/win32/thread.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/moc.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/win32/windows.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/resources.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/uic.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/yacc.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/lex.prf" "/usr/i686-w64-mingw32/share/qt4/mkspecs/features/include_source_dir.prf")) nil [2150 3968])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/qconfig.pri" function nil nil [3968 4021])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/modules/qt_webkit_version.pri" function nil nil [4021 4092])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/qt_functions.prf" function nil nil [4092 4159])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/qt_config.prf" function nil nil [4159 4223])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/exclusive_builds.prf" function nil nil [4223 4294])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/default_pre.prf" function nil nil [4294 4360])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/win32/default_pre.prf" function nil nil [4360 4432])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/release.prf" function nil nil [4432 4494])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/debug_and_release.prf" function nil nil [4494 4566])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/default_post.prf" function nil nil [4566 4633])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/win32/default_post.prf" function nil nil [4633 4706])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/win32/stl.prf" function nil nil [4706 4770])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/win32/rtti.prf" function nil nil [4770 4835])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/win32/exceptions.prf" function nil nil [4835 4906])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/shared.prf" function nil nil [4906 4967])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/warn_on.prf" function nil nil [4967 5029])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/qt.prf" function nil nil [5029 5086])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/win32/thread.prf" function nil nil [5086 5153])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/moc.prf" function nil nil [5153 5211])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/win32/windows.prf" function nil nil [5211 5279])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/resources.prf" function nil nil [5279 5343])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/uic.prf" function nil nil [5343 5401])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/yacc.prf" function nil nil [5401 5460])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/lex.prf" function nil nil [5460 5518])
+            ("/usr/i686-w64-mingw32/share/qt4/mkspecs/features/include_source_dir.prf" function nil nil [5518 5591])
+            ("qmake" function (:arguments ("qmake_all" "FORCE")) nil [5591 5649])
+            ("qmake_all" function (:arguments ("FORCE")) nil [5650 5667])
+            ("make_default" function (:arguments ("release-make_default" "debug-make_default" "FORCE")) nil [5668 5728])
+            ("make_first" function (:arguments ("release-make_first" "debug-make_first" "FORCE")) nil [5728 5782])
+            ("all" function (:arguments ("release-all" "debug-all" "FORCE")) nil [5782 5815])
+            ("clean" function (:arguments ("release-clean" "debug-clean" "FORCE")) nil [5815 5854])
+            ("distclean" function (:arguments ("release-distclean" "debug-distclean" "FORCE")) nil [5854 5928])
+            ("check" function (:arguments ("first")) nil [5929 5942])
+            ("release-mocclean" function (:arguments ("$(MAKEFILE).Release")) nil [5943 6022])
+            ("debug-mocclean" function (:arguments ("$(MAKEFILE).Debug")) nil [6022 6095])
+            ("mocclean" function (:arguments ("release-mocclean" "debug-mocclean")) nil [6095 6137])
+            ("release-mocables" function (:arguments ("$(MAKEFILE).Release")) nil [6138 6217])
+            ("debug-mocables" function (:arguments ("$(MAKEFILE).Debug")) nil [6217 6290])
+            ("mocables" function (:arguments ("release-mocables" "debug-mocables")) nil [6290 6332])
+            ("FORCE" function nil nil [6332 6339])
+            ("$(MAKEFILE)" function (:arguments ("Makefile")) nil [6340 6370]))          
+    :file "Makefile"
+    :pointmax 6398
+    :fsize 8633
+    :lastmodtime '(21230 44666 258178 451000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "main.cpp"
+    :pointmax 173
+    :fsize 172
+    :lastmodtime '(21230 44658 574844 801000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ui_mainwindow.h"
+    :file "ui_mainwindow.h"
+    :fsize 10045
+    :lastmodtime '(21230 44667 124845 187000)
+    )
+   )
+  :file "!tmp!QZudiro!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,47 @@
+;; Object tests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tests/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("INCLUDES" variable (:default-value ("-I@srcdir@/..")) nil [125 151])
+            ("AM_CXXFLAGS" variable (:default-value ("$(QT_CXXFLAGS)")) nil [152 181])
+            ("AM_CPPFLAGS" variable (:default-value ("$(QT_CPPFLAGS)" "$(SRCHILITE_CFLAGS)")) nil [181 230])
+            ("AM_LDFLAGS" variable (:default-value ("$(QT_LDFLAGS)" "-no-install")) nil [230 270])
+            ("LDADD" variable (:default-value ("$(QT_LIBS)" "$(SRCHILITE_LIBS)")) nil [309 346])
+            ("check_PROGRAMS" variable (:default-value ("test_get_lang_files")) nil [347 398])
+            ("test_get_lang_files_SOURCES" variable (:default-value ("test_get_lang_files_main.cpp")) nil [399 458])
+            ("test_get_lang_files_LDADD" variable (:default-value ("$(LDADD)" "$(builddir)/../srchiliteqt/libsource-highlight-qt-common.la")) nil [458 555])
+            ("test_colormap_SOURCES" variable (:default-value ("test_colormap_main.cpp")) nil [556 603])
+            ("test_colormap_LDADD" variable (:default-value ("$(LDADD)" "$(builddir)/../srchiliteqt/libsource-highlight-qt-common.la")) nil [603 694])
+            ("check_PROGRAMS" variable (:default-value ("test_qt4_simple")) nil [706 794])
+            ("test_qt4_simple_SOURCES" variable (:default-value ("test_qt4_simple_main.cpp")) nil [795 846])
+            ("test_qt4_simple_LDADD" variable (:default-value ("$(LDADD)" "$(builddir)/../srchiliteqt/libsource-highlight-qt4.la")) nil [846 933])
+            ("test_qt4_formatter_factory_SOURCES" variable (:default-value ("test_qt4_formatter_factory_main.cpp")) nil [934 1007])
+            ("test_qt4_formatter_factory_LDADD" variable (:default-value ("$(LDADD)" "$(builddir)/../srchiliteqt/libsource-highlight-qt4.la")) nil [1007 1105])
+            ("test_qt4_syntaxhighlighter_SOURCES" variable (:default-value ("test_qt4_syntaxhighlighter_main.cpp")) nil [1106 1179])
+            ("test_qt4_syntaxhighlighter_LDADD" variable (:default-value ("$(LDADD)" "$(builddir)/../srchiliteqt/libsource-highlight-qt4.la")) nil [1179 1277])
+            ("check_PROGRAMS" variable (:default-value ("test_qt3_formatter_factory")) nil [1295 1385])
+            ("test_qt3_formatter_factory_SOURCES" variable (:default-value ("test_qt3_formatter_factory_main.cpp")) nil [1386 1459])
+            ("test_qt3_formatter_factory_LDADD" variable (:default-value ("$(LDADD)" "$(builddir)/../srchiliteqt/libsource-highlight-qt3.la")) nil [1459 1557])
+            ("test_qt3_syntaxhighlighter_SOURCES" variable (:default-value ("test_qt3_syntaxhighlighter_main.cpp")) nil [1558 1631])
+            ("test_qt3_syntaxhighlighter_LDADD" variable (:default-value ("$(LDADD)" "$(builddir)/../srchiliteqt/libsource-highlight-qt3.la")) nil [1631 1729])
+            ("test_paragraphmap_SOURCES" variable (:default-value ("test_paragraphmap_main.cpp")) nil [1730 1785])
+            ("test_paragraphmap_LDADD" variable (:default-value ("$(LDADD)" "$(builddir)/../srchiliteqt/libsource-highlight-qt3.la")) nil [1785 1874])
+            ("VALGRIND_TESTS" variable (:default-value ("$(check_PROGRAMS)")) nil [1881 1916])
+            ("VALGRINDTEST" variable (:default-value ("$(builddir)/valgrind_test.sh")) nil [1917 1961])
+            ("check-valgrind" function (:arguments ("$(VALGRIND_TESTS)")) nil [1962 2072])
+            ("EXTRA_DIST" variable (:default-value ("valgrind_test.sh.in" "valgrind_suppressions.sh.in" "suppressions.supp" "asserttestexit.h")) nil [2073 2175])
+            ("TESTS" variable (:default-value ("$(check_PROGRAMS)")) nil [2176 2202]))          
+    :file "Makefile.am"
+    :pointmax 2203
+    :fsize 2202
+    :lastmodtime '(19176 36209 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!tmp!source-highlight-qt!src!source-highlight-qt-0.2.2!lib!tests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

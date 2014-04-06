@@ -1,0 +1,19 @@
+;; Object plugins/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "plugins/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("SUBDIRS" variable (:default-value ("filesystem" "information" "radios" "wikipedia")) nil [1 88]))          
+    :file "Makefile.am"
+    :pointmax 247
+    :fsize 246
+    :lastmodtime '(21147 9529 186674 984000)
+    :unmatched-syntax '((symbol 225 . 239) (punctuation 223 . 224) (punctuation 222 . 223) (symbol 214 . 221) (bol 206 . 206) (symbol 167 . 176) (punctuation 165 . 166) (punctuation 164 . 165) (symbol 156 . 163) (bol 148 . 148) (symbol 120 . 126) (punctuation 118 . 119) (punctuation 117 . 118) (symbol 109 . 116) (bol 101 . 101))
+    )
+   )
+  :file "!tmp!ario-svn!src!ario!plugins!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

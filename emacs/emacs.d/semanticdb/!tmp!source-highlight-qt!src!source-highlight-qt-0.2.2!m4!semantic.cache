@@ -1,0 +1,18 @@
+;; Object m4/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "m4/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags nil
+    :file "Makefile.am"
+    :pointmax 89
+    :fsize 88
+    :lastmodtime '(19176 36209 0 0)
+    :unmatched-syntax '((symbol 71 . 89) (symbol 50 . 67) (symbol 30 . 46) (symbol 14 . 26) (punctuation 12 . 13) (symbol 1 . 11) (bol 1 . 1))
+    )
+   )
+  :file "!tmp!source-highlight-qt!src!source-highlight-qt-0.2.2!m4!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

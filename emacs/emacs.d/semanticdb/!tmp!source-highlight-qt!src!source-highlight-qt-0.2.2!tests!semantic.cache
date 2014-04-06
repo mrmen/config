@@ -1,0 +1,48 @@
+;; Object tests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tests/"
+  :tables (list 
+   (semanticdb-table "qt4_highlighter_edit_main.cpp"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "qt4_highlighter_edit_main.cpp"
+    :pointmax 1950
+    :fsize 1949
+    :lastmodtime '(19176 36206 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("$(top_srcdir)/boiler/autotroll.mk" include nil nil [1 43])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/lib")) nil [114 145])
+            ("AM_CXXFLAGS" variable (:default-value ("$(QT_CXXFLAGS)")) nil [146 175])
+            ("AM_CPPFLAGS" variable (:default-value ("$(QT_CPPFLAGS)" "$(SRCHILITE_CFLAGS)")) nil [175 224])
+            ("AM_LDFLAGS" variable (:default-value ("$(QT_LDFLAGS)" "-no-install")) nil [224 264])
+            ("LDADD" variable (:default-value ("$(QT_LIBS)")) nil [264 286])
+            ("check_PROGRAMS" variable (:default-value ("qt4_highlighter_example")) nil [299 391])
+            ("qt4_highlighter_example_SOURCES" variable (:default-value ("qt4_highlighter_example_main.cpp")) nil [392 459])
+            ("qt4_highlighter_example_LDADD" variable (:default-value ("$(LDADD)" "../lib/srchiliteqt/libsource-highlight-qt4.la")) nil [459 549])
+            ("qt4_highlighter_example_CXXFLAGS" variable (:default-value ("-D" "BASEDIR=\"\\\"$(srcdir)/\\\"\"")) nil [549 612])
+            ("qt4_highlighter_edit_SOURCES" variable (:default-value ("qt4_highlighter_edit_main.cpp")) nil [613 674])
+            ("qt4_highlighter_edit_LDADD" variable (:default-value ("$(LDADD)" "../lib/srchiliteqt/libsource-highlight-qt4.la")) nil [674 761])
+            ("qt4_highlighter_view_SOURCES" variable (:default-value ("qt4_highlighter_view_main.cpp")) nil [762 823])
+            ("qt4_highlighter_view_LDADD" variable (:default-value ("$(LDADD)" "../lib/srchiliteqt/libsource-highlight-qt4.la")) nil [823 910])
+            ("example_DATA" variable (:default-value ("$(qt4_highlighter_example_SOURCES)" "$(qt4_highlighter_edit_SOURCES)" "$(qt4_highlighter_view_SOURCES)" "$(LANGFILES)")) nil [981 1117])
+            ("check_PROGRAMS" variable (:default-value ("qt3_highlighter_example")) nil [1135 1176])
+            ("qt3_highlighter_example_SOURCES" variable (:default-value ("qt3_highlighter_example_main.cpp")) nil [1177 1244])
+            ("qt3_highlighter_example_LDADD" variable (:default-value ("$(LDADD)" "../lib/srchiliteqt/libsource-highlight-qt3.la")) nil [1244 1334])
+            ("qt3_highlighter_example_CXXFLAGS" variable (:default-value ("-D" "BASEDIR=\"\\\"$(srcdir)/\\\"\"")) nil [1334 1397])
+            ("example_DATA" variable (:default-value ("$(qt3_highlighter_example_SOURCES)" "$(LANGFILES)")) nil [1398 1461])
+            ("EXTRA_DIST" variable (:default-value ("simple.lang" "tests.pro")) nil [1469 1504]))          
+    :file "Makefile.am"
+    :pointmax 1528
+    :fsize 1527
+    :lastmodtime '(19216 12738 0 0)
+    :unmatched-syntax '((symbol 1517 . 1528) (punctuation 1515 . 1516) (symbol 1505 . 1514) (bol 1505 . 1505))
+    )
+   )
+  :file "!tmp!source-highlight-qt!src!source-highlight-qt-0.2.2!tests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

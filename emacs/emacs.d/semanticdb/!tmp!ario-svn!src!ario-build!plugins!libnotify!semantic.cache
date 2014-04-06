@@ -1,0 +1,31 @@
+;; Object libnotify/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "libnotify/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("plugindir" variable (:default-value ("$(PLUGINDIR)")) nil [1 26])
+            ("plugindatadir" variable (:default-value ("$(PLUGIN_DATA_DIR)")) nil [26 61])
+            ("plugin_LTLIBRARIES" variable (:default-value ("liblibnotify.la")) nil [61 98])
+            ("liblibnotify_la_SOURCES" variable (:default-value ("ario-libnotify-plugin.c" "ario-libnotify-plugin.h" "ario-notifier-libnotify.c" "ario-notifier-libnotify.h")) nil [99 258])
+            ("liblibnotify_la_LDFLAGS" variable (:default-value ("$(PLUGIN_LIBTOOL_FLAGS)")) nil [259 309])
+            ("liblibnotify_la_LIBADD" variable (:default-value ("$(NOTIFY_LIBS)")) nil [310 352])
+            ("INCLUDES" variable (:default-value ("-DLOCALE_DIR=\\\"\"$(prefix)/$(DATADIRNAME)/locale\"\\\"" "$(DEPS_CFLAGS)" "$(NOTIFY_CFLAGS)" "-I$(top_srcdir)" "-I$(top_srcdir)/src" "-I$(top_srcdir)/src/lib" "-I$(top_srcdir)/src/plugins" "-I$(top_srcdir)/src/shell" "-Wcomment" "-Wformat" "-Wnonnull" "-Wimplicit-int" "-Wimplicit" "-Wmain" "-Wmissing-braces" "-Wparentheses" "-Wsequence-point" "-Wreturn-type" "-Wswitch" "-Wtrigraphs" "-Wunused-function" "-Wunused-label" "-Wunused-value" "-Wchar-subscripts" "-Wmissing-declarations" "-Wmissing-prototypes" "-Wnested-externs" "-Wpointer-arith" "-Wcast-align" "-Wall")) nil [353 1055])
+            ("plugin_in_files" variable (:default-value ("libnotify.ario-plugin.desktop.in")) nil [1056 1107])
+            ("%.ario-plugin" function (:arguments ("%.ario-plugin.desktop.in" "$(INTLTOOL_MERGE)" "$(wildcard $(top_srcdir)/po/*po)" ";" "$(INTLTOOL_MERGE)" "$(top_srcdir)/po" "$<" "$@" "-d" "-u" "-c" "$(top_builddir)/po/.intltool-merge-cache")) nil [1108 1292])
+            ("plugin_DATA" variable (:default-value ("$(plugin_in_files:.ario-plugin.desktop.in=.ario-plugin)")) nil [1293 1363])
+            ("EXTRA_DIST" variable (:default-value ("$(plugin_in_files)")) nil [1364 1396])
+            ("CLEANFILES" variable (:default-value ("$(plugin_DATA)")) nil [1397 1425])
+            ("DISTCLEANFILES" variable (:default-value ("$(plugin_DATA)")) nil [1425 1457]))          
+    :file "Makefile.am"
+    :pointmax 1457
+    :fsize 1456
+    :lastmodtime '(21147 11851 460078 828000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!tmp!ario-svn!src!ario-build!plugins!libnotify!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

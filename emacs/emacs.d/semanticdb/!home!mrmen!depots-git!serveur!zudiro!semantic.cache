@@ -1,0 +1,18 @@
+;; Object zudiro/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "zudiro/"
+  :tables (list 
+   (semanticdb-table "zudiro.py"
+    :major-mode 'python-mode
+    :tags nil
+    :file "zudiro.py"
+    :pointmax 10054
+    :fsize 10052
+    :lastmodtime '(21168 16328 170061 52000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!mrmen!depots-git!serveur!zudiro!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

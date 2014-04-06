@@ -1,0 +1,20 @@
+;; Object ario-build/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ario-build/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AUTOMAKE_OPTIONS" variable (:default-value ("foreign" "1.6")) nil [1 32])
+            ("SUBDIRS" variable (:default-value ("data" "plugins" "po" "src")) nil [106 173]))          
+    :file "Makefile.am"
+    :pointmax 173
+    :fsize 172
+    :lastmodtime '(21147 11851 450078 827000)
+    :unmatched-syntax '((punctuation 98 . 99) (symbol 90 . 97) (bol 82 . 82) (symbol 68 . 76) (punctuation 66 . 67) (symbol 58 . 65) (bol 50 . 50))
+    )
+   )
+  :file "!tmp!ario-svn!src!ario-build!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

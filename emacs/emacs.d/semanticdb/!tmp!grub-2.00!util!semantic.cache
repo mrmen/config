@@ -1,0 +1,565 @@
+;; Object util/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "util/"
+  :tables (list 
+   (semanticdb-table "grub-mkfont.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("config.h" include (:system-flag t) nil [742 761])
+            ("grub/types.h" include (:system-flag t) nil [762 785])
+            ("grub/misc.h" include (:system-flag t) nil [786 808])
+            ("grub/emu/misc.h" include (:system-flag t) nil [809 835])
+            ("grub/util/misc.h" include (:system-flag t) nil [836 863])
+            ("grub/misc.h" include (:system-flag t) nil [864 886])
+            ("grub/i18n.h" include (:system-flag t) nil [887 909])
+            ("grub/fontformat.h" include (:system-flag t) nil [910 938])
+            ("grub/font.h" include (:system-flag t) nil [939 961])
+            ("grub/unicode.h" include (:system-flag t) nil [962 987])
+            ("stdio.h" include (:system-flag t) nil [989 1007])
+            ("stdlib.h" include (:system-flag t) nil [1008 1027])
+            ("string.h" include (:system-flag t) nil [1028 1047])
+            ("_GNU_SOURCE" variable (:constant-flag t) nil [1057 1068])
+            ("argp.h" include (:system-flag t) nil [1071 1088])
+            ("assert.h" include (:system-flag t) nil [1089 1108])
+            ("ft2build.h" include (:system-flag t) nil [1110 1131])
+            ("freetype/ftsynth.h" include (:system-flag t) nil [1213 1243])
+            ("FT_ERROR_START_LIST" variable (:constant-flag t) nil [1275 1294])
+            ("FT_ERRORDEF" variable (:constant-flag t) nil [1335 1346])
+            ("FT_ERROR_END_LIST" variable (:constant-flag t) nil [1374 1391])
+            ("progname.h" include nil nil [1424 1445])
+            ("GRUB_FONT_DEFAULT_SIZE" variable (:constant-flag t) nil [1455 1477])
+            ("GRUB_FONT_RANGE_BLOCK" variable (:constant-flag t) nil [1491 1512])
+            ("grub_glyph_info" type
+               (:members 
+                  ( ("next" variable
+                       (:pointer 1
+                        :type ("grub_glyph_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1547 1576])
+                    ("char_code" variable (:type ("grub_uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1579 1603])
+                    ("width" variable (:type "int") (reparse-symbol classsubparts) [1606 1616])
+                    ("height" variable (:type "int") (reparse-symbol classsubparts) [1619 1630])
+                    ("x_ofs" variable (:type "int") (reparse-symbol classsubparts) [1633 1643])
+                    ("y_ofs" variable (:type "int") (reparse-symbol classsubparts) [1646 1656])
+                    ("device_width" variable (:type "int") (reparse-symbol classsubparts) [1659 1676])
+                    ("bitmap_size" variable (:type "int") (reparse-symbol classsubparts) [1679 1695])
+                    ("bitmap" variable
+                       (:pointer 1
+                        :type ("grub_uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1698 1719]))                  
+                :type "struct")
+                nil [1520 1722])
+            ("file_formats" type
+               (:members 
+                  ( ("PF2" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1746 1750])
+                    ("ASCII_BITMAPS" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1753 1767])
+                    ("WIDTH_SPEC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1770 1782]))                  
+                :type "enum")
+                nil [1724 1783])
+            ("GRUB_FONT_FLAG_BOLD" variable (:constant-flag t) nil [1793 1812])
+            ("GRUB_FONT_FLAG_NOBITMAP" variable (:constant-flag t) nil [1824 1847])
+            ("GRUB_FONT_FLAG_NOHINTING" variable (:constant-flag t) nil [1859 1883])
+            ("GRUB_FONT_FLAG_FORCEHINT" variable (:constant-flag t) nil [1894 1918])
+            ("grub_font_info" type
+               (:members 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [1948 1965])
+                    ("style" variable (:type "int") (reparse-symbol classsubparts) [1968 1978])
+                    ("desc" variable (:type "int") (reparse-symbol classsubparts) [1981 1990])
+                    ("asce" variable (:type "int") (reparse-symbol classsubparts) [1993 2002])
+                    ("size" variable (:type "int") (reparse-symbol classsubparts) [2005 2014])
+                    ("max_width" variable (:type "int") (reparse-symbol classsubparts) [2017 2031])
+                    ("max_height" variable (:type "int") (reparse-symbol classsubparts) [2034 2049])
+                    ("min_y" variable (:type "int") (reparse-symbol classsubparts) [2052 2062])
+                    ("max_y" variable (:type "int") (reparse-symbol classsubparts) [2065 2075])
+                    ("flags" variable (:type "int") (reparse-symbol classsubparts) [2078 2088])
+                    ("num_range" variable (:type "int") (reparse-symbol classsubparts) [2091 2105])
+                    ("ranges" variable
+                       (:pointer 1
+                        :type ("grub_uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2108 2130])
+                    ("glyphs_unsorted" variable
+                       (:pointer 1
+                        :type ("grub_glyph_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2133 2173])
+                    ("glyphs_sorted" variable
+                       (:pointer 1
+                        :type ("grub_glyph_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2176 2214])
+                    ("num_glyphs" variable (:type "int") (reparse-symbol classsubparts) [2217 2232]))                  
+                :type "struct")
+                nil [1922 2235])
+            ("font_verbosity" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [2237 2263])
+            ("add_pixel" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 2
+                        :type ("grub_uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2288 2308])
+                    ("mask" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2309 2319])
+                    ("not_blank" variable (:type "int") (reparse-symbol arg-sub-list) [2320 2334]))                  
+                :type "void")
+                nil [2265 2477])
+            ("add_glyph" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("font_info" variable
+                       (:pointer 1
+                        :type ("grub_font_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2502 2535])
+                    ("glyph_idx" variable (:type ("FT_UInt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2536 2554])
+                    ("face" variable (:type ("FT_Face" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2555 2568])
+                    ("char_code" variable (:type ("grub_uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2573 2597])
+                    ("nocut" variable (:type "int") (reparse-symbol arg-sub-list) [2598 2608]))                  
+                :type "void")
+                nil [2479 6895])
+            ("subst_medijoin" variable
+               (:pointer 1
+                :type ("glyph_replace" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [6897 6969])
+            ("subst_leftjoin" variable
+               (:pointer 1
+                :type ("glyph_replace" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [6897 6969])
+            ("subst_rightjoin" variable
+               (:pointer 1
+                :type ("glyph_replace" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [6897 6969])
+            ("glyph_replace" type
+               (:members 
+                  ( ("next" variable
+                       (:pointer 1
+                        :type ("glyph_replace" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [6996 7023])
+                    ("to" variable (:type ("grub_uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7026 7049])
+                    ("from" variable (:type ("grub_uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7026 7049]))                  
+                :type "struct")
+                nil [6971 7052])
+            ("add_char" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("font_info" variable
+                       (:pointer 1
+                        :type ("grub_font_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7144 7177])
+                    ("face" variable (:type ("FT_Face" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7178 7191])
+                    ("char_code" variable (:type ("grub_uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7195 7219])
+                    ("nocut" variable (:type "int") (reparse-symbol arg-sub-list) [7220 7230]))                  
+                :type "void")
+                nil [7122 9703])
+            ("gsub_header" type
+               (:members 
+                  ( ("version" variable (:type ("grub_uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9728 9750])
+                    ("scripts_off" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9753 9779])
+                    ("features_off" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9782 9809])
+                    ("lookups_off" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9812 9838]))                  
+                :type "struct")
+                nil [9705 9866])
+            ("gsub_features" type
+               (:members 
+                  ( ("count" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9893 9913])
+                    ("features" variable
+                       (:dereference 1
+                        :type ("" type
+                             (:members 
+                                ( ("FEATURE_FINA" variable (:constant-flag t) (reparse-symbol classsubparts) [9935 9947])
+                                  ("FEATURE_INIT" variable (:constant-flag t) (reparse-symbol classsubparts) [9967 9979])
+                                  ("FEATURE_MEDI" variable (:constant-flag t) (reparse-symbol classsubparts) [9999 10011])
+                                  ("FEATURE_AALT" variable (:constant-flag t) (reparse-symbol classsubparts) [10031 10043])
+                                  ("FEATURE_LIGA" variable (:constant-flag t) (reparse-symbol classsubparts) [10063 10075])
+                                  ("FEATURE_RLIG" variable (:constant-flag t) (reparse-symbol classsubparts) [10095 10107])
+                                  ("feature_tag" variable (:type ("grub_uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10123 10149])
+                                  ("offset" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10154 10175]))                                
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [9916 10217]))                  
+                :type "struct")
+                nil [9868 10245])
+            ("gsub_feature" type
+               (:members 
+                  ( ("params" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10271 10292])
+                    ("lookupcount" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10295 10321])
+                    ("lookupindices" variable
+                       (:dereference 1
+                        :type ("grub_uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10324 10355]))                  
+                :type "struct")
+                nil [10247 10383])
+            ("gsub_lookup_list" type
+               (:members 
+                  ( ("count" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10413 10433])
+                    ("offsets" variable
+                       (:dereference 1
+                        :type ("grub_uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10436 10461]))                  
+                :type "struct")
+                nil [10385 10489])
+            ("gsub_lookup" type
+               (:members 
+                  ( ("type" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10514 10533])
+                    ("flag" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10536 10555])
+                    ("subtablecount" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10558 10586])
+                    ("subtables" variable
+                       (:dereference 1
+                        :type ("grub_uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10589 10616]))                  
+                :type "struct")
+                nil [10491 10644])
+            ("gsub_substitution" type
+               (:members 
+                  ( ("type" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10675 10694])
+                    ("coverage_off" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10697 10724])
+                    ("" type
+                       (:members 
+                          ( ("delta" variable (:type ("grub_int16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10741 10760])
+                            ("" type
+                               (:members 
+                                  ( ("count" variable (:type ("grub_int16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10784 10803])
+                                    ("repl" variable
+                                       (:dereference 1
+                                        :type ("grub_uint16_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [10810 10832]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [10765 10839]))                          
+                        :type "union")
+                        (reparse-symbol classsubparts) [10727 10844]))                  
+                :type "struct")
+                nil [10646 10872])
+            ("gsub_coverage_list" type
+               (:members 
+                  ( ("type" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10904 10923])
+                    ("count" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10926 10946])
+                    ("glyphs" variable
+                       (:dereference 1
+                        :type ("grub_uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10949 10973]))                  
+                :type "struct")
+                nil [10874 11001])
+            ("gsub_coverage_ranges" type
+               (:members 
+                  ( ("type" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11035 11054])
+                    ("count" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11057 11077])
+                    ("ranges" variable
+                       (:dereference 1
+                        :type ("" type
+                             (:members 
+                                ( ("start" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11096 11116])
+                                  ("end" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11121 11139])
+                                  ("start_index" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11144 11170]))                                
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [11080 11210]))                  
+                :type "struct")
+                nil [11003 11238])
+            ("GSUB_SINGLE_SUBSTITUTION" variable (:constant-flag t) nil [11248 11272])
+            ("GSUB_SUBSTITUTION_DELTA" variable (:constant-flag t) nil [11284 11307])
+            ("GSUB_SUBSTITUTION_MAP" variable (:constant-flag t) nil [11318 11339])
+            ("GSUB_COVERAGE_LIST" variable (:constant-flag t) nil [11351 11369])
+            ("GSUB_COVERAGE_RANGE" variable (:constant-flag t) nil [11380 11399])
+            ("GSUB_RTL_CHAR" variable (:constant-flag t) nil [11411 11424])
+            ("add_subst" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("from" variable (:type ("grub_uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11451 11470])
+                    ("to" variable (:type ("grub_uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11471 11488])
+                    ("target" variable
+                       (:pointer 2
+                        :type ("glyph_replace" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11489 11519]))                  
+                :type "void")
+                nil [11428 11654])
+            ("process_cursive" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("feature" variable
+                       (:pointer 1
+                        :type ("gsub_feature" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11685 11714])
+                    ("lookups" variable
+                       (:pointer 1
+                        :type ("gsub_lookup_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11718 11751])
+                    ("feattag" variable (:type ("grub_uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11755 11777]))                  
+                :type "void")
+                nil [11656 15321])
+            ("add_font" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("font_info" variable
+                       (:pointer 1
+                        :type ("grub_font_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15345 15378])
+                    ("face" variable (:type ("FT_Face" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15379 15392])
+                    ("nocut" variable (:type "int") (reparse-symbol arg-sub-list) [15393 15403]))                  
+                :type "void")
+                nil [15323 17819])
+            ("write_string_section" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17855 17872])
+                    ("str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17873 17889])
+                    ("offset" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [17898 17910])
+                    ("file" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17911 17922])
+                    ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17931 17952]))                  
+                :type "void")
+                nil [17821 18251])
+            ("write_be16_section" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [18285 18302])
+                    ("data" variable (:type ("grub_uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18303 18322])
+                    ("offset" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [18323 18335])
+                    ("file" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18342 18353])
+                    ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [18354 18375]))                  
+                :type "void")
+                nil [18253 18658])
+            ("print_glyphs" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("font_info" variable
+                       (:pointer 1
+                        :type ("grub_font_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18748 18781]))                  
+                :type "void")
+                nil [18722 20402])
+            ("write_font_ascii_bitmap" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("font_info" variable
+                       (:pointer 1
+                        :type ("grub_font_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20441 20474])
+                    ("output_file" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [20475 20493]))                  
+                :type "void")
+                nil [20404 21296])
+            ("write_font_width_spec" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("font_info" variable
+                       (:pointer 1
+                        :type ("grub_font_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21333 21366])
+                    ("output_file" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [21367 21385]))                  
+                :type "void")
+                nil [21298 21924])
+            ("write_font_pf2" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("font_info" variable
+                       (:pointer 1
+                        :type ("grub_font_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21954 21987])
+                    ("output_file" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [21988 22006]))                  
+                :type "void")
+                nil [21926 26786])
+            ("options" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("argp_option" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [26788 28454])
+            ("arguments" type
+               (:members 
+                  ( ("font_info" variable (:type ("grub_font_info" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [28477 28509])
+                    ("nfiles" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [28512 28526])
+                    ("files_max" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [28529 28546])
+                    ("files" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol classsubparts) [28549 28562])
+                    ("output_file" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [28565 28583])
+                    ("font_index" variable (:type "int") (reparse-symbol classsubparts) [28586 28601])
+                    ("font_size" variable (:type "int") (reparse-symbol classsubparts) [28604 28618])
+                    ("file_format" variable (:type ("file_formats" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [28621 28651]))                  
+                :type "struct")
+                nil [28456 28654])
+            ("argp_parser" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("key" variable (:type "int") (reparse-symbol arg-sub-list) [28684 28692])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [28693 28703])
+                    ("state" variable
+                       (:pointer 1
+                        :type ("argp_state" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [28704 28729]))                  
+                :type ("error_t" type (:type "class") nil nil))
+                nil [28656 31091])
+            ("argp" variable
+               (:typemodifiers ("static")
+                :type ("argp" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [31093 31245])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [31257 31266])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [31267 31280]))                  
+                :type "int")
+                nil [31247 35496]))          
+    :file "grub-mkfont.c"
+    :pointmax 35496
+    :fsize 35496
+    :lastmodtime '(21237 14247 407954 131000)
+    :unmatched-syntax '((string 18690 . 18719) (symbol 18682 . 18689) (symbol 18671 . 18681) (symbol 18667 . 18670) (symbol 18660 . 18666) (punctuation 18659 . 18660) (symbol 1407 . 1418) (symbol 1399 . 1406) (punctuation 1398 . 1399) (symbol 1192 . 1212) (symbol 1184 . 1191) (punctuation 1183 . 1184) (symbol 1164 . 1182) (symbol 1156 . 1163) (punctuation 1155 . 1156) (symbol 1141 . 1154) (symbol 1133 . 1140) (punctuation 1132 . 1133))
+    :lexical-table 
+        '(("GRUB_FONT_FLAG_NOBITMAP" . ((number "2" 1848 . 1849)))
+          ("GSUB_SUBSTITUTION_MAP" . ((number "2" 11339 . 11340)))
+          ("_GNU_SOURCE" . ((number "1" 1069 . 1070)))
+          ("FT_ERROR_END_LIST" . ((close-paren "}" 1395 . 1396) (punctuation ";" 1396 . 1397)))
+          ("GSUB_COVERAGE_LIST" . ((number "1" 11369 . 11370)))
+          ("FEATURE_FINA" . ((number "0x66696e61" 9947 . 9957)))
+          ("FEATURE_INIT" . ((number "0x696e6974" 9979 . 9989)))
+          ("GRUB_FONT_RANGE_BLOCK" . ((number "1024" 1513 . 1517)))
+          ("FEATURE_MEDI" . ((number "0x6d656469" 10011 . 10021)))
+          ("FEATURE_AALT" . ((number "0x61616c74" 10043 . 10053)))
+          ("FT_ERROR_START_LIST" . 
+              ((CONST "const" 1296 . 1301) (CHAR "char" 1302 . 1306) (punctuation "*" 1307 . 1308) (symbol "ft_errmsgs" 1308 . 1318) (semantic-list "[]" 1318 . 1320) (punctuation "=" 1321 . 1322) (semantic-list "{ " 1323 . 1325)))
+          ("FT_ERRORDEF" (spp-arg-list ("e" "v" "s") 1345 . 1354) . 
+              ((semantic-list "[e]" 1356 . 1359) (punctuation "=" 1360 . 1361) (symbol "s" 1362 . 1363) (punctuation "," 1363 . 1364)))
+          ("GRUB_FONT_FLAG_BOLD" . ((number "1" 1813 . 1814)))
+          ("FEATURE_RLIG" . ((number "0x726c6967" 10107 . 10117)))
+          ("GSUB_COVERAGE_RANGE" . ((number "2" 11399 . 11400)))
+          ("GRUB_FONT_DEFAULT_SIZE" . ((number "16" 1478 . 1480)))
+          ("GSUB_RTL_CHAR" . ((number "1" 11424 . 11425)))
+          ("GRUB_FONT_FLAG_NOHINTING" . ((number "4" 1883 . 1884)))
+          ("GRUB_FONT_FLAG_FORCEHINT" . ((number "8" 1918 . 1919)))
+          ("GSUB_SINGLE_SUBSTITUTION" . ((number "1" 11272 . 11273)))
+          ("GSUB_SUBSTITUTION_DELTA" . ((number "1" 11307 . 11308)))
+          ("FEATURE_LIGA" . ((number "0x6c696761" 10075 . 10085)))
+          )
+
+    )
+   )
+  :file "!tmp!grub-2.00!util!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

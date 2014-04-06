@@ -1,0 +1,71 @@
+;; Object cinquieme/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "cinquieme/"
+  :tables (list 
+   (semanticdb-table "calcul-litteral.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("random" include nil nil [243 256])
+            ("sympy" include nil nil [257 269])
+            ("EXER" variable nil nil [271 279])
+            ("QUESTION" variable nil nil [280 293])
+            ("MONOME" variable nil nil [294 304])
+            ("variable" variable nil nil [320 350])
+            ("signe" variable nil nil [351 369])
+            ("coeff" variable nil nil [370 380])
+            ("i" code nil nil [381 387])
+            ("while" code nil nil [388 429])
+            ("i" code nil nil [429 433])
+            ("while" code nil nil [434 475])
+            ("texprint" function (:arguments 
+              ( ("poly" variable nil (reparse-symbol function_parameters) [489 493]))              ) nil [476 1228])
+            ("solevandtexprint" function (:arguments 
+              ( ("poly" variable nil (reparse-symbol function_parameters) [1250 1254]))              ) nil [1229 1479])
+            ("ListExer" variable nil nil [1495 1508])
+            ("for" code nil nil [1509 2231])
+            ("print" code nil nil [2233 2329])
+            ("print" code nil nil [2330 2397])
+            ("print" code nil nil [2398 2439])
+            ("print" code nil nil [2440 2483])
+            ("print" code nil nil [2484 2515])
+            ("print" code nil nil [2516 2604])
+            ("print" code nil nil [2605 2632])
+            ("print" code nil nil [2633 2659])
+            ("for" code nil nil [2661 3334])
+            ("print" code nil nil [3335 3361])
+            ("for" code nil nil [3363 4025])
+            ("print" code nil nil [4028 4052]))          
+    :file "calcul-litteral.py"
+    :pointmax 4053
+    :fsize 4052
+    :lastmodtime '(21168 15914 30047 56000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "distributivite.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("random" include nil nil [338 351])
+            ("sympy" include nil nil [352 364])
+            ("EX" variable nil nil [382 386])
+            ("Q" variable nil nil [415 419])
+            ("BorneMin" variable nil nil [464 474])
+            ("BorneMax" variable nil nil [475 486])
+            ("sgn" variable nil nil [525 540])
+            ("X" variable nil nil [558 578])
+            ("ListExer" variable nil nil [580 593])
+            ("print" code nil nil [621 815])
+            ("for" code nil nil [818 2465])
+            ("print" code nil nil [2466 2484])
+            ("for" code nil nil [2486 3080])
+            ("print" code nil nil [3097 3121]))          
+    :file "distributivite.py"
+    :pointmax 3092
+    :fsize 3138
+    :lastmodtime '(21168 15191 443358 25000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!mrmen!Documents!scriptMaths!cinquieme!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,25 @@
+;; Object cinquieme/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "cinquieme/"
+  :tables (list 
+   (semanticdb-table "cinquieme.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("Mathématiques" section (:members 
+              ( ("Mathématiques" section (:members 
+                  ( ("Cinquième" section (:members 
+                      ( ("Simplification" anchor nil nil [367 370])
+                        ("Distributivité" anchor nil nil [530 533])
+                        ("Factorisation" anchor nil nil [698 701]))                      ) nil [242 863]))                  ) nil [210 863]))              ) nil [155 863])
+            ("" section nil nil [863 870]))          
+    :file "cinquieme.html"
+    :pointmax 870
+    :fsize 889
+    :lastmodtime '(21168 28246 400581 438000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!tmp!cinquieme!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

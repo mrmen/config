@@ -1,0 +1,20 @@
+;; Object lib/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "lib/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("SUBDIRS" variable (:default-value ("srchiliteqt" "tests")) nil [1 27])
+            ("DIST_SUBDIRS" variable (:default-value ("$(SUBDIRS)")) nil [28 54]))          
+    :file "Makefile.am"
+    :pointmax 75
+    :fsize 74
+    :lastmodtime '(19216 12736 0 0)
+    :unmatched-syntax '((symbol 68 . 75) (punctuation 66 . 67) (symbol 55 . 65) (bol 55 . 55))
+    )
+   )
+  :file "!tmp!source-highlight-qt!src!source-highlight-qt-0.2.2!lib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

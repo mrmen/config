@@ -1,0 +1,155 @@
+;; Object libnotify/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "libnotify/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("plugindir" variable (:default-value ("$(PLUGINDIR)")) nil [1 26])
+            ("plugindatadir" variable (:default-value ("$(PLUGIN_DATA_DIR)")) nil [26 61])
+            ("plugin_LTLIBRARIES" variable (:default-value ("liblibnotify.la")) nil [61 98])
+            ("liblibnotify_la_SOURCES" variable (:default-value ("ario-libnotify-plugin.c" "ario-libnotify-plugin.h" "ario-notifier-libnotify.c" "ario-notifier-libnotify.h")) nil [99 258])
+            ("liblibnotify_la_LDFLAGS" variable (:default-value ("$(PLUGIN_LIBTOOL_FLAGS)")) nil [259 309])
+            ("liblibnotify_la_LIBADD" variable (:default-value ("$(NOTIFY_LIBS)")) nil [310 352])
+            ("INCLUDES" variable (:default-value ("-DLOCALE_DIR=\\\"\"$(prefix)/$(DATADIRNAME)/locale\"\\\"" "$(DEPS_CFLAGS)" "$(NOTIFY_CFLAGS)" "-I$(top_srcdir)" "-I$(top_srcdir)/src" "-I$(top_srcdir)/src/lib" "-I$(top_srcdir)/src/plugins" "-I$(top_srcdir)/src/shell" "-Wcomment" "-Wformat" "-Wnonnull" "-Wimplicit-int" "-Wimplicit" "-Wmain" "-Wmissing-braces" "-Wparentheses" "-Wsequence-point" "-Wreturn-type" "-Wswitch" "-Wtrigraphs" "-Wunused-function" "-Wunused-label" "-Wunused-value" "-Wchar-subscripts" "-Wmissing-declarations" "-Wmissing-prototypes" "-Wnested-externs" "-Wpointer-arith" "-Wcast-align" "-Wall")) nil [353 1055])
+            ("plugin_in_files" variable (:default-value ("libnotify.ario-plugin.desktop.in")) nil [1056 1107])
+            ("%.ario-plugin" function (:arguments ("%.ario-plugin.desktop.in" "$(INTLTOOL_MERGE)" "$(wildcard $(top_srcdir)/po/*po)" ";" "$(INTLTOOL_MERGE)" "$(top_srcdir)/po" "$<" "$@" "-d" "-u" "-c" "$(top_builddir)/po/.intltool-merge-cache")) nil [1108 1292])
+            ("plugin_DATA" variable (:default-value ("$(plugin_in_files:.ario-plugin.desktop.in=.ario-plugin)")) nil [1293 1363])
+            ("EXTRA_DIST" variable (:default-value ("$(plugin_in_files)")) nil [1364 1396])
+            ("CLEANFILES" variable (:default-value ("$(plugin_DATA)")) nil [1397 1425])
+            ("DISTCLEANFILES" variable (:default-value ("$(plugin_DATA)")) nil [1425 1457]))          
+    :file "Makefile.am"
+    :pointmax 1457
+    :fsize 1456
+    :lastmodtime '(21147 9528 160008 287000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ario-notifier-libnotify.c.new"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ario-notifier-libnotify.h" include nil nil [797 833])
+            ("glib.h" include (:system-flag t) nil [834 851])
+            ("string.h" include (:system-flag t) nil [852 871])
+            ("glib/gi18n.h" include (:system-flag t) nil [872 895])
+            ("servers/ario-server.h" include nil nil [896 928])
+            ("ario-util.h" include nil nil [929 951])
+            ("widgets/ario-tray-icon.h" include nil nil [952 987])
+            ("libnotify/notify.h" include (:system-flag t) nil [988 1017])
+            ("covers/ario-cover-handler.h" include nil nil [1018 1056])
+            ("preferences/ario-preferences.h" include nil nil [1057 1098])
+            ("lib/ario-conf.h" include nil nil [1099 1125])
+            ("ario-debug.h" include nil nil [1126 1149])
+            ("ArioNotifierLibnotifyPrivate" type
+               (:members 
+                  ( ("notification" variable
+                       (:pointer 1
+                        :type ("NotifyNotification" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1197 1230]))                  
+                :type "struct")
+                nil [1151 1233])
+            ("ARIO_NOTIFIER_LIBNOTIFY_GET_PRIVATE" variable (:constant-flag t) nil [1243 1278])
+            ("ario_notifier_libnotify_get_id" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("notifier" variable
+                       (:pointer 1
+                        :type ("ArioNotifier" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1509 1532]))                  
+                :type ("gchar" type (:type "class") nil nil))
+                nil [1462 1564])
+            ("ario_notifier_libnotify_get_name" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("notifier" variable
+                       (:pointer 1
+                        :type ("ArioNotifier" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1615 1638]))                  
+                :type ("gchar" type (:type "class") nil nil))
+                nil [1566 1670])
+            ("ario_notifier_libnotify_set_string_property" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("notifier_libnotify" variable
+                       (:pointer 1
+                        :type ("ArioNotifierLibnotify" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1729 1771])
+                    ("prop" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1817 1835])
+                    ("str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1881 1898]))                  
+                :type "void")
+                nil [1672 2182])
+            ("ario_notifier_libnotify_notify" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("notifier" variable
+                       (:pointer 1
+                        :type ("ArioNotifier" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2228 2251]))                  
+                :type "void")
+                nil [2184 4008])
+            ("ario_notifier_libnotify_class_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("klass" variable
+                       (:pointer 1
+                        :type ("ArioNotifierLibnotifyClass" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4058 4092]))                  
+                :type "void")
+                nil [4010 4483])
+            ("ario_notifier_libnotify_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("notifier_libnotify" variable
+                       (:pointer 1
+                        :type ("ArioNotifierLibnotify" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4527 4569]))                  
+                :type "void")
+                nil [4485 5108])
+            ("ario_notifier_libnotify_cover_changed_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cover_handler" variable
+                       (:pointer 1
+                        :type ("ArioCoverHandler" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5164 5196])
+                    ("notifier_libnotify" variable
+                       (:pointer 1
+                        :type ("ArioNotifierLibnotify" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5239 5281]))                  
+                :type "void")
+                nil [5110 5786])
+            ("ario_notifier_libnotify_new" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5831 5836]))                  
+                :type ("ArioNotifier" type (:type "class") nil nil))
+                nil [5788 6375]))          
+    :file "ario-notifier-libnotify.c.new"
+    :pointmax 6383
+    :fsize 6376
+    :lastmodtime '(21147 10384 860034 313000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("ARIO_NOTIFIER_LIBNOTIFY_GET_PRIVATE" (spp-arg-list ("o") 1278 . 1281) . ((semantic-list "(G_TYPE_INSTANCE_GET_PRIVATE ((o), TYPE_ARIO_NOTIFIER_LIBNOTIFY, ArioNotifierLibnotifyPrivate))" 1282 . 1377)))
+          )
+
+    )
+   (semanticdb-table "ario-notifier-libnotify.h"
+    :file "ario-notifier-libnotify.h"
+    :fsize 2114
+    :lastmodtime '(21147 9528 160008 287000)
+    )
+   )
+  :file "!tmp!ario-svn!src!ario!plugins!libnotify!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,48 @@
+;; Object mrmen/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mrmen/"
+  :tables (list 
+   (semanticdb-table "calcul-litteral.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("random" include nil nil [243 256])
+            ("sympy" include nil nil [257 269])
+            ("EXER" variable nil nil [271 279])
+            ("QUESTION" variable nil nil [280 293])
+            ("MONOME" variable nil nil [294 304])
+            ("variable" variable nil nil [320 350])
+            ("signe" variable nil nil [351 369])
+            ("coeff" variable nil nil [370 380])
+            ("i" code nil nil [381 387])
+            ("while" code nil nil [388 429])
+            ("i" code nil nil [429 433])
+            ("while" code nil nil [434 475])
+            ("texprint" function (:arguments 
+              ( ("poly" variable nil (reparse-symbol function_parameters) [489 493]))              ) nil [476 1289])
+            ("solevandtexprint" function (:arguments 
+              ( ("poly" variable nil (reparse-symbol function_parameters) [1311 1315]))              ) nil [1290 1540])
+            ("ListExer" variable nil nil [1556 1569])
+            ("for" code nil nil [1570 2292])
+            ("print" code nil nil [2294 2373])
+            ("print" code nil nil [2374 2441])
+            ("print" code nil nil [2442 2483])
+            ("print" code nil nil [2484 2527])
+            ("print" code nil nil [2528 2559])
+            ("print" code nil nil [2560 2648])
+            ("print" code nil nil [2649 2676])
+            ("print" code nil nil [2677 2703])
+            ("for" code nil nil [2705 3378])
+            ("print" code nil nil [3379 3405])
+            ("for" code nil nil [3407 4069])
+            ("print" code nil nil [4072 4096]))          
+    :file "calcul-litteral.py"
+    :pointmax 4097
+    :fsize 4096
+    :lastmodtime '(21164 12048 620004 684000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!mrmen!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

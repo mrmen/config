@@ -1,0 +1,42 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags nil
+    :file "Makefile"
+    :pointmax 96616
+    :fsize 96615
+    :lastmodtime '(21147 12105 403419 875000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("BUILT_SOURCES" variable nil nil [1 18])
+            ("bin_PROGRAMS" variable (:default-value ("ario")) nil [18 38])
+            ("noinst_LTLIBRARIES" variable (:default-value ("libario.la")) nil [39 71])
+            ("INCLUDES" variable (:default-value ("-Wcomment" "-Wformat" "-Wnonnull" "-Wimplicit-int" "-Wimplicit" "-Wmain" "-Wmissing-braces" "-Wparentheses" "-Wsequence-point" "-Wreturn-type" "-Wswitch" "-Wtrigraphs" "-Wunused-function" "-Wunused-label" "-Wunused-value" "-Wchar-subscripts" "-Wmissing-declarations" "-Wmissing-prototypes" "-Wnested-externs" "-Wpointer-arith" "-Wcast-align" "-Wall" "-Wuninitialized")) nil [72 448])
+            ("ario_SOURCES" variable (:default-value ("ario-main.c")) nil [449 476])
+            ("ario_LDADD" variable (:default-value ("libario.la" "$(DEPS_LIBS)")) nil [476 513])
+            ("libario_la_LIBADD" variable (:default-value ("$(DEPS_LIBS)" "$(AVAHI_LIBS)" "$(TAGLIB_LIBS)" "$(XMMS2_LIBS)" "$(LIBGCRYPT_LIBS)")) nil [514 654])
+            ("libario_la_SOURCES" variable (:default-value ("ario-enum-types.c" "ario-enum-types.h" "ario-debug.h" "ario-profiles.c" "ario-profiles.h" "ario-util.c" "ario-util.h" "covers/ario-cover-amazon.c" "covers/ario-cover-amazon.h" "covers/ario-cover.c" "covers/ario-cover.h" "covers/ario-cover-handler.c" "covers/ario-cover-handler.h" "covers/ario-cover-lastfm.c" "covers/ario-cover-lastfm.h" "covers/ario-cover-local.c" "covers/ario-cover-local.h" "covers/ario-cover-manager.c" "covers/ario-cover-manager.h" "covers/ario-cover-provider.c" "covers/ario-cover-provider.h" "lib/ario-conf.c" "lib/ario-conf.h" "lib/bacon-message-connection.c" "lib/bacon-message-connection.h" "lib/eggtrayicon.c" "lib/eggtrayicon.h" "lib/libmpdclient.c" "lib/libmpdclient.h" "lib/rb-glade-helpers.c" "lib/rb-glade-helpers.h" "lib/libsexy/sexy-tooltip.c" "lib/libsexy/sexy-tooltip.h" "lyrics/ario-lyrics-leoslyrics.c" "lyrics/ario-lyrics-leoslyrics.h" "lyrics/ario-lyrics-lyricwiki.c" "lyrics/ario-lyrics-lyricwiki.h" "lyrics/ario-lyrics-manager.c" "lyrics/ario-lyrics-manager.h" "lyrics/ario-lyrics-provider.c" "lyrics/ario-lyrics-provider.h" "lyrics/ario-lyrics.c" "lyrics/ario-lyrics.h" "notification/ario-notification-manager.c" "notification/ario-notification-manager.h" "notification/ario-notifier.c" "notification/ario-notifier.h" "notification/ario-notifier-tooltip.c" "notification/ario-notifier-tooltip.h" "plugins/ario-module.c" "plugins/ario-module.h" "plugins/ario-plugin.c" "plugins/ario-plugin.h" "plugins/ario-plugin-info.c" "plugins/ario-plugin-info.h" "plugins/ario-plugin-info-priv.h" "plugins/ario-plugin-manager.c" "plugins/ario-plugin-manager.h" "plugins/ario-plugins-engine.c" "plugins/ario-plugins-engine.h" "preferences/ario-browser-preferences.c" "preferences/ario-browser-preferences.h" "preferences/ario-connection-preferences.c" "preferences/ario-connection-preferences.h" "preferences/ario-cover-preferences.c" "preferences/ario-cover-preferences.h" "preferences/ario-interface-preferences.c" "preferences/ario-interface-preferences.h" "preferences/ario-lyrics-preferences.c" "preferences/ario-lyrics-preferences.h" "preferences/ario-proxy-preferences.c" "preferences/ario-proxy-preferences.h" "preferences/ario-server-preferences.c" "preferences/ario-server-preferences.h" "preferences/ario-stats-preferences.c" "preferences/ario-stats-preferences.h" "preferences/ario-trayicon-preferences.c" "preferences/ario-trayicon-preferences.h" "preferences/ario-preferences.h" "servers/ario-mpd.c" "servers/ario-mpd.h" "servers/ario-server.c" "servers/ario-server.h" "servers/ario-server-interface.c" "servers/ario-server-interface.h" "sources/ario-browser.c" "sources/ario-browser.h" "sources/ario-tree.c" "sources/ario-tree.h" "sources/ario-search.c" "sources/ario-search.h" "sources/ario-source.c" "sources/ario-source.h" "sources/ario-source-manager.c" "sources/ario-source-manager.h" "sources/ario-storedplaylists.c" "sources/ario-storedplaylists.h" "shell/ario-shell.c" "shell/ario-shell.h" "shell/ario-shell-coverdownloader.c" "shell/ario-shell-coverdownloader.h" "shell/ario-shell-coverselect.c" "shell/ario-shell-coverselect.h" "shell/ario-shell-lyrics.c" "shell/ario-shell-lyrics.h" "shell/ario-shell-lyricsselect.c" "shell/ario-shell-lyricsselect.h" "shell/ario-shell-preferences.c" "shell/ario-shell-preferences.h" "shell/ario-shell-songinfos.c" "shell/ario-shell-songinfos.h" "shell/ario-shell-similarartists.c" "shell/ario-shell-similarartists.h" "widgets/ario-connection-widget.c" "widgets/ario-connection-widget.h" "widgets/ario-firstlaunch.c" "widgets/ario-firstlaunch.h" "widgets/ario-header.c" "widgets/ario-header.h" "widgets/ario-lyrics-editor.c" "widgets/ario-lyrics-editor.h" "widgets/ario-playlist.c" "widgets/ario-playlist.h" "widgets/ario-songlist.c" "widgets/ario-songlist.h" "widgets/ario-status-bar.c" "widgets/ario-status-bar.h" "widgets/ario-tray-icon.c" "widgets/ario-tray-icon.h" "widgets/ario-volume.c" "widgets/ario-volume.h")) nil [655 4683])
+            ("INST_H_FILES" variable (:default-value ("plugins/ario-plugin.h" "servers/ario-server.h" "shell/ario-shell.h")) nil [5361 5469])
+            ("regenerate-enum-types" function nil nil [5470 5727])
+            ("AM_CPPFLAGS" variable (:default-value ("$(DEPS_CFLAGS)" "$(AVAHI_CFLAGS)" "$(TAGLIB_CFLAGS)" "$(LIBGCRYPT_CFLAGS)" "$(XMMS2_CFLAGS)" "-DLOCALE_DIR=\\\"\"$(datadir)/locale\"\\\"" "-DPIXMAP_PATH=\\\"\"$(pkgdatadir)/art/\"\\\"" "-DDATA_PATH=\\\"\"$(pkgdatadir)/data/\"\\\"" "-DUI_PATH=\\\"\"$(pkgdatadir)/ui/\"\\\"" "-DARIO_PLUGIN_DIR=\\\"$(PLUGINDIR)\\\"" "-DARIO_PLUGIN_DATA_DIR=\\\"$(PLUGIN_DATA_DIR)\\\"" "-DGLADE_PATH=\\\"\"$(pkgdatadir)/glade/\"\\\"")) nil [5728 6277])
+            ("AM_CPPFLAGS" variable (:default-value ("-DMPD_GLIB")) nil [6289 6315])
+            ("AUTHORS.tab" function (:arguments ("$(top_srcdir)/AUTHORS")) nil [6322 6436])
+            ("BUILT_SOURCES" variable (:default-value ("AUTHORS.tab")) nil [6437 6466])
+            ("CLEANFILES" variable (:default-value ("$(BUILT_SOURCES)")) nil [6467 6497]))          
+    :file "Makefile.am"
+    :pointmax 6497
+    :fsize 6496
+    :lastmodtime '(21147 12038 890084 518000)
+    :unmatched-syntax '((symbol 5329 . 5353) (semantic-list 5315 . 5329) (punctuation 5314 . 5315) (punctuation 5301 . 5302) (punctuation 5300 . 5301) (symbol 5282 . 5299) (bol 5274 . 5274) (semantic-list 5261 . 5272) (punctuation 5260 . 5261) (semantic-list 5232 . 5247) (punctuation 5231 . 5232) (semantic-list 5203 . 5217) (punctuation 5202 . 5203) (semantic-list 5163 . 5190) (punctuation 5162 . 5163) (punctuation 5149 . 5150) (punctuation 5148 . 5149) (symbol 5139 . 5147) (bol 5131 . 5131) (symbol 5101 . 5129) (symbol 5047 . 5075) (symbol 4993 . 5021) (symbol 4939 . 4967) (punctuation 4937 . 4938) (punctuation 4936 . 4937) (symbol 4923 . 4935) (bol 4915 . 4915) (symbol 4871 . 4890) (symbol 4827 . 4846) (punctuation 4825 . 4826) (punctuation 4824 . 4825) (symbol 4805 . 4823) (bol 4797 . 4797) (symbol 4764 . 4776) (symbol 4727 . 4739) (punctuation 4725 . 4726) (punctuation 4724 . 4725) (symbol 4705 . 4723) (bol 4697 . 4697))
+    )
+   )
+  :file "!tmp!ario-svn!src!ario-build!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,35 @@
+;; Object wikipedia/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "wikipedia/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("plugindir" variable (:default-value ("$(PLUGINDIR)")) nil [1 26])
+            ("plugindatadir" variable (:default-value ("$(PLUGIN_DATA_DIR)")) nil [26 61])
+            ("plugin_LTLIBRARIES" variable (:default-value ("libwikipedia.la")) nil [61 98])
+            ("libwikipedia_la_SOURCES" variable (:default-value ("ario-wikipedia-plugin.c" "ario-wikipedia-plugin.h")) nil [99 186])
+            ("libwikipedia_la_LDFLAGS" variable (:default-value ("$(PLUGIN_LIBTOOL_FLAGS)")) nil [187 237])
+            ("uixmldir" variable (:default-value ("$(plugindatadir)")) nil [238 266])
+            ("uixml_DATA" variable (:default-value ("wikipedia-ui.xml")) nil [266 296])
+            ("INCLUDES" variable (:default-value ("-DLOCALE_DIR=\\\"\"$(prefix)/$(DATADIRNAME)/locale\"\\\"" "$(DEPS_CFLAGS)" "-I$(top_srcdir)" "-I$(top_srcdir)/src" "-I$(top_srcdir)/src/lib" "-I$(top_srcdir)/src/plugins" "-I$(top_srcdir)/src/shell" "-Wcomment" "-Wformat" "-Wnonnull" "-Wimplicit-int" "-Wimplicit" "-Wmain" "-Wmissing-braces" "-Wparentheses" "-Wsequence-point" "-Wreturn-type" "-Wswitch" "-Wtrigraphs" "-Wunused-function" "-Wunused-label" "-Wunused-value" "-Wchar-subscripts" "-Wmissing-declarations" "-Wmissing-prototypes" "-Wnested-externs" "-Wpointer-arith" "-Wcast-align" "-Wall")) nil [297 975])
+            ("plugin_in_files" variable (:default-value ("wikipedia.ario-plugin.desktop.in")) nil [976 1027])
+            ("%.ario-plugin" function (:arguments ("%.ario-plugin.desktop.in" "$(INTLTOOL_MERGE)" "$(wildcard $(top_srcdir)/po/*po)" ";" "$(INTLTOOL_MERGE)" "$(top_srcdir)/po" "$<" "$@" "-d" "-u" "-c" "$(top_builddir)/po/.intltool-merge-cache")) nil [1028 1212])
+            ("BUILT_SOURCES" variable (:default-value ("$(plugin_in_files:.ario-plugin.desktop.in=.ario-plugin)")) nil [1213 1288])
+            ("plugin_DATA" variable (:default-value ("$(BUILT_SOURCES)" "$(plugin_in_files:.ario-plugin.desktop.in=.ario-plugin)")) nil [1289 1387])
+            ("icondir" variable (:default-value ("$(plugindatadir)/icons")) nil [1388 1421])
+            ("icon_DATA" variable (:default-value ("wikipedia.png")) nil [1421 1447])
+            ("EXTRA_DIST" variable (:default-value ("$(plugin_in_files)" "$(plugin_DATA)" "$(icon_DATA)" "$(uixml_DATA)")) nil [1448 1601])
+            ("CLEANFILES" variable (:default-value ("$(BUILT_SOURCES)")) nil [1602 1632])
+            ("DISTCLEANFILES" variable (:default-value ("$(BUILT_SOURCES)")) nil [1633 1667]))          
+    :file "Makefile.am"
+    :pointmax 1667
+    :fsize 1666
+    :lastmodtime '(21147 11851 460078 828000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!tmp!ario-svn!src!ario-build!plugins!wikipedia!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

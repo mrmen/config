@@ -1,0 +1,23 @@
+;; Object zudiro/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "zudiro/"
+  :tables (list 
+   (semanticdb-table "zudirogrid.cpp"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "zudirogrid.cpp"
+    :pointmax 4694
+    :fsize 4680
+    :lastmodtime '(21183 23594 320158 497000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "zudirogrid.h"
+    :file "zudirogrid.h"
+    :fsize 548
+    :lastmodtime '(21183 22441 633456 833000)
+    )
+   )
+  :file "!tmp!zudiro!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

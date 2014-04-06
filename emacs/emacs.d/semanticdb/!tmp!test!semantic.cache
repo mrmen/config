@@ -1,0 +1,34 @@
+;; Object test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test/"
+  :tables (list 
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("srchiliteqt/Qt4SyntaxHighlighter.h" include (:system-flag t) nil [219 264])
+            ("srchilite/versions.h" include (:system-flag t) nil [265 296])
+            ("QApplication" include (:system-flag t) nil [303 326])
+            ("QMainWindow" include (:system-flag t) nil [327 349])
+            ("QTextEdit" include (:system-flag t) nil [350 370])
+            ("iostream" include (:system-flag t) nil [377 396])
+            ("BASEDIR" variable (:constant-flag t) nil [437 444])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [477 486])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [487 499]))                  
+                :type "int")
+                nil [468 1082]))          
+    :file "main.cpp"
+    :pointmax 1083
+    :fsize 1082
+    :lastmodtime '(21181 40661 956762 435000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!tmp!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

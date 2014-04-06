@@ -1,0 +1,34 @@
+;; Object radios/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "radios/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("plugindir" variable (:default-value ("$(PLUGINDIR)")) nil [1 26])
+            ("plugindatadir" variable (:default-value ("$(PLUGIN_DATA_DIR)")) nil [26 61])
+            ("plugin_LTLIBRARIES" variable (:default-value ("libradios.la")) nil [61 95])
+            ("libradios_la_SOURCES" variable (:default-value ("ario-radio.c" "ario-radio.h" "ario-radios-plugin.c" "ario-radios-plugin.h")) nil [96 206])
+            ("libradios_la_LDFLAGS" variable (:default-value ("$(PLUGIN_LIBTOOL_FLAGS)")) nil [208 255])
+            ("uixmldir" variable (:default-value ("$(plugindatadir)")) nil [256 284])
+            ("uixml_DATA" variable (:default-value ("radios-ui.xml")) nil [284 311])
+            ("alldatadir" variable (:default-value ("$(plugindatadir)")) nil [312 342])
+            ("alldata_DATA" variable (:default-value ("radios.xml.default")) nil [342 376])
+            ("INCLUDES" variable (:default-value ("-DLOCALE_DIR=\\\"\"$(prefix)/$(DATADIRNAME)/locale\"\\\"" "$(DEPS_CFLAGS)" "-I$(top_srcdir)" "-I$(top_srcdir)/src" "-I$(top_srcdir)/src/lib" "-I$(top_srcdir)/src/plugins" "-I$(top_srcdir)/src/sources" "-I$(top_srcdir)/src/shell" "-Wcomment" "-Wformat" "-Wnonnull" "-Wimplicit-int" "-Wimplicit" "-Wmain" "-Wmissing-braces" "-Wparentheses" "-Wsequence-point" "-Wreturn-type" "-Wswitch" "-Wtrigraphs" "-Wunused-function" "-Wunused-label" "-Wunused-value" "-Wchar-subscripts" "-Wmissing-declarations" "-Wmissing-prototypes" "-Wnested-externs" "-Wpointer-arith" "-Wcast-align" "-Wall")) nil [377 1105])
+            ("plugin_in_files" variable (:default-value ("radios.ario-plugin.desktop.in")) nil [1106 1154])
+            ("%.ario-plugin" function (:arguments ("%.ario-plugin.desktop.in" "$(INTLTOOL_MERGE)" "$(wildcard $(top_srcdir)/po/*po)" ";" "$(INTLTOOL_MERGE)" "$(top_srcdir)/po" "$<" "$@" "-d" "-u" "-c" "$(top_builddir)/po/.intltool-merge-cache")) nil [1155 1339])
+            ("plugin_DATA" variable (:default-value ("$(plugin_in_files:.ario-plugin.desktop.in=.ario-plugin)")) nil [1340 1410])
+            ("EXTRA_DIST" variable (:default-value ("$(plugin_in_files)" "$(uixml_DATA)" "$(alldata_DATA)")) nil [1411 1501])
+            ("CLEANFILES" variable (:default-value ("$(plugin_DATA)")) nil [1502 1530])
+            ("DISTCLEANFILES" variable (:default-value ("$(plugin_DATA)")) nil [1530 1562]))          
+    :file "Makefile.am"
+    :pointmax 1562
+    :fsize 1561
+    :lastmodtime '(21147 9528 563341 632000)
+    :unmatched-syntax '((shell-command 207 . 207) (bol 206 . 206))
+    )
+   )
+  :file "!tmp!ario-svn!src!ario!plugins!radios!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

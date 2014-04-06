@@ -1,0 +1,268 @@
+;; Object MeQ/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "MeQ/"
+  :tables (list 
+   (semanticdb-table "highlighter.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("QtGui" include (:system-flag t) nil [271 287])
+            ("highlighter.h" include nil nil [289 313])
+            ("Highlighter" function
+               (:constructor-flag t
+                :parent "Highlighter"
+                :arguments 
+                  ( ("parent" variable
+                       (:pointer 1
+                        :type ("QTextDocument" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [340 362]))                  
+                :type ("Highlighter" type (:type "class") nil nil))
+                nil [315 3330])
+            ("highlightBlock" function
+               (:parent "Highlighter"
+                :arguments 
+                  ( ("text" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3365 3385]))                  
+                :type "void")
+                nil [3332 4460]))          
+    :file "highlighter.cpp"
+    :pointmax 4462
+    :fsize 4462
+    :lastmodtime '(21183 10420 320081 305000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "highlighter.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("HIGHLIGHTER_H" variable (:constant-flag t) nil [299 312])
+            ("HIGHLIGHTER_H" variable (:constant-flag t) nil [299 312])
+            ("HIGHLIGHTER_H" variable (:constant-flag t) nil [299 312])
+            ("HIGHLIGHTER_H" variable (:constant-flag t) nil [299 312])
+            ("HIGHLIGHTER_H" variable (:constant-flag t) nil [299 312])
+            ("QSyntaxHighlighter" include (:system-flag t) nil [314 343])
+            ("QHash" include (:system-flag t) nil [345 361])
+            ("QTextCharFormat" include (:system-flag t) nil [362 388])
+            ("QTextDocument" type
+               (:prototype t
+                :type "class")
+                nil [390 410])
+            ("Highlighter" type
+               (:superclasses 
+                  ( ("QSyntaxHighlighter" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [470 477])
+                    ("Highlighter" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("parent" variable
+                               (:pointer 1
+                                :type ("QTextDocument" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [490 513]))                          
+                        :type ("Highlighter" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [478 517])
+                    ("protected" label nil (reparse-symbol classsubparts) [519 529])
+                    ("highlightBlock" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("text" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("QString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [550 570]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [530 571])
+                    ("private" label nil (reparse-symbol classsubparts) [573 581])
+                    ("HighlightingRule" type
+                       (:members 
+                          ( ("pattern" variable (:type ("QRegExp" type (:type "class") nil nil)) (reparse-symbol classsubparts) [608 624])
+                            ("format" variable (:type ("QTextCharFormat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [625 648]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [582 651])
+                    ("highlightingRules" variable (:type ("QVector" type
+                         (:template-specifier 
+                            ( ("HighlightingRule" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [652 696])
+                    ("commentStartExpression" variable (:type ("QRegExp" type (:type "class") nil nil)) (reparse-symbol classsubparts) [698 729])
+                    ("commentEndExpression" variable (:type ("QRegExp" type (:type "class") nil nil)) (reparse-symbol classsubparts) [730 759])
+                    ("keywordFormat" variable (:type ("QTextCharFormat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [761 791])
+                    ("classFormat" variable (:type ("QTextCharFormat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [792 820])
+                    ("singleLineCommentFormat" variable (:type ("QTextCharFormat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [821 861])
+                    ("mathDollarFormat" variable (:type ("QTextCharFormat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [862 895])
+                    ("mathCenterFormat" variable (:type ("QTextCharFormat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [896 929])
+                    ("backslashFormat" variable (:type ("QTextCharFormat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [930 962])
+                    ("multiLineCommentFormat" variable (:type ("QTextCharFormat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [963 1002])
+                    ("quotationFormat" variable (:type ("QTextCharFormat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1003 1035])
+                    ("functionFormat" variable (:type ("QTextCharFormat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1036 1067]))                  
+                :type "class")
+                nil [412 1070]))          
+    :file "highlighter.h"
+    :pointmax 1097
+    :fsize 1096
+    :lastmodtime '(21183 10464 156750 778000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("HIGHLIGHTER_H")
+          )
+
+    )
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("mainwindow.h" include nil nil [228 251])
+            ("QApplication" include (:system-flag t) nil [252 275])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [286 295])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [296 309]))                  
+                :type "int")
+                nil [277 399]))          
+    :file "main.cpp"
+    :pointmax 400
+    :fsize 399
+    :lastmodtime '(21183 10504 713417 174000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "mainwindow.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("MAINWINDOW_H" variable (:constant-flag t) nil [331 343])
+            ("MAINWINDOW_H" variable (:constant-flag t) nil [331 343])
+            ("QMainWindow" include (:system-flag t) nil [345 367])
+            ("QTextCursor" include (:system-flag t) nil [368 390])
+            ("Ui" type
+               (:members 
+                  ( ("MainWindow" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [407 424]))                  
+                :type "namespace")
+                nil [392 426])
+            ("MainWindow" type
+               (:superclasses 
+                  ( ("QMainWindow" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [482 489])
+                    ("MainWindow" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("parent" variable
+                               (:pointer 1
+                                :type ("QWidget" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [514 531]))                          
+                        :type ("MainWindow" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [503 535])
+                    ("MainWindow" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [540 554])
+                    ("private" label nil (reparse-symbol classsubparts) [556 564])
+                    ("ui" variable
+                       (:pointer 1
+                        :type ("Ui::MainWindow" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [569 588])
+                    ("public" label nil (reparse-symbol classsubparts) [590 603])
+                    ("open" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [608 620])
+                    ("printButtonText" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [625 648])
+                    ("beginEnd" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [653 669])
+                    ("hiliteCurrentLine" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [674 699])
+                    ("saveFile" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [704 720]))                  
+                :type "class")
+                nil [428 723]))          
+    :file "mainwindow.h"
+    :pointmax 748
+    :fsize 747
+    :lastmodtime '(21183 10601 356753 314000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("MAINWINDOW_H")
+          )
+
+    )
+   (semanticdb-table "mainwindow.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("mainwindow.h" include nil nil [304 327])
+            ("ui_mainwindow.h" include nil nil [328 354])
+            ("highlighter.h" include nil nil [355 379])
+            ("iostream" include (:system-flag t) nil [380 399])
+            ("QTextCodec" include (:system-flag t) nil [400 421])
+            ("QInputDialog" include (:system-flag t) nil [422 445])
+            ("QFile" include (:system-flag t) nil [446 462])
+            ("QFileDialog" include (:system-flag t) nil [463 485])
+            ("MainWindow" function
+               (:constructor-flag t
+                :parent "MainWindow"
+                :arguments 
+                  ( ("parent" variable
+                       (:pointer 1
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [511 527]))                  
+                :type ("MainWindow" type (:type "class") nil nil))
+                nil [488 1944])
+            ("MainWindow" function
+               (:destructor-flag t
+                :parent "MainWindow"
+                :type "void")
+                nil [1946 1990])
+            ("open" function
+               (:parent "MainWindow"
+                :type "void")
+                nil [1992 2612])
+            ("printButtonText" function
+               (:parent "MainWindow"
+                :type "void")
+                nil [2615 2779])
+            ("beginEnd" function
+               (:parent "MainWindow"
+                :type "void")
+                nil [2781 3226])
+            ("hiliteCurrentLine" function
+               (:parent "MainWindow"
+                :type "void")
+                nil [3228 3650])
+            ("saveFile" function
+               (:parent "MainWindow"
+                :type "void")
+                nil [3652 4237]))          
+    :file "mainwindow.cpp"
+    :pointmax 4238
+    :fsize 4237
+    :lastmodtime '(21183 10565 906752 307000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!mrmen!depots-git!github!MeQ!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

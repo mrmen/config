@@ -1,0 +1,92 @@
+;; Object Qtabvar/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Qtabvar/"
+  :tables (list 
+   (semanticdb-table "mainwindow.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("mainwindow.h" include nil nil [1 24])
+            ("ui_mainwindow.h" include nil nil [25 51])
+            ("PScode.h" include nil nil [52 71])
+            ("LaTeXcode.h" include nil nil [72 94])
+            ("stdio.h" include (:system-flag t) nil [96 114])
+            ("unistd.h" include (:system-flag t) nil [115 134])
+            ("iostream" include (:system-flag t) nil [136 155])
+            ("fstream" include (:system-flag t) nil [156 174])
+            ("sstream" include (:system-flag t) nil [175 193])
+            ("QTableView" include (:system-flag t) nil [194 215])
+            ("QStandardItem" include (:system-flag t) nil [216 240])
+            ("QTextEdit" include (:system-flag t) nil [241 261])
+            ("QShortcut" include (:system-flag t) nil [262 282])
+            ("QFile" include (:system-flag t) nil [283 299])
+            ("QFileDialog" include (:system-flag t) nil [300 322])
+            ("QMessageBox" include (:system-flag t) nil [323 345])
+            ("QTextCodec" include (:system-flag t) nil [347 368])
+            ("MainWindow" function
+               (:constructor-flag t
+                :parent "MainWindow"
+                :arguments 
+                  ( ("parent" variable
+                       (:pointer 1
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [547 563]))                  
+                :type ("MainWindow" type (:type "class") nil nil))
+                nil [524 1755])
+            ("updateTabular" function
+               (:parent "MainWindow"
+                :type "void")
+                nil [1825 3319])
+            ("removeCode" function
+               (:parent "MainWindow"
+                :type "void")
+                nil [3381 3459])
+            ("exportPS" function
+               (:parent "MainWindow"
+                :type "void")
+                nil [3607 4723])
+            ("doReplaceStuff" function
+               (:parent "MainWindow"
+                :arguments 
+                  ( ("line" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4822 4835]))                  
+                :type ("QString" type (:type "class") nil nil))
+                nil [4787 5174])
+            ("showCredits" function
+               (:parent "MainWindow"
+                :type "void")
+                nil [5239 5579])
+            ("MainWindow" function
+               (:destructor-flag t
+                :parent "MainWindow"
+                :type "void")
+                nil [5581 5623]))          
+    :file "mainwindow.cpp"
+    :pointmax 5624
+    :fsize 5625
+    :lastmodtime '(21082 40594 749811 578000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "mainwindow.h"
+    :file "mainwindow.h"
+    :fsize 536
+    :lastmodtime '(21082 40594 749811 578000)
+    )
+   (semanticdb-table "ui_mainwindow.h"
+    :file "ui_mainwindow.h"
+    :fsize 12323
+    :lastmodtime '(21082 40613 956477 448000)
+    )
+   (semanticdb-table "PScode.h"
+    :file "PScode.h"
+    :fsize 54
+    :lastmodtime '(21082 40594 746478 245000)
+    )
+   (semanticdb-table "LaTeXcode.h"
+    :file "LaTeXcode.h"
+    :fsize 63
+    :lastmodtime '(21082 40594 746478 245000)
+    )
+   )
+  :file "!home!mrmen!depots-git!github!Qtabvar!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

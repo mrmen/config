@@ -1,0 +1,18 @@
+;; Object QZudiro/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "QZudiro/"
+  :tables (list 
+   (semanticdb-table "mainwindow.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file "mainwindow.h"
+    :pointmax 922
+    :fsize 898
+    :lastmodtime '(21184 1655 193461 11000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!mrmen!depots-git!github!QZudiro!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

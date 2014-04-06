@@ -1,0 +1,18 @@
+;; Object qq31-parenthesis/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "qq31-parenthesis/"
+  :tables (list 
+   (semanticdb-table "textedit.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file "textedit.h"
+    :pointmax 1955
+    :fsize 1959
+    :lastmodtime '(21179 61952 420563 910000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!tmp!qq31-parenthesis!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

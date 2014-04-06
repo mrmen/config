@@ -1,0 +1,24 @@
+;; Object source-highlight-qt-0.2.2/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "source-highlight-qt-0.2.2/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("EXTRA_DIST" variable (:default-value ("TODO.txt" "qt3_notes.txt" "source-highlight-qt.pro" "defines.pri" "THANKS")) nil [1 80])
+            ("ACLOCAL_AMFLAGS" variable (:default-value ("-I" "m4")) nil [81 105])
+            ("SUBDIRS" variable (:default-value ("m4" "lib" "tests" "doc")) nil [106 133])
+            ("pkgconfigdir" variable (:default-value ("$(libdir)/pkgconfig")) nil [134 169])
+            ("pkgconfig_DATA" variable (:default-value ("source-highlight-qt4.pc")) nil [182 223])
+            ("pkgconfig_DATA" variable (:default-value ("source-highlight-qt3.pc")) nil [230 271]))          
+    :file "Makefile.am"
+    :pointmax 332
+    :fsize 331
+    :lastmodtime '(19217 16944 0 0)
+    :unmatched-syntax '((symbol 320 . 332) (symbol 305 . 319) (punctuation 304 . 305) (symbol 279 . 304) (bol 279 . 279))
+    )
+   )
+  :file "!tmp!source-highlight-qt!src!source-highlight-qt-0.2.2!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

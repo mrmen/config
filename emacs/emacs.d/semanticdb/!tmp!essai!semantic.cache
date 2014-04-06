@@ -1,0 +1,31 @@
+;; Object essai/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "essai/"
+  :tables (list 
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("QApplication" include (:system-flag t) nil [1 24])
+            ("Qsci/qsciscintilla.h" include (:system-flag t) nil [25 56])
+            ("Qsci/qscilexerbash.h" include (:system-flag t) nil [57 88])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [99 108])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [109 122]))                  
+                :type "int")
+                nil [90 330]))          
+    :file "main.cpp"
+    :pointmax 331
+    :fsize 330
+    :lastmodtime '(21181 29704 304236 170000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!tmp!essai!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

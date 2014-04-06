@@ -1,0 +1,213 @@
+;; Object public_html/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "public_html/"
+  :tables (list 
+   (semanticdb-table "blog-2014-03-12-1439.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("Org-blog" section nil nil [240 2264])
+            ("/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = \"code-highlighted\";
+     elem.className   = \"code-highlighted\";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->" section nil nil [2264 3884])
+            ("Org-blog" section (:members 
+              ( ("Org-blog" section (:members 
+                  ( ("Table of Contents" section (:members 
+                      ( ("1 Introduction" anchor nil nil [4045 4048])
+                        ("2 Utilisation [0%]" anchor nil nil [4090 4093])
+                        ("2.1 Nouveau post" anchor nil nil [4139 4142])
+                        ("2.2 Publication" anchor nil nil [4188 4191]))                      ) nil [3975 4314])
+                    ("1" section nil nil [4314 4984])
+                    ("2" section (:members 
+                      ( ("2.1" section nil nil [5163 5388])
+                        ("2.2" section nil nil [5388 5591]))                      ) nil [4984 5591]))                  ) nil [3912 5591]))              ) nil [3884 5591]))          
+    :file "blog-2014-03-12-1439.html"
+    :pointmax 5591
+    :fsize 5600
+    :lastmodtime '(21280 25636 269016 933000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "blog-2014-03-12-2307.html"
+    :major-mode 'html-mode
+    :tags nil
+    :file "blog-2014-03-12-2307.html"
+    :pointmax 5658
+    :fsize 8494
+    :lastmodtime '(21280 56588 937592 495000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "blog-2014-03-12-2317.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("mon post qui débute tout ça" section nil nil [240 2875])
+            ("/**
+ *
+ * @source: http://thomasf.github.io/solarized-css/org-info.min.js
+ *
+ * @licstart  The following is the entire license notice for the
+ *  JavaScript code in http://thomasf.github.io/solarized-css/org-info.min.js.
+ *
+ * Copyright (C) 2012-2013  Sebastian Rose
+ *
+ *
+ * The JavaScript code in this tag is free software: you can
+ * redistribute it and/or modify it under the terms of the GNU
+ * General Public License (GNU GPL) as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option)
+ * any later version.  The code is distributed WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+ *
+ * As additional permission under GNU GPL version 3 section 7, you
+ * may distribute non-source (e.g., minimized or compacted) forms of
+ * that code without the copy of the GNU GPL normally required by
+ * section 4, provided you include this license notice and a URL
+ * through which recipients can access the Corresponding Source.
+ *
+ * @licend  The above is the entire license notice
+ * for the JavaScript code in http://thomasf.github.io/solarized-css/org-info.min.js.
+ *
+ */" section nil nil [2875 4195])
+            ("/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+
+<!--/*--><![CDATA[/*><!--*/
+org_html_manager.set(\"TOC_DEPTH\", \"3\");
+org_html_manager.set(\"LINK_HOME\", \"\");
+org_html_manager.set(\"LINK_UP\", \"\");
+org_html_manager.set(\"LOCAL_TOC\", \"1\");
+org_html_manager.set(\"VIEW_BUTTONS\", \"0\");
+org_html_manager.set(\"MOUSE_HINT\", \"underline\");
+org_html_manager.set(\"FIXED_TOC\", \"0\");
+org_html_manager.set(\"TOC\", \"1\");
+org_html_manager.set(\"VIEW\", \"1\");
+org_html_manager.setup();  // activate after the parameters are set
+/*]]>*///-->" section nil nil [4195 5705])
+            ("/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = \"code-highlighted\";
+     elem.className   = \"code-highlighted\";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->" section nil nil [5705 7324])
+            ("mon post qui débute tout ça" section (:members 
+              ( ("mon post qui débute tout ça" section (:members 
+                  ( ("Table of Contents" section (:members 
+                      ( ("1 le titre qui entame" anchor nil nil [7504 7507])
+                        ("2 titre 2" anchor nil nil [7556 7559])
+                        ("2.1 titre ' 2" anchor nil nil [7596 7599])
+                        ("2.2 titre ' 3" anchor nil nil [7642 7645]))                      ) nil [7434 7766])
+                    ("1" section nil nil [7766 8251])
+                    ("2" section (:members 
+                      ( ("2.1" section nil nil [8487 8781])
+                        ("2.2" section nil nil [8781 9035]))                      ) nil [8251 9035]))                  ) nil [7352 9035]))              ) nil [7324 9035]))          
+    :file "blog-2014-03-12-2317.html"
+    :pointmax 9035
+    :fsize 9040
+    :lastmodtime '(21280 59745 670842 516000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!mrmen!blog!public_html!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

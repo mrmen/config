@@ -1,0 +1,315 @@
+;; Object zudiro/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "zudiro/"
+  :tables (list 
+   (semanticdb-table "grille.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("xml.dom" include nil nil [241 268])
+            ("zudiroGrid" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("'''Initiate all variables of the grid'''" code nil (reparse-symbol indented_block_body) [331 371])
+                            ("self" variable nil (reparse-symbol indented_block_body) [380 402])
+                            ("self" code nil (reparse-symbol indented_block_body) [411 436]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [307 311])
+                            ("xmlLine" variable nil (reparse-symbol function_parameters) [313 320]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [294 437])
+                    ("generateAttributes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [465 469]))                          )
+                        (reparse-symbol indented_block_body) [442 859])
+                    ("getState" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [877 881])
+                            ("i" variable nil (reparse-symbol function_parameters) [883 884])
+                            ("j" variable nil (reparse-symbol function_parameters) [886 887]))                          )
+                        (reparse-symbol indented_block_body) [864 964])
+                    ("setState" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [982 986])
+                            ("i" variable nil (reparse-symbol function_parameters) [988 989])
+                            ("j" variable nil (reparse-symbol function_parameters) [991 992]))                          )
+                        (reparse-symbol indented_block_body) [969 1102]))                  
+                :type "class")
+                nil [270 1102]))          
+    :file "grille.py"
+    :pointmax 1102
+    :fsize 1101
+    :lastmodtime '(21102 48150 631912 714000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "fenetre.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("Tkinter" include nil nil [259 280])
+            ("Fenetre" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("'''Iniate game and window. Call differents functions in order to access games and saved games'''" code nil (reparse-symbol indented_block_body) [331 427])
+                            ("self" variable nil (reparse-symbol indented_block_body) [813 832])
+                            ("self" code nil (reparse-symbol indented_block_body) [841 898])
+                            ("self" code nil (reparse-symbol indented_block_body) [907 939])
+                            ("self" variable nil (reparse-symbol indented_block_body) [948 978])
+                            ("self" code nil (reparse-symbol indented_block_body) [987 1042])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1051 1081])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1090 1137])
+                            ("if" code nil (reparse-symbol indented_block_body) [1146 1233])
+                            ("mainValue" code nil (reparse-symbol indented_block_body) [1322 1356])
+                            ("minorValue" code nil (reparse-symbol indented_block_body) [1365 1418])
+                            ("Label" code nil (reparse-symbol indented_block_body) [1427 1522])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1551 1587])
+                            ("verticalScroll" variable nil (reparse-symbol indented_block_body) [1596 1653])
+                            ("verticalScroll" code nil (reparse-symbol indented_block_body) [1662 1720])
+                            ("self" code nil (reparse-symbol indented_block_body) [1729 1786])
+                            ("updateZudiro" function (:arguments 
+                              ( ("event" variable nil (reparse-symbol function_parameters) [1812 1817]))                              ) (reparse-symbol indented_block_body) [1795 1933])
+                            ("self" code nil (reparse-symbol indented_block_body) [1941 1986])
+                            ("self" code nil (reparse-symbol indented_block_body) [1995 2039])
+                            ("i" variable nil (reparse-symbol indented_block_body) [2048 2051])
+                            ("j" variable nil (reparse-symbol indented_block_body) [2060 2063])
+                            ("k" variable nil (reparse-symbol indented_block_body) [2072 2075])
+                            ("print" code nil (reparse-symbol indented_block_body) [2084 2121])
+                            ("while" code nil (reparse-symbol indented_block_body) [2130 2320])
+                            ("self" code nil (reparse-symbol indented_block_body) [2328 2390])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2452 2473])
+                            ("self" code nil (reparse-symbol indented_block_body) [2482 2498])
+                            ("self" code nil (reparse-symbol indented_block_body) [2507 2527])
+                            ("self" code nil (reparse-symbol indented_block_body) [2536 2555]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [316 320]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [303 2556])
+                    ("isSavedGamesExisting" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2590 2594]))                          )
+                        (reparse-symbol indented_block_body) [2565 2877])
+                    ("loadLevel" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3018 3022]))                          )
+                        (reparse-symbol indented_block_body) [3004 3909])
+                    ("printMainPart" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4067 4071]))                          )
+                        (reparse-symbol indented_block_body) [4049 4113])
+                    ("generateLevel" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4136 4140]))                          )
+                        (reparse-symbol indented_block_body) [4118 6168])
+                    ("changeColor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6189 6193])
+                            ("i" variable nil (reparse-symbol function_parameters) [6194 6195])
+                            ("j" variable nil (reparse-symbol function_parameters) [6196 6197]))                          )
+                        (reparse-symbol indented_block_body) [6173 8705])
+                    ("testZudiroIsDone" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8731 8735]))                          )
+                        (reparse-symbol indented_block_body) [8710 9381])
+                    ("zudiroLineToValue" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9425 9429])
+                            ("string" variable nil (reparse-symbol function_parameters) [9430 9436]))                          )
+                        (reparse-symbol indented_block_body) [9403 9987]))                  
+                :type "class")
+                nil [282 9987])
+            ("if" code nil nil [10006 10054]))          
+    :file "fenetre.py"
+    :pointmax 10054
+    :fsize 10053
+    :lastmodtime '(21100 7949 316632 968000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "game.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("Tkinter" include nil nil [260 281])
+            ("grille" include nil nil [282 305])
+            ("Window" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("'''Iniate game and window. Call differents functions in order to access games and saved games'''" code nil (reparse-symbol indented_block_body) [355 451])
+                            ("self" variable nil (reparse-symbol indented_block_body) [837 856])
+                            ("self" code nil (reparse-symbol indented_block_body) [865 922])
+                            ("self" code nil (reparse-symbol indented_block_body) [931 963])
+                            ("self" variable nil (reparse-symbol indented_block_body) [972 1002])
+                            ("self" code nil (reparse-symbol indented_block_body) [1011 1066])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1075 1105])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1114 1161])
+                            ("if" code nil (reparse-symbol indented_block_body) [1170 1257])
+                            ("mainValue" code nil (reparse-symbol indented_block_body) [1346 1380])
+                            ("minorValue" code nil (reparse-symbol indented_block_body) [1389 1442])
+                            ("Label" code nil (reparse-symbol indented_block_body) [1451 1546])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1575 1611])
+                            ("verticalScroll" variable nil (reparse-symbol indented_block_body) [1620 1677])
+                            ("verticalScroll" code nil (reparse-symbol indented_block_body) [1686 1744])
+                            ("self" code nil (reparse-symbol indented_block_body) [1753 1810])
+                            ("updateZudiro" function (:arguments 
+                              ( ("event" variable nil (reparse-symbol function_parameters) [1836 1841]))                              ) (reparse-symbol indented_block_body) [1819 1957])
+                            ("self" code nil (reparse-symbol indented_block_body) [1965 2010])
+                            ("self" code nil (reparse-symbol indented_block_body) [2019 2063])
+                            ("i" variable nil (reparse-symbol indented_block_body) [2072 2075])
+                            ("j" variable nil (reparse-symbol indented_block_body) [2084 2087])
+                            ("k" variable nil (reparse-symbol indented_block_body) [2096 2099])
+                            ("print" code nil (reparse-symbol indented_block_body) [2108 2145])
+                            ("while" code nil (reparse-symbol indented_block_body) [2154 2344])
+                            ("self" code nil (reparse-symbol indented_block_body) [2352 2414])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2467 2488])
+                            ("self" code nil (reparse-symbol indented_block_body) [2497 2513])
+                            ("self" code nil (reparse-symbol indented_block_body) [2522 2542])
+                            ("self" code nil (reparse-symbol indented_block_body) [2551 2570]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [340 344]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [327 2571])
+                    ("isSavedGamesExisting" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2601 2605]))                          )
+                        (reparse-symbol indented_block_body) [2576 2888])
+                    ("loadLevel" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3021 3025]))                          )
+                        (reparse-symbol indented_block_body) [3007 3795]))                  
+                :type "class")
+                nil [307 3795])
+            ("if" code nil nil [3796 3859]))          
+    :file "game.py"
+    :pointmax 3859
+    :fsize 3858
+    :lastmodtime '(21152 26800 416678 198000)
+    :unmatched-syntax '((IF 3796 . 3798) ($EOI 3825 . 3825))
+    )
+   (semanticdb-table "tmp.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("Tkinter" include nil nil [259 280])
+            ("Fenetre" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("'''Iniate game and window. Call differents functions in order to access games and saved games'''" code nil (reparse-symbol indented_block_body) [331 427])
+                            ("self" variable nil (reparse-symbol indented_block_body) [813 832])
+                            ("self" code nil (reparse-symbol indented_block_body) [841 898])
+                            ("self" code nil (reparse-symbol indented_block_body) [907 939])
+                            ("self" variable nil (reparse-symbol indented_block_body) [948 978])
+                            ("self" code nil (reparse-symbol indented_block_body) [987 1042])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1051 1081])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1090 1137])
+                            ("if" code nil (reparse-symbol indented_block_body) [1146 1233])
+                            ("mainValue" code nil (reparse-symbol indented_block_body) [1322 1356])
+                            ("minorValue" code nil (reparse-symbol indented_block_body) [1365 1418])
+                            ("Label" code nil (reparse-symbol indented_block_body) [1427 1522])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1551 1587])
+                            ("verticalScroll" variable nil (reparse-symbol indented_block_body) [1596 1653])
+                            ("verticalScroll" code nil (reparse-symbol indented_block_body) [1662 1720])
+                            ("self" code nil (reparse-symbol indented_block_body) [1729 1786])
+                            ("updateZudiro" function (:arguments 
+                              ( ("event" variable nil (reparse-symbol function_parameters) [1812 1817]))                              ) (reparse-symbol indented_block_body) [1795 1933])
+                            ("self" code nil (reparse-symbol indented_block_body) [1941 1986])
+                            ("self" code nil (reparse-symbol indented_block_body) [1995 2039])
+                            ("i" variable nil (reparse-symbol indented_block_body) [2048 2051])
+                            ("j" variable nil (reparse-symbol indented_block_body) [2060 2063])
+                            ("k" variable nil (reparse-symbol indented_block_body) [2072 2075])
+                            ("print" code nil (reparse-symbol indented_block_body) [2084 2121])
+                            ("while" code nil (reparse-symbol indented_block_body) [2130 2320])
+                            ("self" code nil (reparse-symbol indented_block_body) [2328 2390])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2452 2473])
+                            ("self" code nil (reparse-symbol indented_block_body) [2482 2498])
+                            ("self" code nil (reparse-symbol indented_block_body) [2507 2527])
+                            ("self" code nil (reparse-symbol indented_block_body) [2536 2555]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [316 320]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [303 2556])
+                    ("isSavedGamesExisting" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2590 2594]))                          )
+                        (reparse-symbol indented_block_body) [2565 2877])
+                    ("loadLevel" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3018 3022]))                          )
+                        (reparse-symbol indented_block_body) [3004 3909])
+                    ("printMainPart" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4067 4071]))                          )
+                        (reparse-symbol indented_block_body) [4049 4113])
+                    ("generateLevel" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4136 4140]))                          )
+                        (reparse-symbol indented_block_body) [4118 6168])
+                    ("changeColor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6189 6193])
+                            ("i" variable nil (reparse-symbol function_parameters) [6194 6195])
+                            ("j" variable nil (reparse-symbol function_parameters) [6196 6197]))                          )
+                        (reparse-symbol indented_block_body) [6173 8705])
+                    ("testZudiroIsDone" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8731 8735]))                          )
+                        (reparse-symbol indented_block_body) [8710 9381])
+                    ("zudiroLineToValue" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9425 9429])
+                            ("string" variable nil (reparse-symbol function_parameters) [9430 9436]))                          )
+                        (reparse-symbol indented_block_body) [9403 9987]))                  
+                :type "class")
+                nil [282 9987])
+            ("if" code nil nil [10006 10054]))          
+    :file "tmp.py"
+    :pointmax 10054
+    :fsize 10053
+    :lastmodtime '(21104 6045 413345 437000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "genC.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("random" include nil nil [252 265])
+            ("sys" include nil nil [266 276])
+            ("if" code nil nil [318 379])
+            ("L" variable nil nil [396 402])
+            ("for" code nil nil [403 507])
+            ("lineToPrint" variable nil nil [529 545])
+            ("for" code nil nil [546 1498])
+            ("columnToPrint" variable nil nil [1527 1545])
+            ("for" code nil nil [1546 2668])
+            ("print" code nil nil [2670 2785]))          
+    :file "genC.py"
+    :pointmax 2969
+    :fsize 2968
+    :lastmodtime '(21145 43185 940012 564000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!mrmen!zudiro!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

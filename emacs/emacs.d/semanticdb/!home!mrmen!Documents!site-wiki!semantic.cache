@@ -1,0 +1,30 @@
+;; Object site-wiki/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "site-wiki/"
+  :tables (list 
+   (semanticdb-table "index.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("LaTeX" section (:members 
+              ( ("Animate" section (:members 
+                  ( ("Faire tourner un micro-ondes" anchor nil nil [61 64]))                  ) nil [32 156]))              ) nil [16 156]))          
+    :file "index.html"
+    :pointmax 156
+    :fsize 155
+    :lastmodtime '(21226 19096 820113 650000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "highlight.py"
+    :major-mode 'python-mode
+    :tags nil
+    :file "highlight.py"
+    :pointmax 559
+    :fsize 517
+    :lastmodtime '(21226 22794 243418 618000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!mrmen!Documents!site-wiki!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,6 @@
+/sudo:root@alka:/etc/qingy/settings
+#_asudo_broot@alka_b_aetc_aqingy_asettings#
+/sudo:root@alka:/etc/qingy/sessions/awesome
+#_asudo_broot@alka_b_aetc_aqingy_asessions_aawesome#
+/home/mrmen/.xinitrc
+/home/mrmen/#.xinitrc#

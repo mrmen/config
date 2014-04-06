@@ -1,0 +1,48 @@
+;; Object srchiliteqt/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "srchiliteqt/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CXXFLAGS" variable (:default-value ("$(QT_CXXFLAGS)")) nil [78 107])
+            ("AM_CPPFLAGS" variable (:default-value ("$(QT_CPPFLAGS)" "$(SRCHILITE_CFLAGS)")) nil [107 156])
+            ("AM_LDFLAGS" variable (:default-value ("$(QT_LDFLAGS)" "-version-info" "$(LIBRARY_VERSION)")) nil [156 217])
+            ("LDADD" variable (:default-value ("$(SRCHILITE_LIBS)" "$(QT_LIBS)")) nil [218 255])
+            ("noinst_LTLIBRARIES" variable (:default-value ("libsource-highlight-qt-common.la")) nil [256 311])
+            ("lib_LTLIBRARIES" variable nil nil [311 329])
+            ("libsource_highlight_qt_common_la_SOURCES" variable (:default-value ("GNUSyntaxHighlighter.cpp" "TextFormatter.cpp" "TextFormatterFactory.cpp" "QtColorMap.cpp")) nil [330 468])
+            ("libsource_highlight_qt_common_la_LIBADD" variable (:default-value ("$(LDADD)")) nil [469 520])
+            ("h_sources" variable (:default-value ("GNUSyntaxHighlighter.h" "TextFormatter.h" "TextFormatterFactory.h" "QtColorMap.h" "HighlightStateData.h" "Qt4SyntaxHighlighter.h" "Qt4TextFormatter.h" "Qt4TextFormatterFactory.h" "Qt3SyntaxHighlighter.h" "Qt3TextFormatter.h" "Qt3TextFormatterFactory.h" "ParagraphMap.h" "StyleComboBox.h" "LanguageComboBox.h" "OutputFormatComboBox.h" "TextEditHighlighted.h" "LanguageElemColorForm.h" "MainColorForm.h" "ColorDialog.h" "Qt4SourceHighlightStyleGenerator.h" "SourceHighlightExceptionBox.h" "SourceHighlightSettingsPage.h" "SourceHighlightSettingsDialog.h")) nil [521 1062])
+            ("lib_LTLIBRARIES" variable (:default-value ("libsource-highlight-qt4.la")) nil [1074 1120])
+            ("libsource_highlight_qt4_la_SOURCES" variable (:default-value ("Qt4SyntaxHighlighter.cpp" "Qt4TextFormatter.cpp" "Qt4TextFormatterFactory.cpp" "StyleComboBox.cpp" "LanguageComboBox.cpp" "OutputFormatComboBox.cpp" "TextEditHighlighted.cpp" "LanguageElemColorForm.cpp" "MainColorForm.cpp" "ColorDialog.cpp" "Qt4SourceHighlightStyleGenerator.cpp" "SourceHighlightExceptionBox.cpp" "SourceHighlightSettingsPage.cpp" "SourceHighlightSettingsDialog.cpp")) nil [1121 1557])
+            ("nodist_libsource_highlight_qt4_la_SOURCES" variable (:default-value ("$(BUILT_SOURCES)")) nil [1558 1619])
+            ("libsource_highlight_qt4_la_LIBADD" variable (:default-value ("$(LDADD)" "$(builddir)/libsource-highlight-qt-common.la")) nil [1620 1710])
+            ("AM_UIC_FLAGS" variable (:default-value ("-no-protection")) nil [1959 1990])
+            ("BUILT_SOURCES" variable (:default-value ("moc_StyleComboBox.cpp" "moc_LanguageComboBox.cpp" "moc_OutputFormatComboBox.cpp" "moc_TextEditHighlighted.cpp" "ui_LanguageElemColorForm.h" "moc_LanguageElemColorForm.cpp" "ui_MainColorForm.h" "moc_MainColorForm.cpp" "ui_ColorDialog.h" "moc_ColorDialog.cpp" "ui_SourceHighlightSettingsPage.h" "moc_SourceHighlightSettingsPage.cpp" "ui_SourceHighlightSettingsDialog.h" "moc_SourceHighlightSettingsDialog.cpp")) nil [1991 2406])
+            ("moc_%.cpp" function (:arguments ("%.h")) nil [2407 2439])
+            ("ui_%.h" function (:arguments ("%.ui")) nil [2440 2486])
+            ("lib_LTLIBRARIES" variable (:default-value ("libsource-highlight-qt3.la")) nil [2505 2551])
+            ("libsource_highlight_qt3_la_SOURCES" variable (:default-value ("Qt3SyntaxHighlighter.cpp" "Qt3TextFormatter.cpp" "Qt3TextFormatterFactory.cpp" "ParagraphMap.cpp")) nil [2552 2692])
+            ("libsource_highlight_qt3_la_LIBADD" variable (:default-value ("$(LDADD)" "$(builddir)/libsource-highlight-qt-common.la")) nil [2693 2783])
+            ("EXTRA_DIST" variable (:default-value ("$(h_sources)" "srchiliteqt.doxyfile.in" "LanguageElemColorForm.ui" "MainColorForm.ui" "ColorDialog.ui" "SourceHighlightSettingsPage.ui" "SourceHighlightSettingsDialog.ui" "srchiliteqt.pro")) nil [2790 2986])
+            ("library_includedir" variable (:default-value ("$(includedir)/srchiliteqt")) nil [2987 3032])
+            ("library_include_HEADERS" variable (:default-value ("$(h_sources)")) nil [3032 3071])
+            ("DOXYFILE" variable (:default-value ("$(builddir)/srchiliteqt.doxyfile")) nil [3116 3158])
+            ("help_dir" variable (:default-value ("$(htmldir)/api")) nil [3159 3183])
+            ("doxygen.stamp" function (:arguments ("$(DOXYFILE)")) nil [3184 3260])
+            ("install-data-local" function (:arguments ("doxygen.stamp")) nil [3307 3453])
+            ("uninstall-local" function nil nil [3560 3630])
+            ("clean-local" function nil nil [3631 3670])
+            ("CLEANFILES" variable (:default-value ("doxygen.stamp" "$(BUILT_SOURCES)")) nil [3677 3721]))          
+    :file "Makefile.am"
+    :pointmax 3721
+    :fsize 3720
+    :lastmodtime '(19216 12737 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!tmp!source-highlight-qt!src!source-highlight-qt-0.2.2!lib!srchiliteqt!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

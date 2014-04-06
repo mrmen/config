@@ -1,0 +1,100 @@
+;; Object temp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "temp/"
+  :tables (list 
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [234 253])
+            ("tinyxml.h" include (:system-flag t) nil [254 274])
+            ("string" include (:system-flag t) nil [275 292])
+            ("boost/foreach.hpp" include (:system-flag t) nil [293 321])
+            ("boost/tokenizer.hpp" include (:system-flag t) nil [322 352])
+            ("vector" include (:system-flag t) nil [353 370])
+            ("boost/lexical_cast.hpp" include (:system-flag t) nil [371 404])
+            ("iterator" include (:system-flag t) nil [405 424])
+            ("algorithm" include (:system-flag t) nil [425 445])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [447 467])
+            ("boost" using (:type ("boost" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [468 490])
+            ("Zudiro" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [506 513])
+                    ("Zudiro" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("filename" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [523 539])
+                            ("level" variable (:type "int") (reparse-symbol arg-sub-list) [551 561])
+                            ("subLevel" variable (:type "int") (reparse-symbol arg-sub-list) [564 577]))                          
+                        :type ("Zudiro" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [516 580])
+                    ("stringToVector" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("text" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [603 615])
+                            ("attribute" variable
+                               (:reference 1
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [616 639]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [583 640])
+                    ("lotg" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [643 665])
+                    ("atg" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [643 665])
+                    ("subLevel" variable (:type "int") (reparse-symbol classsubparts) [668 693])
+                    ("level" variable (:type "int") (reparse-symbol classsubparts) [668 693])
+                    ("dim" variable (:type "int") (reparse-symbol classsubparts) [668 693]))                  
+                :type "class")
+                nil [492 696])
+            ("stringToVector" function
+               (:parent "Zudiro"
+                :arguments 
+                  ( ("text" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [727 739])
+                    ("attribute" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [740 763]))                  
+                :type "void")
+                nil [699 948])
+            ("Zudiro" function
+               (:constructor-flag t
+                :parent "Zudiro"
+                :arguments 
+                  ( ("filename" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [965 981])
+                    ("level" variable (:type "int") (reparse-symbol arg-sub-list) [982 992])
+                    ("subLevel" variable (:type "int") (reparse-symbol arg-sub-list) [993 1006]))                  
+                :type ("Zudiro" type (:type "class") nil nil))
+                nil [950 1739])
+            ("main" function (:type "int") nil [1741 1894]))          
+    :file "main.cpp"
+    :pointmax 1899
+    :fsize 1582
+    :lastmodtime '(21102 49218 865216 55000)
+    :unmatched-syntax '((number 577 . 578) (punctuation 576 . 577) (number 561 . 562) (punctuation 560 . 561) (string 539 . 549) (punctuation 538 . 539) (number 577 . 578) (punctuation 576 . 577) (number 561 . 562) (punctuation 560 . 561) (string 539 . 549) (punctuation 538 . 539))
+    )
+   )
+  :file "!home!mrmen!QZudiro!temp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,22 @@
+;; Object docs/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "docs/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AUTOMAKE_OPTIONS" variable (:default-value ("subdir-objects")) nil [1 35])
+            ("info_TEXINFOS" variable (:default-value ("grub.texi" "grub-dev.texi")) nil [82 122])
+            ("grub_TEXINFOS" variable (:default-value ("fdl.texi")) nil [122 147])
+            ("EXTRA_DIST" variable (:default-value ("font_char_metrics.png" "font_char_metrics.txt")) nil [148 205]))          
+    :file "Makefile.am"
+    :pointmax 207
+    :fsize 206
+    :lastmodtime '(20300 48085 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!tmp!grub-2.00!docs!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

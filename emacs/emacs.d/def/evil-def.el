@@ -1,0 +1,56 @@
+;
+;;
+;;    Thomas "Mr Men" Etcheverria
+;;    <tetcheve (at) gmail .com>
+;;
+;;    Created on : 13-07-2013 23:44:31
+;;    Time-stamp: <03-12-2013 19:59:59>
+;;
+;;    File name : /home/mrmen/.emacs.d/def/evil-mode.el
+;;    Description :
+;;
+
+;; undo-tree mode required by evil
+
+(require 'undo-tree)
+;; replace undo emacs 
+(global-undo-tree-mode)
+
+
+
+(require 'evil)
+;; turn on evil mode
+(setq evil-mode 1)
+
+;; ,, permet de quitter les états visuel, remplacement et insertion et joue le rôle d’escape en état normal (il faut passer par key-chord pour ne pas perdre la fonction evil-repeat-find-char-reverse)
+;;; key-chord: permet d’associer des raccourcis claviers à la frappe de deux touches de clavier standard (donc sans passer par Ctr, Super, F. ou Met-4)
+(require 'key-chord)
+(setq key-chord-two-keys-delay 0.5)
+(key-chord-define evil-normal-state-map ",," 'evil-force-normal-state)
+;; (key-chord-define evil-visual-state-map ",," 'evil-change-to-previous-state)
+(key-chord-define evil-insert-state-map ",," 'evil-normal-state)
+;; (key-chord-define evil-replace-state-map ",," 'evil-normal-state)
+(key-chord-mode 1)
+
+;; modify cursor color
+;fait varier la couleur du curseur en fonction du mode
+ (setq evil-normal-state-cursor '("red" box)
+       evil-visual-state-cursor '("light salmon" box)
+       evil-insert-state-cursor '("blue" box)
+       evil-replace-state-cursor '("sienna" hbar)
+       evil-emacs-state-cursor '("green" box))
+   ;; change mode-line color by evil state
+   (lexical-let ((default-color (cons (face-background 'mode-line)
+                                      (face-foreground 'mode-line))))
+     (add-hook 'post-command-hook
+       (lambda ()
+         (let ((color (cond ((minibufferp) default-color)
+                            ((evil-insert-state-p) '("#e80000" . "#ffffff"))
+                            ((evil-emacs-state-p)  '("#007700" . "#ffffff"))
+                            ((buffer-modified-p)   '("#006fa0" . "#ffffff"))
+                            (t default-color))))
+           (set-face-background 'mode-line (car color))
+           (set-face-foreground 'mode-line (cdr color))))))
+;(evil-initialize-state 'emacs)
+
+(provide 'evil-def)

@@ -1,0 +1,29 @@
+;; Object powerline-shell/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "powerline-shell/"
+  :tables (list 
+   (semanticdb-table "config.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("SEGMENTS" variable nil nil [380 1345])
+            ("THEME" variable nil nil [1415 1432]))          
+    :file "config.py"
+    :pointmax 1433
+    :fsize 1432
+    :lastmodtime '(21150 5824 423256 970000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "install.py"
+    :major-mode 'python-mode
+    :tags nil
+    :file "install.py"
+    :pointmax 1232
+    :fsize 1231
+    :lastmodtime '(21150 5787 3256 648000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!tmp!powerline-shell!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

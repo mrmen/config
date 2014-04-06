@@ -1,0 +1,19 @@
+;; Object .canto/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file ".canto/"
+  :tables (list 
+   (semanticdb-table "conf.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("add" code nil nil [97 138]))          
+    :file "conf.py"
+    :pointmax 139
+    :fsize 138
+    :lastmodtime '(21246 7225 244753 488000)
+    :unmatched-syntax '(($EOI 139 . 139) ($EOI 105 . 105))
+    )
+   )
+  :file "!home!mrmen!.canto!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,170 @@
+;; Object QZudiro/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "QZudiro/"
+  :tables (list 
+   (semanticdb-table "mainwindow.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("mainwindow.h" include nil nil [1 24])
+            ("ui_mainwindow.h" include nil nil [25 51])
+            ("zudirogrid.h" include nil nil [52 75])
+            ("QSignalMapper" include (:system-flag t) nil [76 100])
+            ("QPushButton" include (:system-flag t) nil [101 123])
+            ("iostream" include (:system-flag t) nil [124 143])
+            ("MainWindow" function
+               (:constructor-flag t
+                :parent "MainWindow"
+                :arguments 
+                  ( ("parent" variable
+                       (:pointer 1
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [168 184]))                  
+                :type ("MainWindow" type (:type "class") nil nil))
+                nil [145 525])
+            ("MainWindow" function
+               (:destructor-flag t
+                :parent "MainWindow"
+                :type "void")
+                nil [527 571])
+            ("updateLevelLcd" function
+               (:parent "MainWindow"
+                :arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [605 615]))                  
+                :type "void")
+                nil [573 801])
+            ("doTheStuff" function
+               (:parent "MainWindow"
+                :arguments 
+                  ( ("level" variable (:type "int") (reparse-symbol arg-sub-list) [831 841])
+                    ("sublevel" variable (:type "int") (reparse-symbol arg-sub-list) [842 855]))                  
+                :type "void")
+                nil [803 3148])
+            ("buttonClick" function
+               (:parent "MainWindow"
+                :arguments 
+                  ( ("widget" variable
+                       (:pointer 1
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3179 3195]))                  
+                :type "void")
+                nil [3150 4817])
+            ("getValueAndUpdate" function
+               (:parent "MainWindow"
+                :type "void")
+                nil [4819 5021])
+            ("updateIt" function
+               (:parent "MainWindow"
+                :arguments 
+                  ( ("level" variable (:type "int") (reparse-symbol arg-sub-list) [5049 5059])
+                    ("sublevel" variable (:type "int") (reparse-symbol arg-sub-list) [5060 5073]))                  
+                :type "void")
+                nil [5023 5675]))          
+    :file "mainwindow.cpp"
+    :pointmax 5676
+    :fsize 5675
+    :lastmodtime '(21173 32924 876713 11000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "mainwindow.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("MAINWINDOW_H" variable (:constant-flag t) nil [30 42])
+            ("QMainWindow" include (:system-flag t) nil [44 66])
+            ("QPushButton" include (:system-flag t) nil [67 89])
+            ("Ui" type
+               (:members 
+                  ( ("MainWindow" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [106 123]))                  
+                :type "namespace")
+                nil [91 125])
+            ("MainWindow" type
+               (:superclasses 
+                  ( ("QMainWindow" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("buttonHash" variable (:type ("QHash" type
+                         (:template-specifier 
+                            ( ("QPushButton" type (:pointer 1) nil nil)
+                              ("QPair" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [184 233])
+                    ("public" label nil (reparse-symbol classsubparts) [269 276])
+                    ("MainWindow" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("parent" variable
+                               (:pointer 1
+                                :type ("QWidget" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [301 318]))                          
+                        :type ("MainWindow" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [290 322])
+                    ("MainWindow" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [327 341])
+                    ("private" label nil (reparse-symbol classsubparts) [343 351])
+                    ("ui" variable
+                       (:pointer 1
+                        :type ("Ui::MainWindow" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [356 375])
+                    ("public" label nil (reparse-symbol classsubparts) [377 390])
+                    ("updateLevelLcd" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [415 419]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [395 420])
+                    ("buttonClick" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type ("QWidget" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [442 451]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [425 452]))                  
+                :type "class")
+                nil [127 621]))          
+    :file "mainwindow.h"
+    :pointmax 646
+    :fsize 904
+    :lastmodtime '(21145 63053 226682 906000)
+    :unmatched-syntax '((number 319 . 320) (punctuation 317 . 318) (EXPLICIT 281 . 289) (symbol 171 . 179))
+    :lexical-table 
+        '(("MAINWINDOW_H")
+          )
+
+    )
+   (semanticdb-table "dothecalc.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("a" variable nil nil [244 253])
+            ("debug" function (:arguments 
+              ( ("string" variable nil (reparse-symbol function_parameters) [265 271]))              ) nil [255 280])
+            ("reg" variable nil nil [318 325])
+            ("value" variable nil nil [326 335])
+            ("for" code nil nil [336 504])
+            ("if" code nil nil [504 541])
+            ("print" code nil nil [542 554]))          
+    :file "dothecalc.py"
+    :pointmax 555
+    :fsize 554
+    :lastmodtime '(21145 42493 526675 652000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "zudirogrid.h"
+    :file "zudirogrid.h"
+    :fsize 548
+    :lastmodtime '(21145 61480 280008 962000)
+    )
+   )
+  :file "!home!mrmen!QZudiro!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

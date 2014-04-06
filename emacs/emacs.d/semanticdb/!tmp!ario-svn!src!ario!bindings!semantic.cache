@@ -1,0 +1,20 @@
+;; Object bindings/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "bindings/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("SUBDIRS" variable nil nil [1 12])
+            ("SUBDIRS" variable (:default-value ("python")) nil [30 48]))          
+    :file "Makefile.am"
+    :pointmax 54
+    :fsize 53
+    :lastmodtime '(21147 9531 570008 390000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!tmp!ario-svn!src!ario!bindings!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

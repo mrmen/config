@@ -1,0 +1,25 @@
+;; Object bash-completion.d/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "bash-completion.d/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("bash_completion_source" variable (:default-value ("grub-completion.bash.in")) nil [2 51])
+            ("bash_completion_script" variable (:default-value ("grub")) nil [51 81])
+            ("EXTRA_DIST" variable (:default-value ("$(bash_completion_source)")) nil [82 121])
+            ("CLEANFILES" variable (:default-value ("$(bash_completion_script)" "config.log")) nil [122 172])
+            ("bashcompletiondir" variable (:default-value ("$(sysconfdir)/bash_completion.d")) nil [173 225])
+            ("bashcompletion_DATA" variable (:default-value ("$(bash_completion_script)")) nil [225 273])
+            ("$(bash_completion_script)" function (:arguments ("$(bash_completion_source)" "$(top_builddir)/config.status")) nil [274 401]))          
+    :file "Makefile.am"
+    :pointmax 401
+    :fsize 400
+    :lastmodtime '(19702 24471 0 0)
+    :unmatched-syntax '((shell-command 358 . 400) (bol 357 . 357))
+    )
+   )
+  :file "!tmp!grub-2.00!util!bash-completion.d!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )
