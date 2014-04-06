@@ -1,0 +1,297 @@
+\NeedsTeXFormat{LaTeX2e} 
+\ProvidesPackage{mrmen}[2011/01/24 Mon méta-paquet]
+
+% chargement des paquets mathématiques
+\RequirePackage{amsmath, amsthm, amssymb}%, stmaryrd} 	% pour les crochets [| utiles pour les entiers
+ 
+% pour les url
+\RequirePackage{url}
+
+% chargement des paquets pour les accents
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc} % par défaut
+\RequirePackage{lmodern} % que l'on pourra supprimer
+
+\RequirePackage{xspace}
+\RequirePackage[french]{babel}
+\frenchbsetup{StandardLayout}
+
+\newif\if@algo \@algofalse
+\newif\if@page \@pagefalse
+\newif\if@dessinpstricks \@dessinpstricksfalse
+\newif\if@dessintikz \@dessintikzfalse
+\newif\if@sommaire \@sommairefalse
+\newif\if@index \@indexfalse
+\newif\if@latin \@latinfalse
+\newif\if@macroman \@macromanfalse
+
+
+\DeclareOption{french}{\AtBeginDocument{\selectlanguage{french}}}
+%\DeclareOption{english}{\AtBeginDocument{\selectlanguage{english}}}
+\DeclareOption{algo}{\@algotrue}
+\DeclareOption{page}{\@pagetrue}
+\DeclareOption{dessinpstricks}{\@dessinpstrickstrue}
+\DeclareOption{dessintikz}{\@dessintikztrue}
+\DeclareOption{sommaire}{\@sommairetrue}
+\DeclareOption{index}{\@indextrue}
+%\DeclareOtption{latin}{\@latintrue}
+\DeclareOption{macroman}{\@macromantrue}
+
+\ProcessOptions
+
+% pour l'écriture d'algo chragement du paquet algorithm2e et modifications de nom anglais
+\if@algo
+	\usepackage[ruled, vlined, commentsnumbered]{algorithm2e}
+	\SetKwInput{Donnes}{Donn\'ees}
+	\SetKwInput{Res}{R\'esultat}
+	\SetKwInput{Entree}{Entr\'ees}
+	\SetKwInput{Sortie}{Sorties}
+	\SetKw{Retour}{Retourner}
+	\SetKwBlock{Deb}{d\'ebut}{fin}
+	\SetKwIF{Si}{SinonSi}{Sinon}{si}{alors}{sinon si}{sinon}{finsi}
+	\SetKwSwitch{Suivant}{Cas}{Autre}{suivant}{faire}{cas o\`u}{autres cas}{fin d’alternative}
+	\SetKwFor{Pour}{Pour}{faire}{finpour}
+	\SetKwFor{Tq}{Tant que}{faire}{fintantque}
+	\SetKwFor{PourCh}{Pour chaque}{faire}{finprch}
+	\SetKwFor{PourTous}{Pour tous}{faire}{finprts}
+	\SetKwRepeat{Repeter}{r\'ep\'eter}{jusqu’\`a}
+\fi
+
+% pour utiliser la page entière on utlise a4wide
+\if@page
+%	\RequirePackage{geometry}
+%	\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2.5cm,rmargin=2.5cm,headheight=3cm,headsep=1cm,footskip=1cm}
+	\RequirePackage{a4wide}
+\fi
+
+% paquets requis pour dessiner avec pstricks + graphicx
+\if@dessinpstricks
+	\RequirePackage{pstricks,pstricks, pstricks-add, pst-plot, graphicx}
+\fi
+
+% paquets nécessaires pour utiliser tikz + graphicx
+\if@dessintikz
+	\RequirePackage{tikz,pgf,graphicx}
+\fi
+
+% pour l'obtention de sommaire (en lieu et place de tables des matières)
+\if@sommaire
+	\RequirePackage{array, shorttoc}
+\fi
+
+% pour un index
+\if@index
+	\RequirePackage{makeidx}
+\fi
+
+% encodage du fichier si option latin : latin1
+\if@latin
+	\RequirePackage[latin1]{inputenc}
+\fi
+% encodage du fichier si option macroman : macroman
+\if@macroman
+	\RequirePackage[macroman]{inputenc}
+\fi
+
+
+
+
+% défintion des noms francais
+\def\initmrmenfrench{
+  \def\proofname{Preuve}
+  \def\thm@name{Th\'eor\`eme}
+  \def\lem@name{Lemme}
+  \def\cor@name{Corollaire}
+  \def\prop@name{Proposition}
+  \def\ppt@name{Propri\'et\'e}
+  \def\defn@name{D\'efinition} 
+  \def\rem@name{Remarque}
+  \def\nota@name{Notation}
+  \def\ex@name{Exemple}
+  \def\ax@name{Axiome}}
+\addto\captionsfrench{\initmrmenfrench}
+
+% défintion des noms anglais
+\def\initmrmenenglish{ 
+  \def\proofname{Proof}
+  \def\thm@name{Theorem}
+  \def\lem@name{Lemma}
+  \def\cor@name{Corollary}
+  \def\prop@name{Proposition}
+  \def\ppt@name{Property}
+  \def\defn@name{Definition}
+  \def\rem@name{Remark}
+  \def\nota@name{Notation}
+  \def\ex@name{Exemple}
+  \def\ax@name{Axiom}}
+\addto\captionsenglish{\initmrmenenglish}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% un style de théorème (pour conserver la syntaxe quelque part) 
+\newtheoremstyle{myremark}
+{3pt}{3pt}% Space above / below
+ {}%         Body font
+ {}%         Indent amount
+ {\itshape}% Thm head font
+ {}%         Punctuation after thm head
+ {.5em}%     Space after thm head
+ {\thmname{#1}{\rm\thmnumber{ #2.}}}% Thm head spec
+ 
+ % D\'efintion des th\'eor\`emes et autres d\'efinitions
+\theoremstyle{plain}
+\newtheorem{thm}{\thm@name}
+  \newtheorem{lem}{\lem@name}[section]
+  \newtheorem*{lemfond}{Lemme fondamental}
+  \newtheorem{cor}{\cor@name}[section]
+  \newtheorem{prop}{\prop@name}[section]
+  \newtheorem{ppte}{\ppt@name}[section]
+  \newtheorem{exer}{Exercice}[section]
+
+%\theoremstyle{definition}
+  \newtheorem{defn}{\defn@name}[section]
+
+
+\theoremstyle{remark}
+\@ifundefined{chapter}{
+  \newtheorem{rem}{\rem@name}}{
+  \newtheorem{rem}{\rem@name}[chapter]}
+
+  \newtheorem*{nota}{Notation}
+  \newtheorem*{ex}{Exemple}
+  \newtheorem*{sol}{Solution}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  Mathématiques %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% D\'efinition des mathoperators
+	% fonctions
+\DeclareMathOperator{\diag}{Diag} 		% matrice diagonale
+\DeclareMathOperator{\sgn}{\varepsilon} % signature
+\DeclareMathOperator{\im}{Im} 		% partie imaginaire
+\DeclareMathOperator{\re}{Re}  		% partie réelle
+\DeclareMathOperator{\ord}{Ord} 		% ordre
+\DeclareMathOperator{\rad}{Rad} 		% radical
+\DeclareMathOperator{\rg}{Rg} 		% rang
+\DeclareMathOperator{\disc}{Disc} 		% discriminant
+\DeclareMathOperator{\Tr}{Tr} 			% trace
+\DeclareMathOperator{\jac}{Jac} 		% jacobien
+	% nombres premiers
+\DeclareMathOperator{\pgcd}{pgcd}
+\DeclareMathOperator{\ppcm}{ppcm}
+\DeclareMathOperator{\Li}{Li}
+\relax
+	% groupes et ensembles
+\DeclareMathOperator{\card}{Card} 
+\DeclareMathOperator{\sym}{Sym}
+\DeclareMathOperator{\Sl}{SL}
+\DeclareMathOperator{\Gl}{GL}
+\DeclareMathOperator{\Pgl}{PGL}
+\DeclareMathOperator{\Psl}{PSL}
+\DeclareMathOperator{\So}{SO}
+\DeclareMathOperator{\Fr}{Frac}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Vect}{Vect}
+	% morphisme
+	% misc symbole
+\DeclareMathOperator{\mat}{Mat}
+	
+	% aliases pour les mathops
+\let\noyau\Ker
+\let \Disc\disc
+\let\tr\Tr
+\let\limsup\varlimsup
+\let\liminf\varliminf
+%\let \mod\pmod
+\let \phi\varphi
+\let \epsilon\varepsilon
+\let\latex\LaTeX
+\let\Latex\LaTeX
+\let\tex\TeX
+\let\Tex\TeX
+\let\fq\Fq
+
+
+	% D\'efinition des ensembles de nombres
+\def \PP{\mathbb{P}}
+\def \N{\mathbb{N}}
+\def \Z{\mathbb{Z}}
+\def \D{\mathbb{D}}
+\def \Q{\mathbb{Q}}
+\def \R{\mathbb{R}}
+\def \C{\mathbb{C}}
+\def \Fq{\mathbb{F}_q}
+\def \F#1{\mathbb{F}_{#1}}
+
+%Raccourcis pour le francais
+\def \cad{c'est-\`a-dire\xspace}
+\def \Cad{C'est-\`a-dire\xspace}
+\def \ssi{\mbox{ si et seulement si }\xspace}
+\def \cf{cf.\xspace}
+\def \ie{\textem{i.e.}\xspace}
+
+% Pour le mod
+\renewcommand{\mod}{\!\pmod}	% pour un modulo plus joli
+
+% D\'efinition des commandes g\'en\'eriques
+\def \inv#1{\frac{1}{#1}}					% inverse
+\def \legendre#1#2{\genfrac{(}{)}{}{0}{#1}{#2}} 	% {delim}{delim}{}{style : 0 = displystyle}{num}{denom}
+\def \distingue{\vartriangleleft}    			% distingué
+\def \fonc#1#2#3#4#5{					% pour creer une fonction facilement
+	#1 : \begin{array}{ccc}
+		#2 & \to & #3 \\
+		#4 & \mapsto & #5
+		\end{array}}
+\def \somorth{\overset{\perp}{\oplus}}
+\def \vecteurcol#1#2{\left(					% pour écrire un vecteur colonne
+	\begin{array}{c}
+	#1_{1} \\
+	\vdots \\
+	#1_{#2} 
+	\end{array}
+	\right)}
+\def \vecteurlig#1#2{						% vecteur ligne
+	\parent{#1_{1},...,#1_{#2}}
+} 
+\def \equiveq{\underset{\tiny{EQ}}{\simeq}}
+\def \transp#1{{}^t\!#1}					% trasnpossée modifiée
+\def \angle#1{\widehat{#1}}				% circonflexe pour angle 
+\def \tilda#1{\widetilde{#1}}				% grand tilda
+\def \forme#1{<\!\!#1\!\!>} 			% forme quad
+
+% test pour les normes
+\RequirePackage{xstring}
+\newcommand{\norm}[2][0]{\ifthen{\equal{#1}{0}}
+  {\| #2 \|}
+    {\| #2\|_{#1}}}
+%  {\equal{#1}{inf}
+%    {\| #2\|_{\infty}
+
+
+	%aliases pour certaines commandes
+\let\vecteur\vecteurcol
+\let\leq\leqslant
+\let\geq\geqslant
+\let\nleq\nleqslant
+\let\ngeq\ngeqslant
+\let\ng\ngtr
+\let\nl\nless
+\let\vec\overrightarrow
+
+%parenthese, crochets,...
+\def \parent#1{\left( {#1} \right)}
+\def \acol#1{\left\{ {#1} \right\}}
+\def \croch#1{\left[ {#1} \right]}
+\def \norm#1{\left\| {#1} \right\|}
+\def \floor#1{\left\lfloor {#1} \right\rfloor}
+\def \ceil#1{\left\lceil {#1} \right\rceil}
+\def \round#1{\left\lround {#1} \right\rround}
+
+
+\endinput
