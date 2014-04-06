@@ -1,0 +1,70 @@
+XTerm*eightBitInput: false
+XTerm*faceName: Deja Vu Sans Mono
+XTerm*faceSize: 8
+
+
+XTerm*background: #1e2320
+XTerm*foreground: white
+
+Xcursor.theme: Oxygen_Zion
+
+!!URxvt*background: #1e2320
+!!URxvt*foreground: white
+
+
+!! URxvt*font: 		     xft:Monospace:pixelsize=13: antialias=true:hinting=true
+!! URxvt*boldFont: 	     xft:Monospace:bold:pixelsize=13: antialias=true:hinting=true
+URxvt*font: 		     xft:Meslo LG S DZ for Powerline:pixelsize=13: antialias=true:hinting=true
+URxvt*boldFont: 	     xft:Meslo LG S DZ for Powerline:bold:pixelsize=13: antialias=true:hinting=true
+
+!!URxvt*font: 		     xft:Lucida Console:pixelsize=11: antialias=true:hinting=true
+
+!!URxvt.font: xft:Envypn:pixelsize=13
+
+URxvt.scrollBar:             false
+URxvt.scrollColor:           black
+URxvt.scrollstyle:           rxvt
+URxvt.saveLines:             2000
+URxvt.cursorColor:           pink
+URxvt.cursorBlink:           false
+!!Pour ne pas avoir de bordures
+URxvt*borderLess:            false
+
+ 
+!!Pour avoir le marquage des urls et les ouvrir avec FF
+!!URxvt.perl-ext-common: default,matcher
+!!,tabbeb
+URxvt.urlLauncher: firefox
+URxvt.matcher.button: 1
+URxvt.perl-ext-common: default,matcher,font-size
+URxvt.keysym.C-plus:     perl:font-size:increase
+URxvt.keysym.C-minus:   perl:font-size:decrease
+
+
+URxvt*termName: xterm-256color
+URxvt*xftAntialias: true
+!! URxvt*background: #3f3f3f
+!! URxvt*foreground: #dcdccc
+!! URxvt*cursorColor: #aaaaaa
+!! URxvt*colorUL: #366060
+!! URxvt*underlineColor: #dfaf8f
+!! URxvt*color0: #3f3f3f
+!! URxvt*color1: #cc9393
+!! URxvt*color2: #7f9f7f
+!! URxvt*color3: #d0bf8f
+!! URxvt*color4: #6ca0a3
+!! URxvt*color5: #dc8cc3
+!! URxvt*color6: #93e0e3
+!! URxvt*color7: #dcdccc
+!! URxvt*color8: #000000
+!! URxvt*color9: #dca3a3
+!! URxvt*color10: #bfebbf
+!! URxvt*color11: #f0dfaf
+!! URxvt*color12: #8cd0d3
+!! URxvt*color13: #dc8cc3
+!! URxvt*color14: #93e0e3
+!! URxvt*color15: #ffffff
+
+!!URxvt*transparent: true
+
+

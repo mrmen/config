@@ -1,0 +1,44 @@
+Xcursor.theme: Oxygen_Zion
+
+!! URxvt*font: 		     xft:Monospace:pixelsize=13: antialias=true:hinting=true
+!! URxvt*boldFont: 	     xft:Monospace:bold:pixelsize=13: antialias=true:hinting=true
+URxvt*font: 		     xft:Meslo LG S DZ for Powerline:pixelsize=13: antialias=true:hinting=true
+URxvt*boldFont: 	     xft:Meslo LG S DZ for Powerline:bold:pixelsize=13: antialias=true:hinting=true
+
+
+URxvt.scrollBar:             false
+URxvt.scrollColor:           black
+URxvt.scrollstyle:           rxvt
+URxvt.saveLines:             2000
+URxvt.cursorColor:           red
+URxvt.cursorBlink:           false
+!!Pour ne pas avoir de bordures
+URxvt*borderLess:            false
+
+ 
+!!Pour avoir le marquage des urls et les ouvrir avec FF
+!!URxvt.perl-ext-common: default,matcher
+!!,tabbeb
+URxvt.urlLauncher: firefox
+URxvt.matcher.button: 1
+URxvt.perl-ext-common: default,matcher,font-size
+URxvt.keysym.C-plus:     perl:font-size:increase
+URxvt.keysym.C-minus:   perl:font-size:decrease
+
+
+URxvt*termName: xterm-256color
+URxvt*xftAntialias: true
+
+URxvt*transparent: true
+
+
+!!
+!! solarized color
+!!
+#include common
+
+!! dark mode
+#include dark
+
+!! light mode
+!! #include light

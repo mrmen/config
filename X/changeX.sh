@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+#
+#    Thomas "Mr Men" Etcheverria
+#    <tetcheve (at) gmail .com>
+#
+#    Created on : 10-12-2013 13:49:07
+#    Time-stamp: <10-12-2013 14:19:51>
+#
+#    File name : /home/mrmen/.X/changeX.sh
+#    Description :
+#
+gotolight (){
+    sed -i 's/^#include "dark"/!! &/g' $HOME/.X/ressources
+    sed -i 's/^!! #include "light"/#include "light"/g' $HOME/.X/ressources
+    xrdb -override $HOME/.Xressources
+}
+
+gotodark (){
+    sed -i 's/^#include "light"/!! &/g' $HOME/.X/ressources
+    sed -i 's/^!! #include "dark"/#include "dark"/g' $HOME/.X/ressources
+    xrdb -override $HOME/.Xressources
+}
