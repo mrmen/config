@@ -99,11 +99,11 @@ macro generic,index,pager H <shell-escape>"fetchmail -k -m 'procmail -d %T'"<ent
 
 
 
-folder-hook   .           'my_hdr From: Thomas Etcheverria <thomas.etcheverria@laposte.net>'
-folder-hook   gmail       'my_hdr From: Thomas Etcheverria <tetcheve@gmail.com>'
-folder-hook   hotmail     'my_hdr From: Thomas Etcheverria <chouchoum33@hotmail.fr>'
-folder-hook   laposte     'my_hdr From: Thomas Etcheverria <thomas.etcheverria@laposte.net>'
-folder-hook   ent         'my_hdr From: Thomas Etcheverria <thomas.etcheverria@etu.u-bordeaux1.fr>'
+folder-hook   .           
+folder-hook   gmail      
+folder-hook   hotmail 
+folder-hook   laposte  
+folder-hook   ent    
 
 # Use abook with Mutt
 #macro generic,index,pager A "|abook\n" "lance abook"
